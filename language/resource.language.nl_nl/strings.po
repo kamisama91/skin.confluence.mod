@@ -30,7 +30,7 @@ msgstr "Activeer handmatige opening van media weergave glij menu"
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr "vermogen opties"
+msgstr "Energiebeheer"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -122,7 +122,7 @@ msgstr "Items"
 
 msgctxt "#31026"
 msgid "Misc options"
-msgstr "Diverse Opties"
+msgstr "Overige opties"
 
 msgctxt "#31027"
 msgid "Location"
@@ -310,7 +310,7 @@ msgstr "Activeer grote start widgets"
 
 msgctxt "#31075"
 msgid "Enable episode thumbnails"
-msgstr ""
+msgstr "Activeer eposide thumbnails"
 
 msgctxt "#31076"
 msgid "Enable raindrop effect"
@@ -442,7 +442,7 @@ msgstr "Verberg markeringen gelezen uit bestandsnamen[COLOR=grey3](Bijv. Blu-ray
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr "Verberg hoofd menu knoppen"
+msgstr "Verberg knoppen in het hoofdmenu"
 
 msgctxt "#31109"
 msgid "Enable custom background"
@@ -450,7 +450,7 @@ msgstr "Gebruik achtergrond naar keuze"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Achtergrond map:"
+msgstr "Achtergrond locatie:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -497,8 +497,8 @@ msgid "Show plot info on info screen"
 msgstr "Laat plot informatie op info scherm zien"
 
 msgctxt "#31122"
-msgid "Enable busy animation"
-msgstr "Activeer bezig animatie"
+msgid "Hide EPG if RDS is present on channel window"
+msgstr "Verberg EPG wanneer RDS aanwezig is op kanaalvenster"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -506,7 +506,7 @@ msgstr "Popup:"
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "Toon achtergrond \"nu afspelend\" video"
+msgstr "Toon achtergrond \"Nu afspelend\" video"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
@@ -533,7 +533,7 @@ msgid "Hide favorites button"
 msgstr "Verberg favorieten knop"
 
 msgctxt "#31131"
-msgid "Disable top left info on windows"
+msgid "Hide top left info on windows"
 msgstr "Verberg info linksboven in schermen"
 
 msgctxt "#31132"
@@ -564,7 +564,7 @@ msgctxt "#31138"
 msgid "Play party mode music on screensaver"
 msgstr "Speel feest modus muziek bij schermbeveiliging"
 
-msgctxt "#31339"
+msgctxt "#31139"
 msgid "Enable automatic fullscreen music playback"
 msgstr "Activeer automatisch volledig scherm bij muziek afspelen"
 
@@ -591,6 +591,10 @@ msgstr "Windows home server"
 msgctxt "#31145"
 msgid "Plex"
 msgstr "Plex"
+
+msgctxt "#31146"
+msgid "Enable busy animation"
+msgstr "Activeer bezig animatie"
 
 msgctxt "#31147"
 msgid "Setup UPnP library"
@@ -623,6 +627,10 @@ msgstr "Laat minimale foto info zien"
 msgctxt "#31154"
 msgid "Notifications at top left"
 msgstr "Notificaties linksboven"
+
+msgctxt "#31155"
+msgid "Show global search button on bottom left"
+msgstr "Laat globaal zoeken know linksonder zien"
 
 msgctxt "#31185"
 msgid "Random songs"
@@ -688,9 +696,21 @@ msgctxt "#31200"
 msgid "Shortcuts"
 msgstr "Snelkoppelingen"
 
+msgctxt "#31201"
+msgid "Custom widgets"
+msgstr "Aangepaste widgets"
+
+msgctxt "#31202"
+msgid "Custom:"
+msgstr "Aangepast"
+
 msgctxt "#31203"
 msgid "Choose your song"
 msgstr "Kies je lied"
+
+msgctxt "#31204"
+msgid "ExtendedInfo"
+msgstr "UitgebreideInfo"
 
 msgctxt "#31205"
 msgid "Lyrics source"
@@ -727,6 +747,10 @@ msgstr "Streaming media"
 msgctxt "#31213"
 msgid "Streams navigator"
 msgstr "Streams navigator"
+
+msgctxt "#31214"
+msgid "Show addon names"
+msgstr "Laat addon namen zien"
 
 msgctxt "#31215"
 msgid "Watch it later"
@@ -781,7 +805,7 @@ msgid "HD-movies"
 msgstr "HD-films"
 
 msgctxt "#31228"
-msgid "UnWatched movies"
+msgid "Unwatched movies"
 msgstr "Niet bekeken films"
 
 msgctxt "#31229"
@@ -923,6 +947,14 @@ msgstr "Afgespeeld"
 msgctxt "#31269"
 msgid "Unfinished"
 msgstr "Niet af"
+
+msgctxt "#31270"
+msgid "Ubuntu Normal"
+msgstr "Ubuntu Normaal"
+
+msgctxt "#31271"
+msgid "Ubuntu Bold"
+msgstr "Ubuntu Vet"
 
 msgctxt "#31272"
 msgid "Enable holiday theme"
@@ -1082,7 +1114,7 @@ msgstr "Selecteer add-on instelling"
 
 msgctxt "#31317"
 msgid "Set fanart path"
-msgstr "Instellen Fanart map"
+msgstr "Instellen Fanart locatie"
 
 msgctxt "#31318"
 msgid "Up one level"
@@ -1097,8 +1129,8 @@ msgid "Last logged in"
 msgstr "Laatst ingelogd op"
 
 msgctxt "#31321"
-msgid "Karaoke song selector"
-msgstr "Karaoke lied kiezer"
+msgid "Library mode"
+msgstr "Bibliotheek mode"
 
 msgctxt "#31322"
 msgid "Aired"
@@ -1168,6 +1200,10 @@ msgctxt "#31338"
 msgid "Favourites window"
 msgstr "Favorieten scherm"
 
+msgctxt "#31339"
+msgid "User video OSD button user selection"
+msgstr "Gebruiker video OSD knop selectie"
+
 msgctxt "#31340"
 msgid "Enable logo artwork for all media"
 msgstr "Activeer logo artwork voor alle media"
@@ -1187,6 +1223,10 @@ msgstr "Art downloaden"
 msgctxt "#31344"
 msgid "Extra fanart"
 msgstr "Extra fanart"
+
+msgctxt "#31345"
+msgid "Show user video OSD button"
+msgstr "Laat gebruiker video OSD knop zien"
 
 msgctxt "#31346"
 msgid "Up one level"
@@ -1264,6 +1304,10 @@ msgctxt "#31368"
 msgid "Kryptonite"
 msgstr "Kryptoniet"
 
+msgctxt "#31369"
+msgid "Select main OSD colour"
+msgstr "Selecteer hoofd OSD kleur"
+
 msgctxt "#31370"
 msgid "Instant"
 msgstr "Gelijk"
@@ -1304,10 +1348,17 @@ msgctxt "#31382"
 msgid "Playlist widget should [B]randomize[/B] the playlist sort order"
 msgstr "Afspeellijst widget zou [B]willekeurig[/B] de afspeellijstvolgorde sorteren"
 
-
 msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
 msgstr "Activeer video artwork te tonen met OSD informatie"
+
+msgctxt "#31384"
+msgid "Enable music artwork to show with OSD information"
+msgstr "Activeer muziek artwork te tonen met OSD informatie"
+
+msgctxt "#31385"
+msgid "Hide text label in wide icon view"
+msgstr "Verberg tekst labels in wijde ikoon view"
 
 msgctxt "#31386"
 msgid "Music OSD settings"
@@ -1366,8 +1417,8 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]VIDEO-INSTELLINGEN CONFIGUREREN[/B][CR][CR]Beheer uw videobibliotheek · Configureer videoafspeelopties en -bestandslijstsopties · Stel lettertype in voor ondertitels"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]MUZIEKINSTELLINGEN CONFIGUREREN[/B][CR][CR]Beheer uw muziekbibliotheek · Configureer muziekafspeelopties en -bestandslijstopties · Configureer nummer indienen · Configureer karaokeopties"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission"
+msgstr "[B]CONFIGUREER MUZIEKINSTELLINGEN[/B][CR][CR]Beheer uw muziekbibliotheek · Instellen muziek afspeel opties · Verander muzieklijsten opties[CR]Instellen nummer indiening "
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
@@ -1441,7 +1492,7 @@ msgctxt "#31426"
 msgid "Live TV"
 msgstr "Live TV"
 
-msgctxt "#31447"
+msgctxt "#31427"
 msgid "Concerts"
 msgstr "Concerten"
 
@@ -1711,7 +1762,7 @@ msgstr "Australië"
 
 msgctxt "#31704"
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgctxt "#31705"
 msgid "Hong Kong"
@@ -1869,30 +1920,6 @@ msgctxt "#31942"
 msgid "YouTube"
 msgstr "YouTube"
 
-msgctxt "#31943"
-msgid "Choose a scraper"
-msgstr "Kies een scraper"
-
-msgctxt "#31944"
-msgid "Current scraper"
-msgstr "Huidige scraper"
-
-msgctxt "#31945"
-msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
-msgstr "Fanartafbeelding[CR][CR]niet beschikbaar[CR][CR] klik hier om in te stellen"
-
-msgctxt "#31946"
-msgid "Track number"
-msgstr "Tracknummer"
-
-msgctxt "#31947"
-msgid "Memory used:"
-msgstr "Gebruikt geheugen:"
-
-msgctxt "#31948"
-msgid "Created"
-msgstr "Gemaakt"
-
 msgctxt "#31950"
 msgid "WEATHER"
 msgstr "WEER"
@@ -1942,16 +1969,20 @@ msgid "Choose your song"
 msgstr "Kies je nummer"
 
 msgctxt "#31962"
-msgid "Lyrics source"
-msgstr "Songtekst bron"
+msgid "Reset paths to skin default"
+msgstr "Reset paden naar skin standaard"
 
 msgctxt "#31963"
-msgid "Album details"
-msgstr "Album details"
+msgid "Reset fanart to skin default"
+msgstr "Reset fanart naar skin standaard"
 
 msgctxt "#31964"
-msgid "Click button to play[CR][CR]Movie trailer"
-msgstr "Klik op de knop om af te spelen[CR][CR]Filmtrailer"
+msgid "Use alternative background folder"
+msgstr "Gebruik alternatieve achtergrond map"
+
+msgctxt "#31965"
+msgid "Multi-image background time per image"
+msgstr "Meerdere beelden achtergrond tijd per beeld"
 
 msgctxt "#31969"
 msgid "Airs"
@@ -1973,9 +2004,69 @@ msgctxt "#31973"
 msgid "DVD drive"
 msgstr "DVD station"
 
+msgctxt "#31974"
+msgid "Show seconds on clock display"
+msgstr "Laat seconden zien op clock scherm"
+
+msgctxt "#31975"
+msgid "Sideblade label size and location"
+msgstr "Zijblad label grootte en locatie"
+
+msgctxt "#31976"
+msgid "Top"
+msgstr "Boven"
+
+msgctxt "#31977"
+msgid "Small label"
+msgstr "Klein label"
+
+msgctxt "#31978"
+msgid "Bottom"
+msgstr "Onder"
+
+msgctxt "#31979"
+msgid "Reload"
+msgstr "Herlaad"
+
+msgctxt "#31980"
+msgid "Save settings and reload Xonfluence"
+msgstr "Sla settings op and herlaad Xonfluence"
+
+msgctxt "#31981"
+msgid "Kodi intro movie path"
+msgstr "Kodi intro film pad"
+
+msgctxt "#31982"
+msgid "Custom widgets limit amount"
+msgstr "Max aantal aangepaste widgets"
+
+msgctxt "#31991"
+msgid "Item border size"
+msgstr "Onderdeel rand grootte"
+
+msgctxt "#31992"
+msgid "Small"
+msgstr "Klein"
+
+msgctxt "#31993"
+msgid "Medium"
+msgstr "Middel"
+
+msgctxt "#31994"
+msgid "Large"
+msgstr "Groot"
+
+msgctxt "#31995"
+msgid "Live weather"
+msgstr "Live weer"
+
 msgctxt "#31996"
 msgid "Shortcuts"
 msgstr "Snelkoppelingen"
+
+msgctxt "#31997"
+msgid "Show clock on full screen video"
+msgstr "Laat klok op volledig scherm video zien"
 
 msgctxt "#31998"
 msgid "Recently added"
@@ -1984,3 +2075,4 @@ msgstr "Recent toegevoegd"
 msgctxt "#31999"
 msgid "Resolution"
 msgstr "Resolutie"
+

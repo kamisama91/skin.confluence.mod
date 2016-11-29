@@ -2,6 +2,7 @@
 <includes>
 	<include name="HomeSubMenuControl">
 		<control type="group" id="9001">
+			<depth>DepthMenu-</depth>
 			<left>0</left>
 			<top>70</top>
 			<onup>9000</onup>
@@ -10,32 +11,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) + IntegerGreaterThan(Container(9010).NumItems,0)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9010).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9010).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9010).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9010).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9010).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9010).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9010).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9010).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9010).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9010).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9010).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9010).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9010</param>
+				</include>
 				<control type="list" id="9010">
 					<include>SubMenuCommonValues</include>
 					<onleft>9010</onleft>
@@ -49,32 +27,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Music)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9011).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9011).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9011).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9011).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9011).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9011).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9011).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9011).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9011).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9011).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9011).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9011).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9011</param>
+				</include>
 				<control type="list" id="9011">
 					<include>SubMenuCommonValues</include>
 					<onleft>9011</onleft>
@@ -88,32 +43,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Settings)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9012).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9012).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9012).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9012).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9012).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9012).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9012).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9012).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9012).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9012).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9012).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9012).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9012</param>
+				</include>
 				<control type="list" id="9012">
 					<include>SubMenuCommonValues</include>
 					<onleft>9012</onleft>
@@ -127,32 +59,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),PlayDisc)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9013).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9013).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9013).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9013).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9013).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9013).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9013).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9013).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9013).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9013).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9013).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9013).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9013</param>
+				</include>
 				<control type="list" id="9013">
 					<include>SubMenuCommonValues</include>
 					<onleft>9013</onleft>
@@ -166,32 +75,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),LiveTV)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9014).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9014).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9014).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9014).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9014).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9014).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9014).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9014).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9014).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9014).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9014).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9014).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9014</param>
+				</include>
 				<control type="list" id="9014">
 					<include>SubMenuCommonValues</include>
 					<onleft>9014</onleft>
@@ -205,32 +91,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Pictures)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9015).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9015).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9015).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9015).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9015).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9015).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9015).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9015).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9015).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9015).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9015).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9015).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9015</param>
+				</include>
 				<control type="list" id="9015">
 					<include>SubMenuCommonValues</include>
 					<onleft>9015</onleft>
@@ -244,32 +107,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Movies)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9016).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9016).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9016).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9016).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9016).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9016).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9016).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9016).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9016).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9016).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9016).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9016).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9016</param>
+				</include>
 				<control type="list" id="9016">
 					<include>SubMenuCommonValues</include>
 					<onleft>9016</onleft>
@@ -283,32 +123,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9017).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9017).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9017).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9017).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9017).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9017).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9017).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9017).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9017).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9017).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9017).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9017).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9017</param>
+				</include>
 				<control type="list" id="9017">
 					<include>SubMenuCommonValues</include>
 					<onleft>9017</onleft>
@@ -322,32 +139,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Concerts)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9019).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9019).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9019).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9019).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9019).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9019).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9019).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9019).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9019).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9019).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9019).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9019).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9019</param>
+				</include>
 				<control type="list" id="9019">
 					<include>SubMenuCommonValues</include>
 					<onleft>9019</onleft>
@@ -361,32 +155,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),UserOne)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9021).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9021).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9021).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9021).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9021).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9021).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9021).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9021).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9021).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9021).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9021).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9021).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9021</param>
+				</include>
 				<control type="list" id="9021">
 					<include>SubMenuCommonValues</include>
 					<onleft>9021</onleft>
@@ -400,32 +171,9 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),UserTwo)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9022).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9022).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9022).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9022).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9022).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9022).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9022).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9022).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9022).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9022).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9022).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9022).NumItems,0)</visible>
-				</control>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9022</param>
+				</include>
 				<control type="list" id="9022">
 					<include>SubMenuCommonValues</include>
 					<onleft>9022</onleft>
@@ -437,35 +185,60 @@
 				</control>
 			</control>
 			<control type="group">
+				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),UserThree)</visible>
+				<include>SubMenuAnimation</include>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9023</param>
+				</include>
+				<control type="list" id="9023">
+					<include>SubMenuCommonValues</include>
+					<onleft>9022</onleft>
+					<onright>9022</onright>
+					<include>SubMenuCommonLayout</include>
+					<content>
+						<include>HomeSubMenuUserThree</include>
+					</content>
+				</control>
+			</control>
+			<control type="group">
+				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),UserFour)</visible>
+				<include>SubMenuAnimation</include>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9024</param>
+				</include>
+				<control type="list" id="9024">
+					<include>SubMenuCommonValues</include>
+					<onleft>9022</onleft>
+					<onright>9022</onright>
+					<include>SubMenuCommonLayout</include>
+					<content>
+						<include>HomeSubMenuUserFour</include>
+					</content>
+				</control>
+			</control>
+			<control type="group">
+				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),UserFive)</visible>
+				<include>SubMenuAnimation</include>
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9025</param>
+				</include>
+				<control type="list" id="9025">
+					<include>SubMenuCommonValues</include>
+					<onleft>9022</onleft>
+					<onright>9022</onright>
+					<include>SubMenuCommonLayout</include>
+					<content>
+						<include>HomeSubMenuUserFive</include>
+					</content>
+				</control>
+			</control>
+			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Programs)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9023).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9023).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9023).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9023).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9023).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9023).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9023).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9023).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9023).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9023).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9023).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9023).NumItems,0)</visible>
-				</control>
-				<control type="list" id="9023">
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9026</param>
+				</include>
+				<control type="list" id="9026">
 					<include>SubMenuCommonValues</include>
 					<onleft>9023</onleft>
 					<onright>9023</onright>
@@ -478,33 +251,10 @@
 			<control type="group">
 				<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Radio)</visible>
 				<include>SubMenuAnimation</include>
-				<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container(9024).NumItems,5)">conditional</animation>
-				<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container(9024).NumItems,4)">conditional</animation>
-				<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container(9024).NumItems,3)">conditional</animation>
-				<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container(9024).NumItems,2)">conditional</animation>
-				<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container(9024).NumItems,1)">conditional</animation>
-				<control type="image">
-					<left>26</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-					<visible>IntegerGreaterThan(Container(9024).NumItems,0)</visible>
-				</control>
-				<control type="image">
-					<left>1219</left>
-					<top>0</top>
-					<width>35</width>
-					<height>35</height>
-					<texture border="0,0,0,3">HomeSubEnd.png</texture>
-					<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container(9024).NumItems,5)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container(9024).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container(9024).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container(9024).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container(9024).NumItems,1)">conditional</animation>
-					<visible>IntegerGreaterThan(Container(9024).NumItems,0)</visible>
-				</control>
-				<control type="list" id="9024">
+				<include name="SubMenuPositionImages">
+    				<param name="Control">9027</param>
+				</include>
+				<control type="list" id="9027">
 					<include>SubMenuCommonValues</include>
 					<onleft>9024</onleft>
 					<onright>9024</onright>
@@ -543,6 +293,7 @@
 				<width>193</width>
 				<height>35</height>
 				<texture border="5">HomeSubNF.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="label">
 				<left>5</left>
@@ -563,6 +314,7 @@
 				<width>193</width>
 				<height>35</height>
 				<texture border="5">HomeSubNF.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -570,6 +322,7 @@
 				<width>193</width>
 				<height>35</height>
 				<texture border="5" colordiffuse="$VAR[MainColorOne]">HomeSubFO.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
 				<visible>ControlGroup(9001).HasFocus</visible>
 			</control>
 			<control type="label">
@@ -822,7 +575,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicOne]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.1.Path))">ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.1.Path))">ActivateWindow(Music,Artists,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.1.Path))">$INFO[Skin.String(SubMusic.1.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.1.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.1.Path),Hidden)</visible>
@@ -830,7 +583,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicTwo]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.2.Path))">ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.2.Path))">ActivateWindow(Music,Albums,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.2.Path))">$INFO[Skin.String(SubMusic.2.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.2.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.2.Path),Hidden)</visible>
@@ -838,7 +591,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicThree]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.3.Path))">ActivateWindow(MusicLibrary,Songs,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.3.Path))">ActivateWindow(Music,Songs,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.3.Path))">$INFO[Skin.String(SubMusic.3.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.3.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.3.Path),Hidden)</visible>
@@ -846,14 +599,14 @@
 		<item>
 			<label>$VAR[SubMenuMusicFour]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.4.Path))">ActivateWindow(MusicFiles)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.4.Path))">ActivateWindow(Music,Files,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.4.Path))">$INFO[Skin.String(SubMusic.4.Path)]</onclick>
 			<visible>!stringcompare(Skin.String(SubMusic.4.Path),Hidden)</visible>
 		</item>
 		<item>
 			<label>$VAR[SubMenuMusicFive]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.5.Path))">ActivateWindow(MusicLibrary,root)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.5.Path))">ActivateWindow(Music,root)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.5.Path))">$INFO[Skin.String(SubMusic.5.Path)]</onclick>
 			<visible>Library.HasContent(Music) | !IsEmpty(Skin.String(SubMusic.5.Path))</visible>
 			<visible>!stringcompare(Skin.String(SubMusic.5.Path),Hidden)</visible>
@@ -861,8 +614,7 @@
 		<item>
 			<label>$VAR[SubMenuMusicSix]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.6.Path)) + Library.HasContent(Music)">ActivateWindow(MusicLibrary,Addons,return)</onclick>
-			<onclick condition="IsEmpty(Skin.String(SubMusic.6.Path)) + !Library.HasContent(Music)">ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<onclick condition="IsEmpty(Skin.String(SubMusic.6.Path))">ActivateWindow(Music,Addons,return)</onclick>
 			<onclick condition="!IsEmpty(Skin.String(SubMusic.6.Path))">$INFO[Skin.String(SubMusic.6.Path)]</onclick>
 			<visible>!stringcompare(Skin.String(SubMusic.6.Path),Hidden)</visible>
 		</item>
@@ -942,10 +694,11 @@
 			<visible>!stringcompare(Skin.String(SubSettings.6.Path),Hidden)</visible>
 		</item>
 		<item>
-			<label>$INFO[Skin.String(SubSettings.7.Label)]</label>
+			<label>$VAR[SubMenuSystemSeven]</label>
 			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
-			<onclick>$INFO[Skin.String(SubSettings.7.Path)]</onclick>
-			<visible>!IsEmpty(Skin.String(SubSettings.7.Path))</visible>
+			<onclick condition="IsEmpty(Skin.String(SubSettings.7.Path))">ActivateWindow(EventLog,events://,return)</onclick>
+			<onclick condition="!IsEmpty(Skin.String(SubSettings.7.Path))">$INFO[Skin.String(SubSettings.7.Path)]</onclick>
+			<visible>[!IsEmpty(Skin.String(SubSettings.7.Path))] | [IsEmpty(Skin.String(SubSettings.7.Path)) + system.getbool(eventlog.enabled)]</visible>
 			<visible>!stringcompare(Skin.String(SubSettings.7.Path),Hidden)</visible>
 		</item>
 		<item>
@@ -1481,5 +1234,276 @@
 			<visible>!IsEmpty(Skin.String(UserSubTwo.10.Path))</visible>
 			<visible>!stringcompare(Skin.String(UserSubTwo.10.Path),Hidden)</visible>
 		</item>
+	</include>
+	<include name="HomeSubMenuUserThree">
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.1.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.1.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.1.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.2.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.2.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.2.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.3.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.3.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.3.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.4.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.4.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.4.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.5.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.5.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.5.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.6.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.6.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.6.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.7.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.7.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.7.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.8.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.8.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.8.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.8.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.9.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.9.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.9.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.9.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubThree.10.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubThree.10.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubThree.10.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubThree.10.Path),Hidden)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuUserFour">
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.1.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.1.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.1.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.2.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.2.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.2.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.3.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.3.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.3.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.4.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.4.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.4.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.5.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.5.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.5.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.6.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.6.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.6.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.7.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.7.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.7.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.8.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.8.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.8.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.8.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.9.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.9.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.9.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.9.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFour.10.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFour.10.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFour.10.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFour.10.Path),Hidden)</visible>
+		</item>
+	</include>
+	<include name="HomeSubMenuUserFive">
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.1.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.1.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.1.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.1.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.2.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.2.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.2.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.2.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.3.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.3.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.3.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.3.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.4.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.4.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.4.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.4.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.5.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.5.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.5.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.5.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.6.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.6.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.6.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.6.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.7.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.7.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.7.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.7.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.8.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.8.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.8.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.8.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.9.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.9.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.9.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.9.Path),Hidden)</visible>
+		</item>
+		<item>
+			<label>$INFO[Skin.String(UserSubFive.10.Label)]</label>
+			<onclick>SetProperty(SubMenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+			<onclick>$INFO[Skin.String(UserSubFive.10.Path)]</onclick>
+			<visible>!IsEmpty(Skin.String(UserSubFive.10.Path))</visible>
+			<visible>!stringcompare(Skin.String(UserSubFive.10.Path),Hidden)</visible>
+		</item>
+	</include>
+	<include name="SubMenuPositionImages">
+		<param name="Control" default="9000" />
+		<definition>
+			<animation effect="slide" start="0,0" end="96.5,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="193,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="289.5,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="386,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="482.5,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+			<control type="image">
+				<left>26</left>
+				<top>0</top>
+				<width>35</width>
+				<height>35</height>
+				<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<visible>IntegerGreaterThan(Container($PARAM[Control]).NumItems,0)</visible>
+			</control>
+			<control type="image">
+				<left>1219</left>
+				<top>0</top>
+				<width>35</width>
+				<height>35</height>
+				<texture border="0,0,0,3">HomeSubEnd.png</texture>
+				<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+				<animation effect="slide" start="0,0" end="-193,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,5)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-386,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-579,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-772,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-965,0" time="0" condition="StringCompare(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+				<visible>IntegerGreaterThan(Container($PARAM[Control]).NumItems,0)</visible>
+			</control>
+			<control type="image">
+				<left>41</left>
+				<top>5</top>
+				<width>20</width>
+				<height>20</height>
+				<texture>arrow-big-left.png</texture>
+				<include>VisibleFadeEffect</include>
+				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasPrevious</visible>
+				<visible>IntegerGreaterThan(Container($PARAM[Control]).NumItems,0)</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+			<control type="image">
+				<left>1219</left>
+				<top>5</top>
+				<width>20</width>
+				<height>20</height>
+				<texture>arrow-big-right.png</texture>
+				<include>VisibleFadeEffect</include>
+				<visible>Control.HasFocus($PARAM[Control]) + Container($PARAM[Control]).HasNext</visible>
+				<visible>IntegerGreaterThan(Container($PARAM[Control]).NumItems,5)</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+		</definition>
 	</include>
 </includes>

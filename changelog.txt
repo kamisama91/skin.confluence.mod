@@ -1,8 +1,8 @@
-[B]15.0.0/B] [I]Dec 2016[/I]
+[B]16.0.0/B] [I]Dec 2016[/I]
+- Upgrade to Helly skin.xonfluence 3.2.18
 
+[B]15.0.0/B] [I]Dec 2016[/I]
 - Upgrade to Helly skin.xonfluence 3.1.6
 
-[B]14.0.0/B]
- [I]Dec 2016[/I]
-
+[B]14.0.0/B] [I]Dec 2016[/I]
 - Fork from Mudislander's skin.ccm.helix 3.0.15

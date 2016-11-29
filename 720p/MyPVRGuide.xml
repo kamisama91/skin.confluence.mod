@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
+	<menucontrol>9000</menucontrol>
 	<views>10,11,12,13</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
@@ -13,38 +14,27 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
+			<include condition="!IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+			<animation effect="fade" start="100" end="65" time="0" condition="IsEmpty(Skin.String(HomeTrans)) + Skin.String(HomeFloor,Transparent)">Conditional</animation>
+			<visible>!IsEmpty(Skin.String(HomeFloor))</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>100r</top>
-				<width>1280</width>
-				<height>100</height>
-				<texture>floor.png</texture>
-				<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-				<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-				<visible>!Skin.HasSetting(HideHomeFloor)</visible>
-			</control>
 			<control type="group">
-				<include>Window_OpenClose_Animation</include>
-				<control type="group">
-					<include>VisibleFadeEffect</include>
-					<control type="image">
-						<left>55</left>
-						<top>60</top>
-						<width>1170</width>
-						<height>600</height>
-						<texture border="15">ContentPanel.png</texture>
-					</control>
-					<control type="image">
-						<left>55</left>
-						<top>652</top>
-						<width>1170</width>
-						<height>64</height>
-						<texture border="15">ContentPanelMirror.png</texture>
-					</control>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<left>55</left>
+					<top>60</top>
+					<width>1170</width>
+					<height>600</height>
+					<texture border="15">ContentPanel.png</texture>
+				</control>
+				<control type="image">
+					<left>55</left>
+					<top>652</top>
+					<width>1170</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
 				</control>
 			</control>
 		</control>
@@ -57,7 +47,10 @@
 			<include>PVRGuideViewNext</include>
 			<include>PVRGuideViewChannel</include>
 		</control>
-		<include>CommonNowPlaying</include>
+		<control type="group">
+			<depth>DepthFooter</depth>
+			<include>CommonNowPlaying</include>
+		</control>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
@@ -71,6 +64,5 @@
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
 		<include>PVRSideBlade</include>
-		<include>Clock</include>
 	</controls>
 </window>
