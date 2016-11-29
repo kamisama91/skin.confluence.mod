@@ -113,10 +113,34 @@
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
-						<description>Playlist Movies</description>
+						<description>Playlist Video</description>
 						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
 						<onclick>Dialog.Close(2118)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<include>MenuMoviePlayListCheck</include>
+					</item>
+					<item>
+						<description>Playlist Video - Random</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31182]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RandomVideoPlayList)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<include>MenuMoviePlayListCheck</include>
+					</item>
+					<item>
+						<description>Playlist Video - Recent</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31183]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentVideoPlayList)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<include>MenuMoviePlayListCheck</include>
+					</item>
+					<item>
+						<description>Playlist Video - Suggested</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31184]</label>
+						<onclick>Dialog.Close(2118)</onclick>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,SuggestedVideoPlayList)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<include>MenuMoviePlayListCheck</include>
 					</item>
@@ -182,7 +206,7 @@
 						<onclick>Dialog.Close(2118)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UnWatchedMovies)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-						<visible>!Skin.HasSetting(DisableScriptPlaylist)</visible>
+						<visible>!Skin.HasSetting(DisableScriptFetchPlaylist)</visible>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item>

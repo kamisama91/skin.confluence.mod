@@ -4,7 +4,6 @@
 	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<onload condition="!Skin.HasSetting(DisableTVNextAired) + !System.HasAddon(script.tv.show.next.aired)">Skin.Setbool(DisableTVNextAired)</onload>
-	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + !System.HasAddon(script.randomandlastitems)">Skin.Setbool(DisableScriptPlaylist)</onload>
 	<onload condition="Skin.HasSetting(EnableFanartScript) + !System.HasAddon(script.grab.fanart)">Skin.Reset(EnableFanartScript)</onload>
 	<onload condition="!Skin.HasSetting(DisableGlobalSearch) + !System.HasAddon(script.globalsearch)">Skin.Setbool(DisableGlobalSearch)</onload>
 	<onload condition="!Skin.HasSetting(DisableTVTunes) + !System.HasAddon(script.tvtunes)">Skin.Setbool(DisableTVTunes)</onload>

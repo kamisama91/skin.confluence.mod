@@ -80,6 +80,7 @@
 			<onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
 			<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 			<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+			<onclick>ClearProperty(UsrSelectBtnPlaylistAlias,Home)</onclick>
 			<onclick>ActivateWindow(SkinSettings)</onclick>
 			<onleft>10</onleft>
 			<onright>10</onright>

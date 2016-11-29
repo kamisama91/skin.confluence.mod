@@ -228,21 +228,77 @@ msgctxt "#31152"
 msgid "Enable Kiosk Mode"
 msgstr "Activer le mode Kiosk"
 
+msgctxt "#31182"
+msgid "Random (Playlist)"
+msgstr "Aléatoires (Playliste)"
+
+msgctxt "#31183"
+msgid "Recent (Playlist)"
+msgstr "Récents (Playliste)"
+
+msgctxt "#31184"
+msgid "Suggested (Playlist)"
+msgstr "Recommandés (Playliste)"
+
+msgctxt "#31185"
+msgid "Random Songs"
+msgstr "Chansons Aléatoires"
+
+msgctxt "#31186"
+msgid "Random Artists"
+msgstr "Artistes Aléatoires"
+
+msgctxt "#31187"
+msgid "Recent Tracks"
+msgstr "Chansons Récentes"
+
+msgctxt "#31188"
+msgid "Random Concerts"
+msgstr "Concerts Aléatoires"
+
+msgctxt "#31189"
+msgid "Recent Concerts"
+msgstr "Concerts Récents"
+
 msgctxt "#31190"
 msgid "Random Albums"
-msgstr "Albums aléatoires"
+msgstr "Albums Aléatoires"
+
+msgctxt "#31191"
+msgid "Suggested Albums"
+msgstr "Albums Recommandés"
 
 msgctxt "#31192"
 msgid "Recent Albums"
-msgstr "Albums récents"
+msgstr "Albums Récentes"
+
+msgctxt "#31193"
+msgid "Random Episodes"
+msgstr "Episodes Aléatoires"
+
+msgctxt "#31194"
+msgid "Suggested Episodes"
+msgstr "Episodes Recommandés"
 
 msgctxt "#31195"
 msgid "Recent Episodes"
-msgstr "Episodes récents"
+msgstr "Episodes Récents"
+
+msgctxt "#31196"
+msgid "Random Movies"
+msgstr "Films Aléatoires"
+
+msgctxt "#31197"
+msgid "Suggested Movies"
+msgstr "Films Recommandés"
 
 msgctxt "#31198"
 msgid "Recent Movies"
-msgstr "Films récents"
+msgstr "Films Récents"
+
+msgctxt "#31199"
+msgid "Suggested Concerts"
+msgstr "Concerts Recommandés"
 
 msgctxt "#31200"
 msgid "TV Shows"

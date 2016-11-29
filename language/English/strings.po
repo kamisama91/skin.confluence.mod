@@ -608,6 +608,19 @@ msgstr ""
 #empty strings from id 31153 to 31184
 #Widget Names 31185
 
+msgctxt "#31182"
+msgid "Random (Playlist)"
+msgstr ""
+
+msgctxt "#31183"
+msgid "Recent (Playlist)"
+msgstr ""
+
+msgctxt "#31184"
+msgid "Suggested (Playlist)"
+msgstr ""
+
+
 msgctxt "#31185"
 msgid "Random Songs"
 msgstr ""
@@ -1312,12 +1325,12 @@ msgstr ""
 
 #empty strings from id 31375 to 31379
 
-msgctxt "#31380"
-msgid "Enable Playlist Widget Script"
+msgctxt "#31980"
+msgid "Configure service.skin.smartplaylist.widgets"
 msgstr ""
 
-msgctxt "#31381"
-msgid "Configure script.randomandlastitems"
+msgctxt "#31981"
+msgid "Configure service.skin.smartplaylist.widgets"
 msgstr ""
 
 msgctxt "#31382"
@@ -1749,7 +1762,9 @@ msgctxt "#31941"
 msgid "Enable Running Artwork Downloader Automaticaly after Updating Library"
 msgstr ""
 
-#empty string id 31942
+msgctxt "#31942"
+msgid "Configure service.skin.smartplaylist.widgets"
+msgstr ""
 
 msgctxt "#31943"
 msgid "Choose a Scraper"

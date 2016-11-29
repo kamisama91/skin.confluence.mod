@@ -1523,18 +1523,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="VideoNodeStatsList">
-		<control type="list" id="8051">
-			<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),VideoNode)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1</width>
-			<height>1</height>
-			<focusedlayout />
-			<itemlayout />
-			<content>$VAR[VideoNodeStats]</content>
-		</control>
-	</include>
 	<include name="BackgroundFade">
 		<animation effect="fade" time="600">Visible</animation>
 		<animation effect="fade" time="600">Hidden</animation>
@@ -1595,6 +1583,8 @@
 		<onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
 		<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 		<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+		<onclick>ClearProperty(UsrSelectBtnPlaylistAlias,Home)</onclick>
+		<onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
 	</include>
 	<include name="InvisibleButton">
 		<left>1480</left>
