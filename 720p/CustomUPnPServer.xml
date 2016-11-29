@@ -2,7 +2,6 @@
 <window type="dialog" id="2132">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
@@ -12,8 +11,8 @@
 			<control type="list" id="8050">
 				<content>upnp://</content>
 			</control>
-			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="400,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<left>400r</left>
 				<top>0</top>
@@ -124,7 +123,7 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31317]</label>
+						<label>$LOCALIZE[31439]</label>
 						<icon>DefaultIconWarning.png</icon>
 						<thumb>DefaultIconWarning.png</thumb>
 						<onclick>Skin.Reset(UPnP_Path)</onclick>

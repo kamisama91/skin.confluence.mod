@@ -27,7 +27,20 @@
 					<control type="label">
 						<left>10</left>
 						<top>0</top>
-						<width>660</width>
+						<width>580</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
+						<visible>Window.IsVisible(pictures)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>580</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
@@ -35,6 +48,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
 						<left>280</left>
@@ -68,19 +82,17 @@
 						<top>8</top>
 						<width>40</width>
 						<height>26</height>
-						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>!ListItem.IsStereoscopic</visible>
+						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<left>625</left>
-						<top>8</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>flagging/lists/3D.png</texture>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>ListItem.IsStereoscopic</visible>
+						<left>665</left>
+						<top>14</top>
+						<width>16</width>
+						<height>16</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
 						<left>665</left>
@@ -90,14 +102,6 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>665</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="580">
@@ -121,16 +125,29 @@
 					</control>
 					<control type="image">
 						<left>490</left>
-						<top>4</top>
+						<top>5</top>
 						<width>200</width>
-						<height>33</height>
-						<texture border="0,0,14,0" colordiffuse="$VAR[MainColorOne]">MediaItemDetailBG.png</texture>
+						<height>31</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
 						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
 						<top>0</top>
-						<width>660</width>
+						<width>580</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label] - $INFO[ListItem.PictureDatetime]</label>
+						<visible>Window.IsVisible(pictures)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>580</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
@@ -138,6 +155,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
 						<left>280</left>
@@ -171,28 +189,9 @@
 						<top>8</top>
 						<width>40</width>
 						<height>26</height>
-						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>!ListItem.IsStereoscopic</visible>
-					</control>
-					<control type="image">
-						<left>625</left>
-						<top>8</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>flagging/lists/3D.png</texture>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>ListItem.IsStereoscopic</visible>
-					</control>
-					<control type="image">
-						<left>665</left>
-						<top>14</top>
-						<width>20</width>
-						<height>16</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
+						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
 						<left>665</left>
@@ -201,6 +200,15 @@
 						<height>16</height>
 						<texture>OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
+					</control>
+ 					<control type="image">
+						<left>665</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -231,7 +239,7 @@
 					<height>540</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true">$VAR[PosterThumb]</texture>
+					<texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 					<visible>StringCompare(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
@@ -243,7 +251,7 @@
 					<height>540</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 					<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
@@ -255,7 +263,7 @@
 					<height>524</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="diffuse_mirror3.png" flipy="true" background="true">$VAR[PosterThumb]</texture>
+					<texture diffuse="diffuse_mirror3.png" flipy="true" background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 				</control>
 			</control>
 		</control>
@@ -285,7 +293,7 @@
 						<height>160</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(Episodes)</visible>
 					</control>
@@ -297,7 +305,7 @@
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
 						<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
@@ -309,7 +317,7 @@
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
@@ -329,8 +337,17 @@
 						<top>130</top>
 						<width>30</width>
 						<height>30</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>130</top>
+						<width>30</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="186" width="216">
@@ -341,7 +358,7 @@
 						<height>160</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(Episodes)</visible>
 					</control>
@@ -353,7 +370,7 @@
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
 						<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
@@ -365,7 +382,7 @@
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
@@ -385,8 +402,17 @@
 						<top>130</top>
 						<width>30</width>
 						<height>30</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>130</top>
+						<width>30</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="279" width="216">
@@ -397,7 +423,7 @@
 						<height>240</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$VAR[PosterThumb]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -417,8 +443,17 @@
 						<top>210</top>
 						<width>30</width>
 						<height>30</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>210</top>
+						<width>30</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="276" width="216">
@@ -429,7 +464,7 @@
 						<height>240</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$VAR[PosterThumb]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -449,8 +484,17 @@
 						<top>210</top>
 						<width>30</width>
 						<height>30</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>210</top>
+						<width>30</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -490,7 +534,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
-				<itemlayout height="110" width="540">
+				<itemlayout height="150" width="540">
 					<control type="image">
 						<left>1</left>
 						<top>0</top>
@@ -498,19 +542,40 @@
 						<height>105</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$VAR[BannerThumb]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[BannerThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
+					<control type="label">
+						<left>1</left>
+						<top>125</top>
+						<width>538</width>
+						<height>25</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
 					<control type="image">
-						<left>500</left>
+						<left>250</left>
+						<top>70</top>
+						<width>35</width>
+						<height>35</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>250</left>
 						<top>70</top>
 						<width>35</width>
 						<height>35</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="110" width="540">
+				<focusedlayout height="150" width="540">
 					<control type="image">
 						<left>1</left>
 						<top>0</top>
@@ -518,16 +583,37 @@
 						<height>105</height>
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture background="true">$VAR[BannerThumb]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$VAR[BannerThumb]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
+					<control type="label">
+						<left>1</left>
+						<top>125</top>
+						<width>538</width>
+						<height>25</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
 					<control type="image">
-						<left>500</left>
+						<left>250</left>
+						<top>70</top>
+						<width>35</width>
+						<height>35</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>ListItem.IsResumable</visible>
+					</control>
+					<control type="image">
+						<left>250</left>
 						<top>70</top>
 						<width>35</width>
 						<height>35</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>!ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -578,7 +664,7 @@
 						<top>4</top>
 						<width>40</width>
 						<height>32</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>StringCompare(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
@@ -587,7 +673,7 @@
 						<top>4</top>
 						<width>40</width>
 						<height>32</height>
-						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
@@ -601,7 +687,21 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
+						<visible>Window.IsVisible(pictures)</visible>
+					</control>
+					<control type="label">
+						<left>60</left>
+						<top>0</top>
+						<width>950</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -635,19 +735,17 @@
 						<top>8</top>
 						<width>40</width>
 						<height>26</height>
-						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>!ListItem.IsStereoscopic</visible>
+						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<left>1010</left>
-						<top>8</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>flagging/lists/3D.png</texture>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>ListItem.IsStereoscopic</visible>
+						<left>1050</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
 						<left>1050</left>
@@ -657,14 +755,6 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>1050</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="1080">
@@ -688,10 +778,10 @@
 					</control>
 					<control type="image">
 						<left>875</left>
-						<top>4</top>
+						<top>5</top>
 						<width>200</width>
-						<height>33</height>
-						<texture border="0,0,14,0" colordiffuse="$VAR[MainColorOne]">MediaItemDetailBG.png</texture>
+						<height>31</height>
+						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
 						<visible>Control.HasFocus(51) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="image">
@@ -699,7 +789,7 @@
 						<top>4</top>
 						<width>40</width>
 						<height>32</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>StringCompare(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
@@ -708,7 +798,7 @@
 						<top>4</top>
 						<width>40</width>
 						<height>32</height>
-						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
@@ -722,7 +812,21 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
+						<visible>Window.IsVisible(pictures)</visible>
+					</control>
+					<control type="label">
+						<left>60</left>
+						<top>0</top>
+						<width>950</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -756,19 +860,17 @@
 						<top>8</top>
 						<width>40</width>
 						<height>26</height>
-						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>!ListItem.IsStereoscopic</visible>
+						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<left>1010</left>
-						<top>8</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>flagging/lists/3D.png</texture>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						<visible>ListItem.IsStereoscopic</visible>
+						<left>1050</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>OverlayWatching.png</texture>
+						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
 						<left>1050</left>
@@ -778,14 +880,6 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>1050</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
 			</control>

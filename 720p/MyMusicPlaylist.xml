@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<views>50,51,506</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
@@ -9,12 +8,12 @@
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<include>CommonRootView</include>
 			<!-- view id = 50 -->
-			<include>FullWidthList</include>
+			<include>CommonRootView</include>
 			<!-- view id = 51 -->
-			<include>MusicInfoListView</include>
+			<include>FullWidthList</include>
 			<!-- view id = 506 -->
+			<include>MusicInfoListView</include>
 		</control>
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>
@@ -30,6 +29,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_music.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -39,6 +39,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[10517]</label>
@@ -49,10 +50,11 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="button" id="800">
 			<include>InvisibleButton</include>
 			<onleft>801</onleft>
-			<onright>804</onright>
+			<onright>805</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<visible>false</visible>

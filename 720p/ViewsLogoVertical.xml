@@ -146,7 +146,7 @@
 						<fadetime>200</fadetime>
 						<aspectratio align="center" scalediffuse="false">keep</aspectratio>
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+							<effect type="zoom" center="auto" start="51" end="100" time="450" tween="back" easing="out" />
 						</animation>
 					</control>
 					<control type="label">
@@ -161,7 +161,7 @@
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="125" time="600" tween="back" easing="out" />
+							<effect type="zoom" center="auto" start="100" end="125" time="450" tween="back" easing="out" />
 						</animation>
 					</control>
 					<control type="group">
@@ -203,7 +203,7 @@
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+							<effect type="zoom" center="auto" start="51" end="100" time="450" tween="back" easing="out" />
 						</animation>
 					</control>
 					<control type="label">
@@ -218,7 +218,7 @@
 						<textcolor>white</textcolor>
 						<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="125" time="600" tween="back" easing="out" />
+							<effect type="zoom" center="auto" start="100" end="125" time="450" tween="back" easing="out" />
 						</animation>
 					</control>
 					<control type="label">
@@ -235,7 +235,7 @@
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="125" time="600" tween="back" easing="out" />
+							<effect type="zoom" center="auto" start="100" end="125" time="450" tween="back" easing="out" />
 						</animation>
 					</control>
 					<control type="group">
@@ -440,7 +440,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<label>$VAR[VideoDescription]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="1500" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<visible>Control.IsVisible(730)</visible>
 			</control>

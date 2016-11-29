@@ -50,33 +50,14 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					<!--control type="group">
-						<control type="image">
-							<left>435</left>
-							<top>5</top>
-							<width>32</width>
-							<height>32</height>
-							<texture diffuse="poster-diffuse.png">OverlayStatus/resumable/OverlayUnwatched.png</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>435</left>
-							<top>5</top>
-							<width>32</width>
-							<height>32</height>
-							<texture diffuse="poster-diffuse.png">$VAR[PartlyWatched,OverlayStatus/resumable/,.png]</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>437</left>
-							<top>16</top>
-							<width>25</width>
-							<height>21</height>
-							<texture>$VAR[WatchTypePath,OverlayStatus/]</texture>
-							<visible>!ListItem.IsResumable</visible>
-						</control>
-						<visible>Window.IsVisible(Videos) + !IsEmpty(ListItem.Overlay) + !stringcompare(Skin.String(WatchStatusType),Hidden)</visible>
-					</control-->
+					<control type="image">
+						<left>430</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="480">
 					<control type="image">
@@ -129,33 +110,14 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					<!--control type="group">
-						<control type="image">
-							<left>435</left>
-							<top>5</top>
-							<width>32</width>
-							<height>32</height>
-							<texture diffuse="poster-diffuse.png">OverlayStatus/resumable/OverlayUnwatched.png</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>435</left>
-							<top>5</top>
-							<width>32</width>
-							<height>32</height>
-							<texture diffuse="poster-diffuse.png">$VAR[PartlyWatched,OverlayStatus/resumable/,.png]</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-						<control type="image">
-							<left>437</left>
-							<top>16</top>
-							<width>25</width>
-							<height>21</height>
-							<texture>$VAR[WatchTypePath,OverlayStatus/]</texture>
-							<visible>!ListItem.IsResumable</visible>
-						</control>
-						<visible>Window.IsVisible(Videos) + !IsEmpty(ListItem.Overlay) + !stringcompare(Skin.String(WatchStatusType),Hidden)</visible>
-					</control-->
+					<control type="image">
+						<left>430</left>
+						<top>14</top>
+						<width>20</width>
+						<height>16</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
@@ -265,7 +227,7 @@
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<label>$VAR[VideoDescription,[B]$LOCALIZE[207]: [/B]]</label>
-					<autoscroll time="3600" delay="6000" repeat="6000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
+					<autoscroll time="2600" delay="6000" repeat="6000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
 					<visible>!StringCompare(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">

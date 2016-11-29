@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
 		<include>CommonBackground</include>
+		<control type="multiimage">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<include>VisibleFadeEffect</include>
+			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
 		<control type="image">
 			<description>Section header image</description>
 			<left>20</left>
@@ -14,6 +26,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_weather.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -23,11 +36,13 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[8]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="image">
 			<left>0</left>
 			<top>100r</top>
@@ -35,26 +50,18 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
-		</control>
-		<control type="button" id="800">
-			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<visible>false</visible>
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
@@ -582,6 +589,19 @@
 					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
+				</control>
+				<control type="radiobutton" id="250">
+					<description>Fanart Toggle</description>
+					<include>ButtonCommonValues</include>
+					<label>31307</label>
+					<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
+					<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
+				</control>
+				<control type="button" id="251">
+					<include>ButtonCommonValues</include>
+					<label>31317</label>
+					<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+					<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>

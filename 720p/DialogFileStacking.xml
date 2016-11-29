@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>450</defaultcontrol>
-	<include>DialogEffect</include>
+	<include>dialogeffect</include>
 	<coordinates>
-		<system>1</system>
 		<left>315</left>
 		<top>260</top>
 	</coordinates>
@@ -81,7 +80,6 @@
 			<onup>450</onup>
 			<ondown>450</ondown>
 			<orientation>horizontal</orientation>
-			<focusposition>2</focusposition>
 			<viewtype label="535">list</viewtype>
 			<scrolltime>200</scrolltime>
 			<itemlayout width="40">

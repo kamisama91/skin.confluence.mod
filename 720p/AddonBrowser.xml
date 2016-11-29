@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<views>50,51,550,551</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
@@ -32,6 +31,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_addons.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -41,6 +41,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[24001]</label>
@@ -51,14 +52,7 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
-		<control type="button" id="800">
-			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<visible>false</visible>
-		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<left>-251</left>
@@ -135,7 +129,36 @@
 					<include>ButtonCommonValues</include>
 					<label>24999</label>
 				</control>
+                                <control type="button" id="9">
+					<description>Check for updates</description>
+					<include>ButtonCommonValues</include>
+					<label>24034</label>
+				</control>
 				<include>CommonNowPlaying_Controls</include>
+			</control>
+			<control type="label">
+				<description>Last updated label</description>
+				<left>0</left>
+				<top>650</top>
+				<height>60</height>
+				<width>240</width>
+				<label>31301</label>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>font13</font>
+				<textcolor>selected</textcolor>
+			</control>
+			<control type="label">
+				<description>Last updated value</description>
+				<left>0</left>
+				<top>680</top>
+				<height>25</height>
+				<width>240</width>
+				<label>$INFO[Window.Property(Updated)]</label>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
 			</control>
 		</control>
 		<include>Clock</include>

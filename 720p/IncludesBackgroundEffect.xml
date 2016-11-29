@@ -14,9 +14,9 @@
 				<visible>true</visible>
 				<colordiffuse>BBFFFFFF</colordiffuse>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
-					<effect type="fade" delay="2000" start="0" end="100" time="200" />
-					<effect type="fade" delay="2500" start="100" end="0" time="500" />
-					<effect type="zoom" delay="2000" start="30" end="500" time="1000" center="auto" tween="quadratic" />
+					<effect type="fade" delay="2000" start="0" end="100" time="150" />
+					<effect type="fade" delay="2500" start="100" end="0" time="375" />
+					<effect type="zoom" delay="2000" start="30" end="500" time="750" center="auto" tween="quadratic" />
 				</animation>
 			</control>
 			<control type="image">
@@ -29,9 +29,9 @@
 				<visible>true</visible>
 				<colordiffuse>55FFFFFF</colordiffuse>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
-					<effect type="fade" start="0" end="100" time="200" />
-					<effect type="fade" start="100" end="0" delay="2500" time="1000" />
-					<effect type="zoom" center="auto" start="30" end="1500" delay="0" time="3500" tween="quadratic" />
+					<effect type="fade" start="0" end="100" time="150" />
+					<effect type="fade" start="100" end="0" delay="1875" time="1000" />
+					<effect type="zoom" center="auto" start="30" end="1175" delay="0" time="3500" tween="quadratic" />
 				</animation>
 			</control>
 			<control type="image">
@@ -43,9 +43,9 @@
 				<texture background="true">BackgroundEffect/rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
-					<effect type="fade" delay="400" start="0" end="100" time="200" />
-					<effect type="fade" delay="1000" start="100" end="0" time="1600" />
-					<effect type="zoom" delay="400" start="30" end="700" time="3000" center="auto" tween="quadratic" />
+					<effect type="fade" delay="400" start="0" end="100" time="150" />
+					<effect type="fade" delay="1000" start="100" end="0" time="1200" />
+					<effect type="zoom" delay="400" start="30" end="700" time="2250" center="auto" tween="quadratic" />
 				</animation>
 			</control>
 			<control type="image">
@@ -58,9 +58,9 @@
 				<visible>true</visible>
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
-					<effect type="fade" delay="800" start="0" end="100" time="200" />
-					<effect type="fade" delay="2400" start="100" end="0" time="2000" />
-					<effect type="zoom" delay="800" start="30" end="1000" time="2500" center="auto" tween="quadratic" />
+					<effect type="fade" delay="800" start="0" end="100" time="150" />
+					<effect type="fade" delay="2400" start="100" end="0" time="1500" />
+					<effect type="zoom" delay="800" start="30" end="1000" time="1875" center="auto" tween="quadratic" />
 				</animation>
 			</control>
 			<control type="image">
@@ -91,8 +91,8 @@
 					<height>9</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,820" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-40,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,820" time="8000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-40,0" time="4000" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
@@ -102,8 +102,8 @@
 					<height>18</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="7000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-20,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="5000" delay="0" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-20,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>200</left>
@@ -112,8 +112,8 @@
 					<height>12</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,1020" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="50,0" end="-10,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,1020" time="10000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-10,0" time="3200" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>260</left>
@@ -122,8 +122,8 @@
 					<height>15</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="15000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-30,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>390</left>
@@ -132,14 +132,14 @@
 					<height>9</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,1020" time="13000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="20,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,1020" time="10000" delay="600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="20,0" end="-60,0" time="3750" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 			</control>
 			<control type="group">
 				<left>100</left>
-				<animation effect="rotate" start="20" end="40" time="9000" delay="800" pulse="true" condition="true">Conditional</animation>
+				<animation effect="rotate" start="20" end="40" time="7000" delay="800" pulse="true" condition="true">Conditional</animation>
 				<control type="image">
 					<left>80</left>
 					<top>-100</top>
@@ -147,8 +147,8 @@
 					<height>20</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,820" time="7000" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-20,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,820" time="5500" delay="1000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-20,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>240</left>
@@ -157,8 +157,8 @@
 					<height>15</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="8000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="6000" delay="1800" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-30,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>390</left>
@@ -167,15 +167,15 @@
 					<height>10</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,1120" time="13000" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="20,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,1120" time="9500" delay="1500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="20,0" end="-60,0" time="4000" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 			</control>
 			<control type="group">
 				<left>600</left>
 				<top>-200</top>
-				<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
+				<animation effect="rotate" end="15" time="7000" delay="375" pulse="true" condition="true">Conditional</animation>
 				<control type="image">
 					<left>20</left>
 					<top>-60</top>
@@ -183,8 +183,8 @@
 					<height>12</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,1020" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="50,0" end="-10,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,1020" time="10000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-10,0" time="3000" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>100</left>
@@ -193,8 +193,8 @@
 					<height>18</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="9000" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-50,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="6500" delay="2000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-50,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>260</left>
@@ -203,8 +203,8 @@
 					<height>15</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,1120" time="8000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,1120" time="6000" delay="2300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-30,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>330</left>
@@ -213,8 +213,8 @@
 					<height>9</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="11000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-40,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="8000" delay="1600" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-40,0" time="400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
@@ -224,14 +224,14 @@
 					<height>10</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,820" time="12000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="-20,0" end="50,0" time="3300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,820" time="9000" delay="2200" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="-20,0" end="50,0" time="2450" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 			</control>
 			<control type="group">
 				<left>900</left>
-				<animation effect="rotate" start="15" end="30" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
+				<animation effect="rotate" start="15" end="30" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>
 				<control type="image">
 					<left>100</left>
 					<top>-200</top>
@@ -239,8 +239,8 @@
 					<height>20</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="7000" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-20,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="5500" delay="3000" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-20,0" time="2400" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>200</left>
@@ -249,8 +249,8 @@
 					<height>12</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,1020" time="13000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="50,0" end="-10,0" time="4300" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,1020" time="10000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="50,0" end="-10,0" time="3000" delay="220" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>260</left>
@@ -259,8 +259,8 @@
 					<height>15</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,820" time="8000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="40,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,820" time="6000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="40,0" end="-30,0" time="3000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>390</left>
@@ -269,8 +269,8 @@
 					<height>10</height>
 					<texture>BackgroundEffect/snow.png</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
-					<animation effect="slide" start="0,0" end="0,920" time="13000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
-					<animation effect="slide" start="20,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,920" time="10000" delay="3500" reversible="false" loop="true" condition="true">Conditional</animation>
+					<animation effect="slide" start="20,0" end="-60,0" time="4000" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
 					<colordiffuse>C2FFFFFF</colordiffuse>
 				</control>
 			</control>

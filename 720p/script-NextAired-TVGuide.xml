@@ -8,7 +8,6 @@
 	<onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SundayList,Home)</onload>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
@@ -22,8 +21,8 @@
 				<texture background="true">$INFO[Container(200).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(200)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -34,8 +33,8 @@
 				<texture background="true">$INFO[Container(201).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(201)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -46,8 +45,8 @@
 				<texture background="true">$INFO[Container(202).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(202)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -58,8 +57,8 @@
 				<texture background="true">$INFO[Container(203).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(203)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -70,8 +69,8 @@
 				<texture background="true">$INFO[Container(204).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(204)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -82,8 +81,8 @@
 				<texture background="true">$INFO[Container(205).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(205)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -94,8 +93,8 @@
 				<texture background="true">$INFO[Container(206).ListItem.Property(Fanart)]</texture>
 				<visible>Control.HasFocus(206)</visible>
 				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
+				<animation effect="fade" time="450">Visible</animation>
+				<animation effect="fade" time="450">Hidden</animation>
 			</control>
 		</control>
 		<control type="image">
@@ -105,8 +104,8 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
 		<control type="image">
@@ -117,7 +116,8 @@
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -127,15 +127,17 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$ADDON[script.tv.show.next.aired 450]</label>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$LOCALIZE[31207]</label>
+				<label>[COLOR=$VAR[MainColorOne]] - [/COLOR]$LOCALIZE[31208]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<control type="grouplist" id="2000">
 			<include>Window_OpenClose_Animation</include>
 			<left>40</left>
@@ -505,7 +507,6 @@
 				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>ClearProperty(SideBladeOpen)</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
-				<!--onright>200</onright-->
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onback>ClearProperty(SideBladeOpen)</onback>
@@ -533,9 +534,7 @@
 					<label>5</label>
 					<onleft>ClearProperty(SideBladeOpen)</onleft>
 					<onright>200</onright>
-					<!--onclick>ClearProperty(SideBladeOpen)</onclick-->
 				</control>
-				<!-- include>CommonNowPlaying_Controls</include -->
 			</control>
 		</control>
 		<include>Clock</include>

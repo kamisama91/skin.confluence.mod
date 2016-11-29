@@ -2,7 +2,6 @@
 <window type="dialog" id="2115">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
@@ -11,8 +10,8 @@
 	<onunload>ClearProperty(UsrSelectPath,home)</onunload>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="400,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<left>400r</left>
 				<top>0</top>

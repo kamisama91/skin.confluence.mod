@@ -29,12 +29,23 @@
 				<progresstexture border="0,48,18,14">PVR-EpgProgressIndicator.png</progresstexture>
 				<onleft>101</onleft>
 				<onright>101</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<onback>101</onback>
+				<onup>101</onup>
+				<ondown>101</ondown>
 				<rulerlayout height="35" width="40">
 					<control type="label" id="2">
-						<left>10</left>
+						<left>0</left>
+						<top>0</top>
+						<width>34</width>
+						<height>29</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!ListItem.Property(DateLabel)</visible>
+					</control>
+					<control type="label" id="2">
+						<left>0</left>
 						<top>0</top>
 						<width>34</width>
 						<height>29</height>
@@ -43,6 +54,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>ListItem.Property(DateLabel)</visible>
 					</control>
 				</rulerlayout>
 				<channellayout height="48" width="280">
@@ -79,7 +91,7 @@
 						<top>0</top>
 						<width>160</width>
 						<height>48</height>
-						<font>special12</font>
+						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -130,7 +142,7 @@
 						<top>0</top>
 						<width>160</width>
 						<height>48</height>
-						<font>special12</font>
+						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -252,7 +264,7 @@
 					<top>0</top>
 					<width>840</width>
 					<height>20</height>
-					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<label>[B]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)][/B]</label>
 					<font>font13</font>
 					<textcolor>white</textcolor>
 				</control>
@@ -261,20 +273,20 @@
 					<top>25</top>
 					<width>840</width>
 					<height>20</height>
-					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Genre, • ]</label>
+					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
 					<font>font12</font>
 					<textcolor>grey</textcolor>
 				</control>
 				<control type="textbox">
 					<description>Plot value</description>
 					<left>280</left>
-					<top>55</top>
+					<top>57</top>
 					<width>840</width>
-					<height>65</height>
+					<height>63</height>
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>grey</textcolor>
-					<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
+					<autoscroll delay="10000" time="3000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$VAR[VideoDescription]</label>
 				</control>
 			</control>
@@ -428,7 +440,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="image">
 							<left>970</left>
@@ -567,14 +579,14 @@
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="textbox">
 							<description>Plot Value for TVShow</description>
 							<left>50</left>
-							<top>35</top>
+							<top>37</top>
 							<width>1000</width>
-							<height>60</height>
+							<height>58</height>
 							<font>font12</font>
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
@@ -645,16 +657,17 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<left>100</left>
 				<top>53r</top>
-				<width>500</width>
+				<width>1100</width>
 				<height>20</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
 	</include>
@@ -806,7 +819,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="image">
 							<left>970</left>
@@ -945,14 +958,14 @@
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="textbox">
 							<description>Plot Value for TVShow</description>
 							<left>50</left>
-							<top>35</top>
+							<top>37</top>
 							<width>1000</width>
-							<height>60</height>
+							<height>58</height>
 							<font>font12</font>
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
@@ -1023,16 +1036,17 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<left>100</left>
 				<top>53r</top>
-				<width>500</width>
+				<width>1100</width>
 				<height>20</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(12).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(12).CurrentPage]/$INFO[Container(12).NumPages][/COLOR])</label>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
 	</include>
@@ -1151,7 +1165,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="image">
 							<left>970</left>
@@ -1270,14 +1284,14 @@
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="textbox">
 							<description>Plot Value for TVShow</description>
 							<left>50</left>
-							<top>40</top>
+							<top>42</top>
 							<width>1000</width>
-							<height>60</height>
+							<height>58</height>
 							<font>font12</font>
 							<align>justify</align>
 							<textcolor>grey2</textcolor>
@@ -1348,16 +1362,17 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>
-				<right>40</right>
+				<left>100</left>
 				<top>53r</top>
-				<width>500</width>
+				<width>1100</width>
 				<height>20</height>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>([COLOR=$VAR[MainColorOne]]$INFO[Container(13).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=$VAR[MainColorOne]]$INFO[Container(13).CurrentPage]/$INFO[Container(13).NumPages][/COLOR])</label>
+				<visible>[!Player.HasMedia | Skin.HasSetting(HideNowPlayingInfo)] + !Skin.HasSetting(HidePageCountInfo)</visible>
 			</control>
 		</control>
 	</include>

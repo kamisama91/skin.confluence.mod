@@ -2,11 +2,10 @@
 <window type="dialog" id="2121">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>335</left>
 		<top>230</top>
 	</coordinates>
-	<include>DialogEffect</include>
+	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<left>0</left>
@@ -30,7 +29,7 @@
 			<width>530</width>
 			<height>30</height>
 			<font>font13_title</font>
-			<label>$LOCALIZE[31306] $LOCALIZE[31307]</label>
+			<label>$LOCALIZE[31306] $LOCALIZE[31432]</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>selected</textcolor>
@@ -68,7 +67,7 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31308]</label>
+			<label>$LOCALIZE[31433]</label>
 			<font>font13</font>
 		</control>
 		<control type="button" id="11">

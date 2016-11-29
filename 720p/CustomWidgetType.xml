@@ -2,14 +2,13 @@
 <window type="dialog" id="2118">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="400,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<left>400r</left>
 				<top>0</top>
@@ -42,7 +41,7 @@
 				<aligny>center</aligny>
 				<textcolor>$VAR[MainColorOne]</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>$LOCALIZE[31326]</label>
+				<label>$LOCALIZE[31440]</label>
 			</control>
 			<control type="list" id="450">
 				<left>390r</left>
@@ -107,7 +106,7 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31317]</label>
+						<label>$LOCALIZE[31439]</label>
 						<onclick>Dialog.Close(2118)</onclick>
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>

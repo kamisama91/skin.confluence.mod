@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
 	<controls>
 		<include>CommonBackground</include>
@@ -11,14 +10,14 @@
 			<width>1280</width>
 			<height>100</height>
 			<texture>floor.png</texture>
-			<animation effect="slide" start="0,10" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(HideHomeFloor)</visible>
 		</control>
-		<control type="button" id="800">
+		<control type="button" id="50">
 			<include>InvisibleButton</include>
-			<onleft>801</onleft>
-			<onright>804</onright>
+			<onleft>800</onleft>
+			<onright>800</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<visible>false</visible>
@@ -27,12 +26,12 @@
 			<left>90</left>
 			<top>30</top>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
+				<effect type="fade" start="0" end="100" time="225" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
+				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<control type="image">
 				<left>5</left>
@@ -72,7 +71,7 @@
 				<width>150</width>
 				<height>55</height>
 				<aspectratio>keep</aspectratio>
-				<texture>Confluence_Logo.png</texture>
+				<texture>Xonfluence_Logo.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<left>10</left>
@@ -241,9 +240,9 @@
 			<control type="textbox">
 				<description>Appearance Description</description>
 				<left>300</left>
-				<top>520</top>
+				<top>522</top>
 				<width>740</width>
-				<height>100</height>
+				<height>98</height>
 				<font>font12</font>
 				<label>$INFO[Container(9000).ListItem.Label2]</label>
 				<align>left</align>
@@ -263,6 +262,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>icon_system.png</texture>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 		</control>
 		<control type="grouplist">
 			<left>65</left>
@@ -272,11 +272,13 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
+			<visible>!Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)</visible>
 			<control type="label">
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[5]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(AllScreenTopLeftWidget) + !Skin.HasSetting(HideTopLeftWindows)">TopLeftInfo</include>
 		<include>Clock</include>
 	</controls>
 </window>

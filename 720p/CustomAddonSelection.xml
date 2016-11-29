@@ -2,7 +2,6 @@
 <window type="dialog" id="2119">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
-		<system>1</system>
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
@@ -107,7 +106,7 @@
 				<content>
 					<item>
 						<description>Clear Setting</description>
-						<label>$LOCALIZE[31317]</label>
+						<label>$LOCALIZE[31439]</label>
 						<onclick>Dialog.Close(2119)</onclick>
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 						<onclick>Skin.Reset($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
@@ -126,7 +125,7 @@
 					</item>
 					<item>
 						<description>Favourites</description>
-						<label>$LOCALIZE[31329] $LOCALIZE[1036]</label>
+						<label>$LOCALIZE[31443] $LOCALIZE[1036]</label>
 						<onclick>Dialog.Close(2119)</onclick>
 						<onclick>RunScript(script.favourites,changetitle=true&amp;property=$INFO[Window(Home).Property(UsrSelectBtn)])</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,home)</onclick>

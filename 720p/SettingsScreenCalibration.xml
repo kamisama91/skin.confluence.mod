@@ -21,7 +21,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>black-back.png</texture>
-			<include>DialogEffect</include>
+			<include>dialogeffect</include>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
