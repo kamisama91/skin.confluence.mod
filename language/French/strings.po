@@ -229,16 +229,16 @@ msgid "Enable Kiosk Mode"
 msgstr "Activer le mode Kiosk"
 
 msgctxt "#31182"
-msgid "Random (Playlist)"
-msgstr "Aléatoires (Playliste)"
+msgid "Random"
+msgstr "Aléatoires"
 
 msgctxt "#31183"
-msgid "Recent (Playlist)"
-msgstr "Récents (Playliste)"
+msgid "Recent"
+msgstr "Récents"
 
 msgctxt "#31184"
-msgid "Suggested (Playlist)"
-msgstr "Recommandés (Playliste)"
+msgid "Suggested"
+msgstr "Recommandés"
 
 msgctxt "#31185"
 msgid "Random Songs"

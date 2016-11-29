@@ -609,15 +609,15 @@ msgstr ""
 #Widget Names 31185
 
 msgctxt "#31182"
-msgid "Random (Playlist)"
+msgid "Random"
 msgstr ""
 
 msgctxt "#31183"
-msgid "Recent (Playlist)"
+msgid "Recent"
 msgstr ""
 
 msgctxt "#31184"
-msgid "Suggested (Playlist)"
+msgid "Suggested"
 msgstr ""
 
 
