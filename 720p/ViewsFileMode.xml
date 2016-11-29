@@ -35,7 +35,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>Window.IsVisible(pictures) + !String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -48,10 +48,10 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>!Window.IsVisible(pictures) | String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
-						<left>280</left>
+						<left>270</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -64,7 +64,7 @@
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
 					<control type="label">
-						<left>220</left>
+						<left>210</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -78,7 +78,7 @@
 						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
 					<control type="image">
-						<left>625</left>
+						<left>615</left>
 						<top>8</top>
 						<width>40</width>
 						<height>26</height>
@@ -87,7 +87,7 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<left>665</left>
+						<left>655</left>
 						<top>14</top>
 						<width>16</width>
 						<height>16</height>
@@ -95,7 +95,7 @@
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
-						<left>665</left>
+						<left>655</left>
 						<top>14</top>
 						<width>20</width>
 						<height>16</height>
@@ -119,17 +119,17 @@
 						<top>0</top>
 						<width>690</width>
 						<height>41</height>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(50)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>490</left>
+						<left>480</left>
 						<top>5</top>
 						<width>200</width>
 						<height>31</height>
 						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(50) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(50) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -142,7 +142,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[ListItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>Window.IsVisible(pictures) + !String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -155,10 +155,10 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>!Window.IsVisible(pictures) | String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
-						<left>280</left>
+						<left>270</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -171,7 +171,7 @@
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
 					<control type="label">
-						<left>220</left>
+						<left>210</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -185,7 +185,7 @@
 						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
 					<control type="image">
-						<left>625</left>
+						<left>615</left>
 						<top>8</top>
 						<width>40</width>
 						<height>26</height>
@@ -194,7 +194,7 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					</control>
 					<control type="image">
-						<left>665</left>
+						<left>655</left>
 						<top>14</top>
 						<width>16</width>
 						<height>16</height>
@@ -202,7 +202,7 @@
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
  					<control type="image">
-						<left>665</left>
+						<left>655</left>
 						<top>14</top>
 						<width>20</width>
 						<height>16</height>
@@ -243,7 +243,7 @@
 					<texture background="true" fallback="DefaultVideoCover.png">$VAR[PosterThumb]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>StringCompare(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+					<visible>String.IsEqual(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -255,7 +255,7 @@
 					<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
-					<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<left>8</left>
@@ -308,7 +308,7 @@
 						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
-						<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
 					<control type="image">
 						<left>1</left>
@@ -319,7 +319,7 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
-						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<left>8</left>
@@ -373,7 +373,7 @@
 						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[Listitem.Icon]</texture>
 						<visible>Container.Content(Episodes)</visible>
-						<visible>StringCompare(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
 					<control type="image">
 						<left>1</left>
@@ -384,7 +384,7 @@
 						<bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
 						<include>TextureBorderViews</include>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
-						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<left>8</left>
@@ -725,7 +725,7 @@
 						<height>32</height>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>StringCompare(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -734,7 +734,7 @@
 						<height>32</height>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -747,7 +747,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>Window.IsVisible(pictures) + !String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -760,7 +760,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>!Window.IsVisible(pictures) | String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -831,7 +831,7 @@
 						<top>0</top>
 						<width>1080</width>
 						<height>41</height>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(51)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -841,7 +841,7 @@
 						<width>200</width>
 						<height>31</height>
 						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(51) + !IsEmpty(ListItem.Label2)</visible>
+						<visible>Control.HasFocus(51) + !String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -850,7 +850,7 @@
 						<height>32</height>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>StringCompare(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
+						<visible>String.IsEqual(ListItem.Label,..) | !Container.Content(Episodes) | !Skin.HasSetting(HideEpisodeThumb)</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -859,7 +859,7 @@
 						<height>32</height>
 						<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio>keep</aspectratio>
-						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
+						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !String.IsEqual(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -872,7 +872,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label] - $INFO[listItem.PictureDatetime]</label>
-						<visible>Window.IsVisible(pictures) + !IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>Window.IsVisible(pictures) + !String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>
@@ -885,7 +885,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>!Window.IsVisible(pictures) | IsEmpty(listItem.PictureDatetime)</visible>
+						<visible>!Window.IsVisible(pictures) | String.IsEmpty(listItem.PictureDatetime)</visible>
 					</control>
 					<control type="label">
 						<left>60</left>

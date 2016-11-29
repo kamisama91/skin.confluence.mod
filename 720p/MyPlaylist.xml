@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<menucontrol>9000</menucontrol>	
+	<menucontrol>9000</menucontrol>
 	<views>50,51,506</views>
 	<onunload>ClearProperty(SideBladeOpen)</onunload>
 	<controls>
@@ -24,7 +24,11 @@
 		<include>FloorReturnButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		<include name="CommonWindowHeader">
+		<include content="CommonWindowHeader" condition="Window.IsActive(videoplaylist)">
+			<param name="Icon" value="icon_video" />
+			<param name="Label" value="$LOCALIZE[10522]" />
+		</include>
+		<include content="CommonWindowHeader" condition="Window.IsActive(musicplaylist)">
 			<param name="Icon" value="icon_music" />
 			<param name="Label" value="$LOCALIZE[10517]" />
 		</include>
@@ -37,7 +41,7 @@
 				<top>110</top>
 				<width>250</width>
 				<height>600</height>
-				<onfocus condition="IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(SideBladeOpen))">SetProperty(SideBladeOpen,True)</onfocus>
 				<onleft>50</onleft>
 				<onright>ClearProperty(SideBladeOpen)</onright>
 				<onright>50</onright>
@@ -89,7 +93,8 @@
 				<control type="button" id="22">
 					<description>Clear button</description>
 					<label>192</label>
-					<onclick>ReplaceWindow(music)</onclick>
+					<onclick condition="Window.IsActive(musicplaylist)">ReplaceWindow(music)</onclick>
+					<onclick condition="Window.IsActive(videoplaylist)">ReplaceWindow(Videos)</onclick>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>

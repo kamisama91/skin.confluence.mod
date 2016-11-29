@@ -7,8 +7,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="600,0" end="0,0" time="300" tween="quadratic" easing="out" condition="!Player.ShowCodec">WindowOpen</animation>
-			<animation effect="slide" start="600,0" end="0,0" time="300" delay="400" tween="quadratic" easing="out" condition="Player.ShowCodec">WindowOpen</animation>
+			<animation effect="slide" start="600,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="600,0" time="150" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<description>media info background image</description>
@@ -28,7 +27,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>101</onleft>
 				<onright>101</onright>
@@ -150,7 +149,7 @@
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
-						<label>$VAR[MainItemLabel]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(110)</visible>
 					</control>
 					<control type="label">
@@ -243,7 +242,7 @@
 						<width>550</width>
 						<height>41</height>
 						<visible>Control.HasFocus(120)</visible>
-						<texture border="5">MenuItemFO.png</texture>
+						<texture border="5">$VAR[SelectMenuItem]</texture>
 					</control>
 					<control type="label">
 						<posx>10</posx>

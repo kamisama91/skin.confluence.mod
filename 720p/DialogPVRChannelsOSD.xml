@@ -25,7 +25,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorOne]">DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>2</onleft>
 				<onright>2</onright>
@@ -118,7 +118,7 @@
 					<control type="image">
 						<left>5</left>
 						<top>35</top>
-						<width>30</width>
+						<width>20</width>
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
@@ -146,7 +146,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -159,7 +159,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -219,7 +219,7 @@
 						<top>0</top>
 						<width>410</width>
 						<height>65</height>
-						<texture border="5" colordiffuse="$VAR[MainColorOne]">button-focus2.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectButton2]</texture>
 						<visible>Control.HasFocus(11)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
@@ -238,7 +238,7 @@
 					<control type="image">
 						<left>5</left>
 						<top>35</top>
-						<width>30</width>
+						<width>20</width>
 						<height>20</height>
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
@@ -266,7 +266,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>IsEmpty(Listitem.Icon)</visible>
+						<visible>String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>
@@ -279,7 +279,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
-						<visible>!IsEmpty(Listitem.Icon)</visible>
+						<visible>!String.IsEmpty(Listitem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>50</left>

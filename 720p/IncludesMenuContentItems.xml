@@ -6,8 +6,8 @@
 				<description>Main Menu</description>
 				<label>[COLOR=selected]$LOCALIZE[31346][/COLOR]</label>
 				<onclick>SetProperty(MenuItemType,MainMenu)</onclick>
-				<visible>!StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
-				<visible>!StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>!String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>!String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Skin Default</description>
@@ -16,19 +16,19 @@
 				<onclick>Dialog.Close(2115)</onclick>
 				<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 				<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-				<visible>![substring(Window(Home).Property(UsrSelectBtn),UserSub,Left) | substring(Window(Home).Property(UsrSelectBtn),SubProg)] + Window.IsVisible(2115)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>![String.Contains(Window(Home).Property(UsrSelectBtn),UserSub,Left) | String.Contains(Window(Home).Property(UsrSelectBtn),SubProg)] + Window.IsVisible(2115)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Clear Setting</description>
-				<label>$LOCALIZE[31439]</label>
+				<label>$LOCALIZE[31499]</label>
 				<include>ClearButtonChoice</include>
 				<onclick condition="Window.IsVisible(2114)">Dialog.Close(2114)</onclick>
 				<onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
 				<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 				<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-				<visible>substring(Window(Home).Property(UsrSelectBtn),UserSub,Left) | substring(Window(Home).Property(UsrSelectBtn),SubProg) | Window.IsVisible(2114)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.Contains(Window(Home).Property(UsrSelectBtn),UserSub,Left) | String.Contains(Window(Home).Property(UsrSelectBtn),SubProg) | Window.IsVisible(2114)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Hide Item</description>
@@ -39,86 +39,86 @@
 				<onclick>Dialog.Close(2115)</onclick>
 				<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 				<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-				<visible>!substring(Window(Home).Property(UsrSelectBtn),UserSub,Left) + !substring(Window(Home).Property(UsrSelectBtn),SubProg) + Window.IsVisible(2115)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>!String.Contains(Window(Home).Property(UsrSelectBtn),UserSub,Left) + !String.Contains(Window(Home).Property(UsrSelectBtn),SubProg) + Window.IsVisible(2115)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>UPnP</description>
 				<label>$LOCALIZE[31114]</label>
 				<onclick condition="!Skin.String(UPnP_Path)">ActivateWindow(2129)</onclick>
 				<onclick condition="Skin.String(UPnP_Path)">SetProperty(MenuItemType,UPnPMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 				<visible>Skin.HasSetting(UPnP_Mode)</visible>
 			</item>
 			<item>
 				<description>Streaming</description>
 				<label>$LOCALIZE[31212] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,StreamingMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Playlists</description>
 				<label>$LOCALIZE[559] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,PlaylistMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Music</description>
 				<label>$LOCALIZE[2] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,MusicMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Videos</description>
 				<label>$LOCALIZE[3] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,VideoMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Movies</description>
 				<label>$LOCALIZE[342] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,MoviesMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 				<visible>Library.HasContent(Movies)</visible>
 			</item>
 			<item>
 				<description>TVShows</description>
 				<label>$LOCALIZE[31424] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,TVShowsMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 				<visible>Library.HasContent(TVShows)</visible>
 			</item>
 			<item>
 				<description>Concerts</description>
 				<label>$LOCALIZE[31427] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,ConcertsMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 				<visible>Library.HasContent(MusicVideos)</visible>
 			</item>
 			<item>
 				<description>Live TV</description>
 				<label>$LOCALIZE[31502] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,LiveTVMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
-				<visible>System.GetBool(pvrmanager.enabled)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>!Skin.HasSetting(DisablePVRinView)</visible>
 			</item>
 			<item>
 				<description>Profiles</description>
 				<label>$LOCALIZE[13200] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,ProfileMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Shutdown</description>
 				<label>$LOCALIZE[13005] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,ShutDownMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>System</description>
 				<label>$LOCALIZE[13000] $LOCALIZE[33061]</label>
 				<onclick>SetProperty(MenuItemType,SystemMenu)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Weather</description>
@@ -132,10 +132,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/wheather2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<enable>!IsEmpty(Weather.Plugin)</enable>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<enable>!String.IsEmpty(Weather.Plugin)</enable>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Pictures</description>
@@ -149,9 +150,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Pictures)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/pictures.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Programs</description>
@@ -166,9 +168,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Programs)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/programs.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Random SlideShow</description>
@@ -183,9 +186,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Pictures)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/pictures.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/pictures.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Favourites</description>
@@ -197,12 +201,13 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Favourites)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/favourites/default.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Dialog.Close(2114)</onclick>
 				<onclick>RunScript(script.favourites,changetitle=true&amp;property=$INFO[Window(Home).Property(UsrSelectBtn)])</onclick>
 				<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 				<visible>System.HasAddon(script.favourites)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Favourites Folder</description>
@@ -216,9 +221,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Favourites)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,fanart,special://skin/backgrounds/favourites/default.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Add-Ons</description>
@@ -233,9 +239,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://home/addons/$INFO[Skin.String(UsrSelectAddon)]/fanart.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/addons.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>DVD-drive</description>
@@ -249,9 +256,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,PlayDisc)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playdisc.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/playdvd.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Global Search</description>
@@ -264,27 +272,29 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/search.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/library.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Advanced Launcher</description>
-				<label>$LOCALIZE[0] ([COLOR=selected]$LOCALIZE[31431][/COLOR])</label>
+				<label>$LOCALIZE[0] ([COLOR=selected]$LOCALIZE[31491][/COLOR])</label>
 				<include>ClearButtonChoice</include>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunAddon(plugin.program.advanced.launcher))</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31431])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31491])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/launcher.jpg)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/programs.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>System.HasAddon(plugin.program.advanced.launcher)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>Eject Tray</description>
@@ -297,9 +307,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,PlayDisc)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,PlayDisc)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/playdvd.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<item>
 				<description>XBMC Command</description>
@@ -313,9 +324,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/addons.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/programs.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MainMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
 			</item>
 			<!-- Edit Menu -->
 			<item>
@@ -324,7 +336,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Movies</description>
@@ -332,7 +344,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit TVShows</description>
@@ -340,7 +352,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Music</description>
@@ -348,7 +360,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Concerts</description>
@@ -356,7 +368,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Live TV</description>
@@ -364,7 +376,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,LiveTV)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Playlist Videos</description>
@@ -373,8 +385,8 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window(Home).Property(UsrSelectPath),PlaylistInUse)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window(Home).Property(UsrSelectPath),PlaylistInUse)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Playlist Music</description>
@@ -383,8 +395,8 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,MusicPlayList)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window(Home).Property(UsrSelectPath),PlaylistInUse)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window(Home).Property(UsrSelectPath),PlaylistInUse)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Weather</description>
@@ -392,7 +404,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Weather)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Pictures</description>
@@ -400,7 +412,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Pictures)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Programs</description>
@@ -408,7 +420,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Programs)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit System Settings</description>
@@ -416,7 +428,7 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<item>
 				<description>Edit Shut Down Menu</description>
@@ -424,12 +436,12 @@
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),EditMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),EditMenu)</visible>
 			</item>
 			<!-- Streaming Menu -->
 			<item>
 				<description>Streaming Navigator</description>
-				<label>$LOCALIZE[33213]</label>
+				<label>$LOCALIZE[31213]</label>
 				<include>ClearButtonChoice</include>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[33002])</onclick>
 				<onclick>Skin.Setpath(UsrSelectAddon,library://video/)</onclick>
@@ -441,8 +453,9 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/network.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),StreamingMenu)</visible>
 				<include>CloseMenuChoice</include>
 			</item>
 			<item>
@@ -458,16 +471,17 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/network.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),StreamingMenu)</visible>
 				<include>CloseMenuChoice</include>
 			</item>
 			<item>
 				<description>PreSet Streaming Media</description>
-				<label>$LOCALIZE[31244] - $LOCALIZE[31430]</label>
+				<label>$LOCALIZE[31244] - $LOCALIZE[31490]</label>
 				<include>ClearButtonChoice</include>
 				<onclick>Skin.SetString(UsrSelectAddon,special://skin/extras/Streaming/Radio105NetworkTV.strm)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31430])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31490])</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,PlayMedia("$INFO[Skin.String(UsrSelectAddon)]"))</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Streaming)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
@@ -475,8 +489,9 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/network.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),StreamingMenu)</visible>
 				<include>CloseMenuChoice</include>
 			</item>
 			<item>
@@ -492,8 +507,9 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/network.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),StreamingMenu)</visible>
 				<include>CloseMenuChoice</include>
 			</item>
 			<item>
@@ -509,8 +525,9 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/network.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
-				<visible>StringCompare(Window.Property(MenuItemType),StreamingMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),StreamingMenu)</visible>
 				<include>CloseMenuChoice</include>
 			</item>
 			<!-- PlayList Menu -->
@@ -526,10 +543,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>System.HasAddon(script.simpleplaylists)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>Playlist Music</description>
@@ -545,9 +563,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,MusicPlayList)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>Music Playlists Window</description>
@@ -561,10 +580,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentAlbums)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>Playlist Video</description>
@@ -580,9 +600,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>Video Playlist Window</description>
@@ -596,9 +617,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -614,9 +636,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -632,9 +655,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -650,9 +674,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -668,9 +693,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -686,9 +712,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -704,9 +731,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<item>
 				<description>PreSet Playlist Video</description>
@@ -722,9 +750,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/playlist.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),PlayListMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
 			</item>
 			<!-- Music Menu -->
 			<item>
@@ -739,10 +768,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music</description>
@@ -755,9 +785,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Files</description>
@@ -770,9 +801,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Library</description>
@@ -785,10 +817,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Artists</description>
@@ -801,10 +834,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Albums</description>
@@ -817,10 +851,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Compilations</description>
@@ -833,10 +868,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Genre</description>
@@ -849,10 +885,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Recently Added</description>
@@ -865,10 +902,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Recently Played</description>
@@ -881,10 +919,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Top 100 Songs</description>
@@ -897,10 +936,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music PartyMode</description>
@@ -913,10 +953,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Library Music Addons</description>
@@ -930,10 +971,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Update Library Music</description>
@@ -947,9 +989,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Clean Library Music</description>
@@ -963,9 +1006,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<item>
 				<description>Music Nodes</description>
@@ -981,9 +1025,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Music)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MusicMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MusicMenu)</visible>
 			</item>
 			<!-- Video Menu -->
 			<item>
@@ -998,9 +1043,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Videos</description>
@@ -1014,9 +1060,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Videos</description>
@@ -1030,9 +1077,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Video Nodes</description>
@@ -1048,9 +1096,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoNode)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Video Folder</description>
@@ -1065,9 +1114,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Video Addons</description>
@@ -1081,9 +1131,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Videos)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Update Library Video</description>
@@ -1097,9 +1148,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<item>
 				<description>Clean Library Video</description>
@@ -1113,9 +1165,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),VideoMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),VideoMenu)</visible>
 			</item>
 			<!-- Movies Menu -->
 			<item>
@@ -1130,9 +1183,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 				<visible>System.HasAddon(script.cinema.experience)</visible>
 			</item>
 			<item>
@@ -1147,9 +1201,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>Movies</description>
@@ -1163,9 +1218,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>RecentlyAddedMovies</description>
@@ -1179,9 +1235,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>MovieSets</description>
@@ -1195,10 +1252,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>Library.HasContent(MovieSets)</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>MovieGenres</description>
@@ -1212,9 +1270,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>MovieTags</description>
@@ -1228,9 +1287,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>Movie Years</description>
@@ -1244,9 +1304,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>Movie Actors</description>
@@ -1260,9 +1321,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<item>
 				<description>Movie Nodes</description>
@@ -1278,9 +1340,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),MoviesMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),MoviesMenu)</visible>
 			</item>
 			<!-- TVShows Menu -->
 			<item>
@@ -1295,9 +1358,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>TVShows</description>
@@ -1311,9 +1375,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>In Progress TVShows</description>
@@ -1327,9 +1392,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>Recently Added TVShows</description>
@@ -1343,9 +1409,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>TVShows Genre</description>
@@ -1359,9 +1426,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>TVShows Tags</description>
@@ -1375,9 +1443,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>TVShow Years</description>
@@ -1391,9 +1460,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>TVShow Actors</description>
@@ -1407,9 +1477,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<item>
 				<description>TVShow Nodes</description>
@@ -1425,9 +1496,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),TVShowsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
 			</item>
 			<!-- Concerts Menu -->
 			<item>
@@ -1441,9 +1513,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Concerts</description>
@@ -1457,9 +1530,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Concerts Titles</description>
@@ -1473,9 +1547,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>RecentlyAddedConcerts</description>
@@ -1489,9 +1564,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Concerts genre</description>
@@ -1505,9 +1581,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Concerts Tags</description>
@@ -1521,9 +1598,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Concerts Years</description>
@@ -1537,9 +1615,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Concert Nodes</description>
@@ -1555,9 +1634,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Concerts)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ConcertsMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
 			</item>
 			<item>
 				<description>Live TV Channels</description>
@@ -1571,9 +1651,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,LiveTV)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/tv.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/livetv.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),LiveTVMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),LiveTVMenu)</visible>
 			</item>
 			<item>
 				<description>Live Radio Channels</description>
@@ -1587,9 +1668,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,LiveTV)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/tv.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/radio.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),LiveTVMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),LiveTVMenu)</visible>
 			</item>
 			<item>
 				<description>Live TV EPG</description>
@@ -1603,9 +1685,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,LiveTV)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/tv.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvguide.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),LiveTVMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),LiveTVMenu)</visible>
 			</item>
 			<item>
 				<description>Recordings</description>
@@ -1619,9 +1702,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,LiveTV)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/tv.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/livetv.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),LiveTVMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),LiveTVMenu)</visible>
 			</item>
 			<item>
 				<description>Timer</description>
@@ -1635,9 +1719,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,LiveTV)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/tv.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/livetv.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),LiveTVMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),LiveTVMenu)</visible>
 			</item>
 			<!-- Profile Menu -->
 			<item>
@@ -1652,9 +1737,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/profiles.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ProfileMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ProfileMenu)</visible>
 			</item>
 			<item>
 				<description>Log In Screen</description>
@@ -1668,9 +1754,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/profiles.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ProfileMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ProfileMenu)</visible>
 			</item>
 			<item>
 				<description>Log Off</description>
@@ -1684,9 +1771,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/profiles.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ProfileMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ProfileMenu)</visible>
 			</item>
 			<!-- Shutdown Menu -->
 			<item>
@@ -1701,9 +1789,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
 			<item>
 				<description>Exit</description>
@@ -1717,9 +1806,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
 			<item>
 				<description>Shutdown</description>
@@ -1734,10 +1824,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>System.CanPowerDown</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
 			<item>
 				<description>Suspend</description>
@@ -1752,10 +1843,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>System.CanSuspend</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
 			<item>
 				<description>Hibernate</description>
@@ -1770,10 +1862,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>System.CanHibernate</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
 			<item>
 				<description>Reboot</description>
@@ -1788,10 +1881,11 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Shutdown)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/shutdown.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvremote.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
 				<visible>System.CanReboot</visible>
-				<visible>StringCompare(Window.Property(MenuItemType),ShutDownMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),ShutDownMenu)</visible>
 			</item>
 			<!-- System Menu -->
 			<item>
@@ -1806,59 +1900,63 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/system.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
 			<item>
 				<description>os.openelec.settings</description>
-				<label>$LOCALIZE[31010]</label>
+				<label>$LOCALIZE[31400]</label>
 				<include>ClearButtonChoice</include>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunAddon(os.openelec.settings),return)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31010])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31400])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/system.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 				<visible>System.HasAddon(os.openelec.settings)</visible>
 			</item>
 			<item>
 				<description>service.openelec.settings</description>
-				<label>$LOCALIZE[31010]</label>
+				<label>$LOCALIZE[31400]</label>
 				<include>ClearButtonChoice</include>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunAddon(service.openelec.settings),return)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31010])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31400])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/system.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 				<visible>System.HasAddon(service.openelec.settings)</visible>
 			</item>
 			<item>
 				<description>script.raspbmc.settings</description>
-				<label>$LOCALIZE[31011]</label>
+				<label>$LOCALIZE[31401]</label>
 				<include>ClearButtonChoice</include>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,RunAddon(script.raspbmc.settings),return)</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31011])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[31401])</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/system.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 				<visible>System.HasAddon(script.raspbmc.settings)</visible>
 			</item>
 			<item>
@@ -1873,9 +1971,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/filemanager.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
 			<item>
 				<description>Skin Settings</description>
@@ -1889,9 +1988,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Xonfluence_Logo.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
 			<item>
 				<description>Sys Info</description>
@@ -1905,9 +2005,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/sysinfo.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
 			<item>
 				<description>Addon Browser</description>
@@ -1921,9 +2022,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/addons.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/addons.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
 			<item>
 				<description>Events</description>
@@ -1937,9 +2039,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,Settings)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/settings.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/system.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),SystemMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),SystemMenu)</visible>
 			</item>
 			<!-- UPnP Music Menu -->
 			<item>
@@ -1953,9 +2056,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/music.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP Music Playlists Window</description>
@@ -1969,9 +2073,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP Music Artists</description>
@@ -1985,9 +2090,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP Music Albums</description>
@@ -2001,9 +2107,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP Music Compilations</description>
@@ -2017,9 +2124,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Music Genre</description>
@@ -2033,9 +2141,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP music Recently Added</description>
@@ -2049,9 +2158,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP music Recently Played</description>
@@ -2065,9 +2175,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Music Top 100 Songs</description>
@@ -2081,9 +2192,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,None)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<!-- UPnP Videos -->
 			<item>
@@ -2098,9 +2210,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>Video Playlist Window</description>
@@ -2114,9 +2227,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP Movies Title</description>
@@ -2130,9 +2244,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu)</visible>
 			</item>
 			<item>
 				<description>UPnP Movies Recently Added</description>
@@ -2146,9 +2261,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/video.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Movie Sets</description>
@@ -2162,9 +2278,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Movie Genre</description>
@@ -2178,9 +2295,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP Movie Tags</description>
@@ -2194,9 +2312,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Movie Years</description>
@@ -2210,9 +2329,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Movie Actors</description>
@@ -2226,9 +2346,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/movies.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<!-- UPnP TVShows -->
 			<item>
@@ -2243,9 +2364,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + [Skin.String(UPnPServer,Kodi) | Skin.String(UPnPServer,WinHomeServer)]</visible>
 			</item>
 			<item>
 				<description>UPnP In Progress TVShows</description>
@@ -2259,9 +2381,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP TV Shows Recently Added</description>
@@ -2275,9 +2398,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP TV Shows Genres</description>
@@ -2291,9 +2415,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP TV Shows Tags</description>
@@ -2307,9 +2432,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP TV Shows Years</description>
@@ -2323,9 +2449,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP TV Shows Actors</description>
@@ -2339,9 +2466,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/videos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/tvshows.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<!-- UPnP Concerts -->
 			<item>
@@ -2356,9 +2484,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Recently Added Concerts</description>
@@ -2372,9 +2501,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Concerts Genre </description>
@@ -2388,9 +2518,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Concerts Tags</description>
@@ -2404,9 +2535,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 			<item>
 				<description>UPnP Concerts Years</description>
@@ -2420,9 +2552,10 @@
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,UPnP)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
 				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,special://skin/backgrounds/musicvideos.jpg)</onclick>
+				<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
 				<include>CloseMenuChoice</include>
-				<visible>StringCompare(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
+				<visible>String.IsEqual(Window.Property(MenuItemType),UPnPMenu) + Skin.String(UPnPServer,Kodi)</visible>
 			</item>
 		</content>
 	</include>

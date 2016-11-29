@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo</visible>
+	<visible>!Player.Playing</visible>
+	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
 	<visible>!Skin.HasSetting(HidePopUpSeekBar) | [Skin.HasSetting(HidePopUpSeekBar) + [Window.IsVisible(FullscreenVideo) | Window.IsVisible(visualisation) | Window.IsVisible(Home)]]</visible>
 	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -11,7 +13,7 @@
 			<visible>!Skin.HasSetting(HidePopUpSeekBar)</visible>
 			<visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
             <animation effect="slide" start="0,0" end="-100,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="Player.Muted">conditional</animation>
 			<left>705r</left>
 			<top>-6</top>
 			<include>VisibleFadeEffect</include>
@@ -54,7 +56,7 @@
 			<animation effect="slide" start="0,0" end="195,665" time="0" condition="Skin.HasSetting(HidePopUpSeekBar)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-100" time="0" condition="Skin.HasSetting(HidePopUpSeekBar) + [[Window.IsActive(VideoOSD) + !Skin.HasSetting(HideArtWorkOSD)] | [Window.IsActive(MusicOSD) + !Skin.HasSetting(HideMusicArtWorkOSD)]]">Conditional</animation>
             <animation effect="slide" start="0,0" end="-100,0" time="0" condition="!Skin.HasSetting(HidePopUpSeekBar) + system.getbool(input.enablemouse)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="!Skin.HasSetting(HidePopUpSeekBar) + Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="75" condition="!Skin.HasSetting(HidePopUpSeekBar) + Player.Muted">conditional</animation>
 			<left>560r</left>
 			<top>-6</top>
 			<control type="image">
@@ -82,7 +84,7 @@
 					<width>20</width>
 					<height>44</height>
 					<texture>OSDSeekRewind.png</texture>
-					<visible>Player.Rewinding</visible>
+					<visible>Player.Rewinding | [Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)]</visible>
 				</control>
 				<control type="image">
 					<left>80</left>
@@ -90,7 +92,7 @@
 					<width>20</width>
 					<height>44</height>
 					<texture>OSDSeekForward.png</texture>
-					<visible>Player.Forwarding</visible>
+					<visible>Player.Forwarding | [Player.IsTempo + String.StartsWith(Player.PlaySpeed,1.)]</visible>
 				</control>
 				<control type="image">
 					<left>31</left>
@@ -106,7 +108,7 @@
 					<width>40</width>
 					<height>40</height>
 					<texture>OSDPlay.png</texture>
-					<visible>Player.Playing</visible>
+					<visible>Player.Playing + !Player.IsTempo</visible>
 				</control>
 				<control type="image">
 					<left>28</left>
@@ -117,12 +119,28 @@
 					<visible>Player.Rewinding2x</visible>
 				</control>
 				<control type="image">
+					<left>28</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD0.9x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,0.90)</visible>
+				</control>
+				<control type="image">
 					<left>25</left>
 					<top>4</top>
 					<width>40</width>
 					<height>40</height>
 					<texture>OSD4x.png</texture>
 					<visible>Player.Rewinding4x</visible>
+				</control>
+				<control type="image">
+					<left>25</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD0.8x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,0.80)</visible>
 				</control>
 				<control type="image">
 					<left>22</left>
@@ -157,12 +175,28 @@
 					<visible>Player.Forwarding2x</visible>
 				</control>
 				<control type="image">
+					<left>34</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD1.1x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,1.10)</visible>
+				</control>
+				<control type="image">
 					<left>37</left>
 					<top>4</top>
 					<width>40</width>
 					<height>40</height>
 					<texture>OSD4x.png</texture>
 					<visible>Player.Forwarding4x</visible>
+				</control>
+				<control type="image">
+					<left>37</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD1.2x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,1.20)</visible>
 				</control>
 				<control type="image">
 					<left>40</left>
@@ -173,6 +207,14 @@
 					<visible>Player.Forwarding8x</visible>
 				</control>
 				<control type="image">
+					<left>40</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD1.3x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,1.30)</visible>
+				</control>
+				<control type="image">
 					<left>43</left>
 					<top>4</top>
 					<width>40</width>
@@ -181,12 +223,28 @@
 					<visible>Player.Forwarding16x</visible>
 				</control>
 				<control type="image">
+					<left>43</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD1.4x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,1.40)</visible>
+				</control>
+				<control type="image">
 					<left>45</left>
 					<top>4</top>
 					<width>40</width>
 					<height>40</height>
 					<texture>OSD32x.png</texture>
 					<visible>Player.Forwarding32x</visible>
+				</control>
+				<control type="image">
+					<left>45</left>
+					<top>4</top>
+					<width>40</width>
+					<height>40</height>
+					<texture>OSD1.5x.png</texture>
+					<visible>String.IsEqual(Player.PlaySpeed,1.50)</visible>
 				</control>
 			</control>
 			<control type="label">

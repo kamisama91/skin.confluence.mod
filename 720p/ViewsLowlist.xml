@@ -39,7 +39,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>430</left>
+						<left>410</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -51,7 +51,7 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
-						<left>430</left>
+						<left>410</left>
 						<top>14</top>
 						<width>20</width>
 						<height>16</height>
@@ -72,14 +72,14 @@
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>460</width>
+						<width>470</width>
 						<height>41</height>
-						<texture border="0,2,0,2" colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texture>
+						<texture border="5" colordiffuse="$VAR[MainColorOne]">$VAR[SelectMenuItem]</texture>
 						<visible>Control.HasFocus(724)</visible>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="image">
-						<left>370</left>
+						<left>360</left>
 						<top>5</top>
 						<width>100</width>
 						<height>31</height>
@@ -99,7 +99,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>430</left>
+						<left>410</left>
 						<top>0</top>
 						<width>400</width>
 						<height>40</height>
@@ -111,7 +111,7 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
-						<left>430</left>
+						<left>410</left>
 						<top>14</top>
 						<width>20</width>
 						<height>16</height>
@@ -139,7 +139,7 @@
 			<control type="group">
 				<visible>Control.IsVisible(724)</visible>
 				<control type="group">
-					<visible>IsEmpty(ListItem.Art(poster)) | !Window.IsVisible(Videos)</visible>
+					<visible>String.IsEmpty(ListItem.Art(poster)) | !Window.IsVisible(Videos)</visible>
 					<left>40</left>
 					<top>185</top>
 					<camera x="640" y="200" />
@@ -152,7 +152,7 @@
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[ListItem.thumbnailImage]</texture>
-						<visible>!IsEmpty(ListItem.thumbnailImage)</visible>
+						<visible>!String.IsEmpty(ListItem.thumbnailImage)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -162,11 +162,11 @@
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture background="true" diffuse="ClearCase/EmptyCaseMask.png">$INFO[ListItem.Icon]</texture>
-						<visible>IsEmpty(ListItem.thumbnailImage)</visible>
+						<visible>String.IsEmpty(ListItem.thumbnailImage)</visible>
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Art(poster)) + Window.IsVisible(Videos)</visible>
+					<visible>!String.IsEmpty(ListItem.Art(poster)) + Window.IsVisible(Videos)</visible>
 					<left>40</left>
 					<top>185</top>
 					<camera x="640" y="200" />
@@ -228,7 +228,7 @@
 					<textcolor>white</textcolor>
 					<label>$VAR[VideoDescription,[B]$LOCALIZE[207]: [/B]]</label>
 					<autoscroll time="2600" delay="6000" repeat="6000">!Skin.HasSetting(StopAutoScroll)</autoscroll>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<description>Rating value</description>
@@ -237,8 +237,8 @@
 					<width>150</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
-					<texture>LeftRating/$INFO[ListItem.StarRating]</texture>
-					<visible>!IsEmpty(ListItem.StarRating)</visible>
+					<texture>LeftRating/$INFO[ListItem.Rating]</texture>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
 				</control>
 				<control type="label">
 					<right>30</right>
@@ -252,7 +252,7 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$VAR[MediaRuntime,[B]$LOCALIZE[2050]: [/B]]</label>
-					<visible>!IsEmpty(ListItem.Duration)</visible>
+					<visible>!String.IsEmpty(ListItem.Duration)</visible>
 				</control>
 			</control>
 		</control>
