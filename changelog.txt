@@ -1,3 +1,8 @@
+[B]14.1.0/B] 
+- Add Set information on movie widget
+- Add MusicVideo and Audio smartplaylist stats
+- Clear service.skin.smartplaylist.* when log-off
+
 [B]14.0.1/B] [I]Dec 2016[/I]
 - Replace script.randomandlastitems with service.skin.smartplaylist.widgets 0.3.2
 

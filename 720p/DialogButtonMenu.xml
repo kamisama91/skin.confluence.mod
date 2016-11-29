@@ -194,6 +194,23 @@
 				<textwidth>290</textwidth>
 				<texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
 				<texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
+				
+				<!-- Dispose of service.skin.smartplaylist.widgets addon -->
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist1,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist2,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist3,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist4,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist5,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist6,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist7,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist8,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist9,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist10,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist11,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist12,Home)</onclick>
+				<onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings,true,Home)</onclick>
+				<onclick>ClearProperty(service.skin.smartplaylist.widgets.Loaded,Home)</onclick>
+				
 				<onclick>dialog.close(all,true)</onclick>
 				<onclick>System.LogOff</onclick>
 				<pulseonselect>no</pulseonselect>
