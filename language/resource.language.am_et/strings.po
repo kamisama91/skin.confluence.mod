@@ -21,11 +21,11 @@ msgid "Change your"
 msgstr ""
 
 msgctxt "#31001"
-msgid ":"
+msgid "GAMES"
 msgstr ""
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
 msgstr ""
 
 msgctxt "#31003"
@@ -77,11 +77,11 @@ msgid "Memory used"
 msgstr ""
 
 msgctxt "#31015"
-msgid "Never"
+msgid "Minute"
 msgstr ""
 
 msgctxt "#31016"
-msgid "Permanently"
+msgid "Elapsed time"
 msgstr ""
 
 msgctxt "#31017"
@@ -104,6 +104,10 @@ msgctxt "#31021"
 msgid "Enable trailers button"
 msgstr ""
 
+msgctxt "#31022"
+msgid "Enable playlist at startup"
+msgstr ""
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "በማጫወት ላይ"
@@ -118,7 +122,7 @@ msgstr "እቃዎች"
 
 msgctxt "#31026"
 msgid "Misc options"
-msgstr ""
+msgstr "የ ተለያዩ ምርጫዎች"
 
 msgctxt "#31027"
 msgid "Location"
@@ -160,6 +164,10 @@ msgctxt "#31036"
 msgid "Please set path to UPnP server"
 msgstr ""
 
+msgctxt "#31037"
+msgid "Image only minimum popup seekbar"
+msgstr ""
+
 msgctxt "#31038"
 msgid "Select item to swap"
 msgstr ""
@@ -170,7 +178,7 @@ msgstr "ተግባሮች"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr ""
+msgstr "አሁን የሚጫወተው"
 
 msgctxt "#31041"
 msgid "UPnP error"
@@ -196,6 +204,10 @@ msgctxt "#31046"
 msgid "SEEKING"
 msgstr "በ መፈለግ ላይ"
 
+msgctxt "#31047"
+msgid "PLAY SPEED"
+msgstr ""
+
 msgctxt "#31048"
 msgid "Visualisation presets"
 msgstr ""
@@ -220,6 +232,10 @@ msgctxt "#31053"
 msgid "Watched banners"
 msgstr ""
 
+msgctxt "#31054"
+msgid "Special features"
+msgstr ""
+
 msgctxt "#31055"
 msgid "Open playlist"
 msgstr "ዝርዝሮችን መክፈቻ"
@@ -242,7 +258,7 @@ msgstr "አሁን የሚጫወተው ዝርዝር"
 
 msgctxt "#31061"
 msgid "Current selected"
-msgstr ""
+msgstr "አሁን የተመረጠው"
 
 msgctxt "#31062"
 msgid "Episode backdrop"
@@ -325,7 +341,7 @@ msgid "Enable clock and date display"
 msgstr ""
 
 msgctxt "#31082"
-msgid "Profile (if not master)"
+msgid " (if not master)"
 msgstr ""
 
 msgctxt "#31083"
@@ -390,6 +406,10 @@ msgstr ""
 
 msgctxt "#31098"
 msgid "Top left widget on all screens"
+msgstr ""
+
+msgctxt "#31099"
+msgid "Use extra fanart on navigation"
 msgstr ""
 
 msgctxt "#31100"
@@ -465,7 +485,7 @@ msgid "Show recently added videos"
 msgstr ""
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
+msgid "Home page \"Add-ons\" submenu"
 msgstr ""
 
 msgctxt "#31119"
@@ -473,7 +493,7 @@ msgid "Hide background fanart"
 msgstr ""
 
 msgctxt "#31120"
-msgid "Hide page count info"
+msgid "Home page \"Games\" submenu"
 msgstr ""
 
 msgctxt "#31121"
@@ -518,7 +538,7 @@ msgstr ""
 
 msgctxt "#31132"
 msgid "Lyrics add-on"
-msgstr ""
+msgstr "ግጥም መጨ-መሪያ "
 
 msgctxt "#31133"
 msgid "Minimize on exit button"
@@ -551,6 +571,10 @@ msgstr ""
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "ሙዚቃ OSD"
+
+msgctxt "#31141"
+msgid "Hide page count info"
+msgstr ""
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -606,6 +630,54 @@ msgstr ""
 
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
+msgstr ""
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Permanently"
+msgstr ""
+
+msgctxt "#31160"
+msgid "Visualisation settings"
+msgstr ""
+
+msgctxt "#31161"
+msgid "Lyrics add-on settings"
+msgstr ""
+
+msgctxt "#31162"
+msgid " pack for "
+msgstr ""
+
+msgctxt "#31163"
+msgid "Update all backgrounds"
+msgstr ""
+
+msgctxt "#31164"
+msgid "Flags"
+msgstr ""
+
+msgctxt "#31165"
+msgid "Don't ask again"
+msgstr ""
+
+msgctxt "#31166"
+msgid "Setup default background"
+msgstr ""
+
+msgctxt "#31167"
+msgid "No backgrounds set, install and setup default backgrounds add-on?"
 msgstr ""
 
 msgctxt "#31188"
@@ -670,7 +742,7 @@ msgstr ""
 
 msgctxt "#31203"
 msgid "Choose your song"
-msgstr ""
+msgstr "የ እርስዎን ዘፈን ይምረጡ"
 
 msgctxt "#31204"
 msgid "ExtendedInfo"
@@ -678,7 +750,7 @@ msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics source"
-msgstr ""
+msgstr "የ ግጥም ምንጭ"
 
 msgctxt "#31206"
 msgid "Found"
@@ -686,7 +758,7 @@ msgstr "ተገኝቷል"
 
 msgctxt "#31207"
 msgid "Find more items"
-msgstr ""
+msgstr "ተጨማሪ እቃዎች ያግኙ"
 
 msgctxt "#31208"
 msgid "Upcoming episodes"
@@ -925,7 +997,7 @@ msgid "Enable visible horizontal submenu"
 msgstr ""
 
 msgctxt "#31276"
-msgid "Extra art work options"
+msgid "Extra artwork options"
 msgstr ""
 
 msgctxt "#31277"
@@ -1018,7 +1090,7 @@ msgstr ""
 
 msgctxt "#31301"
 msgid "Last updated"
-msgstr ""
+msgstr "መጨረሻ የተሻሻለው"
 
 msgctxt "#31302"
 msgid "Outlook - "
@@ -1046,15 +1118,15 @@ msgstr ""
 
 msgctxt "#31308"
 msgid "Movie details"
-msgstr ""
+msgstr "የ ሙቪ ዝርዝር "
 
 msgctxt "#31309"
 msgid "Memory used:"
-msgstr ""
+msgstr "የ ተጠቀሙት ማስታወሻ"
 
 msgctxt "#31310"
 msgid "Track number"
-msgstr ""
+msgstr "የ ተረኛ ቁጥር "
 
 msgctxt "#31315"
 msgid "Submenu item"
@@ -1074,11 +1146,11 @@ msgstr ""
 
 msgctxt "#31319"
 msgid "Selected profile"
-msgstr ""
+msgstr "የ ተመረጠው ገጽታ"
 
 msgctxt "#31320"
 msgid "Last logged in"
-msgstr ""
+msgstr "መጨረሻ የገባው በ"
 
 msgctxt "#31321"
 msgid "Library mode"
@@ -1098,7 +1170,7 @@ msgstr ""
 
 msgctxt "#31325"
 msgid "Playlist options"
-msgstr ""
+msgstr "የሚያጫውቱት ምርጫዎች "
 
 msgctxt "#31326"
 msgid "Created"
@@ -1106,11 +1178,11 @@ msgstr "የተፈጠረው"
 
 msgctxt "#31327"
 msgid "Resolution"
-msgstr "Resolution"
+msgstr "ሪዞሊሽን"
 
 msgctxt "#31328"
 msgid "Recently added"
-msgstr ""
+msgstr "በቅርብ ጊዜ የተጨመሩ "
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -1122,10 +1194,10 @@ msgstr ""
 
 msgctxt "#31331"
 msgid "Album details"
-msgstr ""
+msgstr "የ አልበም ዝርዝሮች"
 
 msgctxt "#31332"
-msgid "Alternate fanArt"
+msgid "Alternate fanart"
 msgstr ""
 
 msgctxt "#31333"
@@ -1190,7 +1262,7 @@ msgstr "ማቆሚያ"
 
 msgctxt "#31353"
 msgid "Fast forward"
-msgstr ""
+msgstr "ወደ ፊት ማሳለፊያ"
 
 msgctxt "#31354"
 msgid "Rewind"
@@ -1202,7 +1274,7 @@ msgstr "የሙቪ ዝርዝር"
 
 msgctxt "#31356"
 msgid "Download subtitles"
-msgstr ""
+msgstr "ንዑስ አርእስቶች ማውረጃ "
 
 msgctxt "#31359"
 msgid "User video OSD button"
@@ -1257,7 +1329,7 @@ msgid "Enable video OSD plot on pause"
 msgstr ""
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
+msgid "Enable video info and seekbar on pause"
 msgstr ""
 
 msgctxt "#31375"
@@ -1269,7 +1341,7 @@ msgid "Use autocomplete on keyboards"
 msgstr ""
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
+msgid "Enable video info on OSD menu"
 msgstr ""
 
 msgctxt "#31380"
@@ -1354,7 +1426,7 @@ msgstr ""
 
 msgctxt "#31411"
 msgid "First run help..."
-msgstr ""
+msgstr "እርዳታ መጀመሪያ ጊዜ ሲያስኬዱ...."
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
@@ -1578,15 +1650,15 @@ msgstr "ቲቪ "
 
 msgctxt "#31503"
 msgid "Add group"
-msgstr ""
+msgstr "ቡድን መጨመሪያ"
 
 msgctxt "#31504"
 msgid "Rename group"
-msgstr ""
+msgstr "ቡድን እንደገና መሰየሚያ"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr ""
+msgstr "ቡድን ማጥፊያ"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
@@ -1594,15 +1666,15 @@ msgstr "ዝግጁ[CR]ቡድኖች"
 
 msgctxt "#31509"
 msgid "Channel group"
-msgstr ""
+msgstr "የ ጣቢያ ቡድን"
 
 msgctxt "#31510"
 msgid "Timer set"
-msgstr ""
+msgstr "ሰአት ማሰናጃ"
 
 msgctxt "#31511"
 msgid "Channel options"
-msgstr ""
+msgstr "የጣቢያ ምርጫዎች "
 
 msgctxt "#31648"
 msgid "Low List"
@@ -1670,15 +1742,15 @@ msgstr ""
 
 msgctxt "#31902"
 msgid "Hourly forecast"
-msgstr ""
+msgstr "የ ሰአት ግምት "
 
 msgctxt "#31903"
 msgid "Weekend forecast"
-msgstr ""
+msgstr "የሳምንቱ መጨረሻ ግምት "
 
 msgctxt "#31904"
 msgid "Daily forecast"
-msgstr ""
+msgstr "የ እለቱ ግምት "
 
 msgctxt "#31905"
 msgid "Forecast"
@@ -1708,6 +1780,10 @@ msgctxt "#31922"
 msgid "Enable fanart script"
 msgstr ""
 
+msgctxt "#31923"
+msgid "Disable PVR in view"
+msgstr ""
+
 msgctxt "#31924"
 msgid "Album thumbnails"
 msgstr ""
@@ -1718,6 +1794,10 @@ msgstr ""
 
 msgctxt "#31926"
 msgid "Configure script.tvtunes"
+msgstr ""
+
+msgctxt "#31928"
+msgid "Enable extra fanart"
 msgstr ""
 
 msgctxt "#31929"
@@ -1752,6 +1832,10 @@ msgctxt "#31936"
 msgid "Configure service.skin.widgets"
 msgstr ""
 
+msgctxt "#31937"
+msgid "Use alternative background folder"
+msgstr ""
+
 msgctxt "#31938"
 msgid "Movie details"
 msgstr ""
@@ -1774,6 +1858,30 @@ msgstr ""
 
 msgctxt "#31943"
 msgid "Use default confluence favourites window look and feel"
+msgstr ""
+
+msgctxt "#31944"
+msgid "Visible in Master mode only"
+msgstr ""
+
+msgctxt "#31945"
+msgid "Reset paths to skin default"
+msgstr ""
+
+msgctxt "#31946"
+msgid "Reset fanart to skin default"
+msgstr ""
+
+msgctxt "#31947"
+msgid "Button look and feel"
+msgstr ""
+
+msgctxt "#31948"
+msgid "Button layout look and feel"
+msgstr ""
+
+msgctxt "#31949"
+msgid "OSD look and feel"
 msgstr ""
 
 msgctxt "#31950"
@@ -1805,8 +1913,8 @@ msgid "MUSIC"
 msgstr "ሙዚቃ"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "ፕሮግራሞች"
+msgid "ADD-ONS"
+msgstr ""
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -1821,19 +1929,19 @@ msgid "RADIO"
 msgstr "ራዲዮ"
 
 msgctxt "#31961"
-msgid "Disable PVR in view"
+msgid "Timeshift"
 msgstr ""
 
 msgctxt "#31962"
-msgid "Reset paths to skin default"
+msgid "Choose kind of profile identification"
 msgstr ""
 
 msgctxt "#31963"
-msgid "Reset fanart to skin default"
-msgstr ""
+msgid "Profile name"
+msgstr "የ ገጽታ ስም"
 
 msgctxt "#31964"
-msgid "Use alternative background folder"
+msgid "Profile avatar"
 msgstr ""
 
 msgctxt "#31965"

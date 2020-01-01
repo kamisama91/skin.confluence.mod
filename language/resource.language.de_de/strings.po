@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-11-27 23:00+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/kodi-main/language/de_DE/)\n"
 "Language: de_DE\n"
@@ -21,16 +21,16 @@ msgid "Change your"
 msgstr "Ändern von"
 
 msgctxt "#31001"
-msgid ":"
-msgstr ""
+msgid "GAMES"
+msgstr "SPIELE"
 
 msgctxt "#31002"
-msgid "Enable manual opening of media views slide menu"
-msgstr ""
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]GAMING EINSTELLUNGEN[/B][CR][CR]Zurückspulen-Unterstützung ·  Tastaturbenutzung und Anzahl der Nutzer"
 
 msgctxt "#31003"
 msgid "Power options"
-msgstr "Energieeinstellungen"
+msgstr "Energie-Einstellungen"
 
 msgctxt "#31004"
 msgid "Working..."
@@ -42,11 +42,11 @@ msgstr "Informationen verstecken"
 
 msgctxt "#31006"
 msgid "View options"
-msgstr "Ansichtseinstellungen"
+msgstr "Ansichts-Einstellungen"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr ""
+msgstr "Information zur Videoverarbeitung"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -77,12 +77,12 @@ msgid "Memory used"
 msgstr "Genutzter Arbeitsspeicher"
 
 msgctxt "#31015"
-msgid "Never"
-msgstr "Niemals"
+msgid "Minute"
+msgstr "Minute"
 
 msgctxt "#31016"
-msgid "Permanently"
-msgstr "Dauerhaft"
+msgid "Elapsed time"
+msgstr "Verstrichen zeit"
 
 msgctxt "#31017"
 msgid "Info button"
@@ -103,6 +103,10 @@ msgstr "Autovervollständigung"
 msgctxt "#31021"
 msgid "Enable trailers button"
 msgstr "Aktiviere Trailer-Schaltfläche"
+
+msgctxt "#31022"
+msgid "Enable playlist at startup"
+msgstr "Aktiviere Wiedergabeliste beim Start"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -160,6 +164,10 @@ msgctxt "#31036"
 msgid "Please set path to UPnP server"
 msgstr "Bitte Pfad zum UPnP-Server eintragen"
 
+msgctxt "#31037"
+msgid "Image only minimum popup seekbar"
+msgstr "Nur Bilder Suchleiste"
+
 msgctxt "#31038"
 msgid "Select item to swap"
 msgstr "Wähle Eintrag zum Tauschen"
@@ -196,6 +204,10 @@ msgctxt "#31046"
 msgid "SEEKING"
 msgstr "SUCHLAUF"
 
+msgctxt "#31047"
+msgid "PLAY SPEED"
+msgstr "LAUF GESCHWINDIGKEIT"
+
 msgctxt "#31048"
 msgid "Visualisation presets"
 msgstr "Visualisierungs-Voreinstellungen"
@@ -219,6 +231,10 @@ msgstr "Neue Banner"
 msgctxt "#31053"
 msgid "Watched banners"
 msgstr "Gesehen Banner"
+
+msgctxt "#31054"
+msgid "Special features"
+msgstr "Speciale Eigenschaften"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -246,7 +262,7 @@ msgstr "Aktuell ausgewählt"
 
 msgctxt "#31062"
 msgid "Episode backdrop"
-msgstr ""
+msgstr "Episoden-Hintergrund"
 
 msgctxt "#31063"
 msgid "Show volume buttons"
@@ -274,7 +290,7 @@ msgstr "Aktiviere Fanart-Animation bei Medienwiedergabe"
 
 msgctxt "#31069"
 msgid "Enable home floor"
-msgstr "Aktiviere Boden für Startbildschirm"
+msgstr "Aktiviere Hauptmenü-Untergrund"
 
 msgctxt "#31070"
 msgid "Enable list item background fanart"
@@ -302,7 +318,7 @@ msgstr "Aktiviere Vorschaubilder für Episoden"
 
 msgctxt "#31076"
 msgid "Enable raindrop effect"
-msgstr "Aktiviere Regentropfeneffekt"
+msgstr "Aktiviere Regentropfen-Effekt"
 
 msgctxt "#31077"
 msgid "Shutdown menu"
@@ -310,7 +326,7 @@ msgstr "Menü Herunterfahren"
 
 msgctxt "#31078"
 msgid "Power button action"
-msgstr "Funktion des Power-Button"
+msgstr "Funktion des Power-Buttons"
 
 msgctxt "#31079"
 msgid "Hide power button"
@@ -325,8 +341,8 @@ msgid "Enable clock and date display"
 msgstr "Uhr und Datum anzeigen"
 
 msgctxt "#31082"
-msgid "Profile (if not master)"
-msgstr "Profile (wenn nicht Master)"
+msgid " (if not master)"
+msgstr " (wenn nicht Master)"
 
 msgctxt "#31083"
 msgid "Kodi icon"
@@ -354,7 +370,7 @@ msgstr "von"
 
 msgctxt "#31089"
 msgid "Enable PVR recording info"
-msgstr "Aktiviere PVR Aufnahmeinfo"
+msgstr "Aktiviere PVR-Aufnahmeinfo"
 
 msgctxt "#31090"
 msgid "Use wide banners"
@@ -391,6 +407,10 @@ msgstr "Aktiviere unteren Zurück-Button (für Touch)"
 msgctxt "#31098"
 msgid "Top left widget on all screens"
 msgstr "Oberes linkes Widget immer einblenden"
+
+msgctxt "#31099"
+msgid "Use extra fanart on navigation"
+msgstr "Benutze extra Fanart bei Navigieren"
 
 msgctxt "#31100"
 msgid "Weather fanart"
@@ -465,16 +485,16 @@ msgid "Show recently added videos"
 msgstr "Zeige zuletzt hinzugefügte Videos"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Hauptmenü Programme-Untermenü"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Hauptmenü \"Add-ons\"-Untermenü"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Hintergrund-Fanart verstecken"
 
 msgctxt "#31120"
-msgid "Hide page count info"
-msgstr "Verstecke Info zur Medienanzahl"
+msgid "Home page \"Games\" submenu"
+msgstr "Hauptmenü \"Spielen\"-Untermenü"
 
 msgctxt "#31121"
 msgid "Show plot info on info screen"
@@ -482,7 +502,7 @@ msgstr "Zeige Handlung im Info-Bildschirm"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr "Verstecke EPG wenn RDS im Kanalfenster verfügbar ist"
+msgstr "Im Kanal-Fenster keine EPG-Informationen anzeigen, wenn RDS-Informationen verfügbar sind"
 
 msgctxt "#31123"
 msgid "Popup:"
@@ -538,7 +558,7 @@ msgstr "Hauptmenü Bilder-Untermenü"
 
 msgctxt "#31137"
 msgid "Enable low main menu bar"
-msgstr "Aktiviere niedrige Hauptmenüleiste"
+msgstr "Aktiviere niedrige Hauptmenü-Leiste"
 
 msgctxt "#31138"
 msgid "Play party mode music on screensaver"
@@ -546,11 +566,15 @@ msgstr "Spiele Musik im Partymode im Bildschirmschoner"
 
 msgctxt "#31139"
 msgid "Enable automatic fullscreen music playback"
-msgstr "Aktiviere automatisch Vollbild-Musikwiedergabe"
+msgstr "Aktiviere automatische Vollbild-Musikwiedergabe"
 
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr "Musik-OSD"
+
+msgctxt "#31141"
+msgid "Hide page count info"
+msgstr "Verstecke Info zur Medienanzahl"
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -607,6 +631,54 @@ msgstr "Benachrichtigungen oben links"
 msgctxt "#31155"
 msgid "Show global search button on bottom left"
 msgstr "Zeige globalen Such-Button unten links"
+
+msgctxt "#31156"
+msgid ":"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Enable manual opening of media views slide menu"
+msgstr "Manuelles Öffnen des Medien-Slide-Menüs aktivieren"
+
+msgctxt "#31158"
+msgid "Never"
+msgstr "Niemals"
+
+msgctxt "#31159"
+msgid "Permanently"
+msgstr "Dauerhaft"
+
+msgctxt "#31160"
+msgid "Visualisation settings"
+msgstr "Visualisierungs-Einstellungen"
+
+msgctxt "#31161"
+msgid "Lyrics add-on settings"
+msgstr "Liedtexte Addon-Einstellungen"
+
+msgctxt "#31162"
+msgid " pack for "
+msgstr " Paket für "
+
+msgctxt "#31163"
+msgid "Update all backgrounds"
+msgstr "Aktualisieren aller Hintergrund"
+
+msgctxt "#31164"
+msgid "Flags"
+msgstr "Flaggen"
+
+msgctxt "#31165"
+msgid "Don't ask again"
+msgstr "Nie mehr fragen"
+
+msgctxt "#31166"
+msgid "Setup default background"
+msgstr "Standard Hintergrund konfigurieren"
+
+msgctxt "#31167"
+msgid "No backgrounds set, install and setup default backgrounds add-on?"
+msgstr "Kiene Hintergrunde konfiguriert, Standard Hintergrunde Addon installieren und konfigurieren?"
 
 msgctxt "#31188"
 msgid "Random concerts"
@@ -834,7 +906,7 @@ msgstr "Skin-Voreinstellung"
 
 msgctxt "#31245"
 msgid "Next aired episodes"
-msgstr "Kommende ausgestrahlte Episoden"
+msgstr "Kommende Episoden"
 
 msgctxt "#31247"
 msgid "Move menu item"
@@ -902,11 +974,11 @@ msgstr "Nicht beendet"
 
 msgctxt "#31270"
 msgid "Ubuntu Normal"
-msgstr ""
+msgstr "Ubuntu Normal"
 
 msgctxt "#31271"
 msgid "Ubuntu Bold"
-msgstr ""
+msgstr "Ubuntu Bold"
 
 msgctxt "#31272"
 msgid "Enable holiday theme"
@@ -925,7 +997,7 @@ msgid "Enable visible horizontal submenu"
 msgstr "Aktiviere sichtbares, horizontales Untermenü"
 
 msgctxt "#31276"
-msgid "Extra art work options"
+msgid "Extra artwork options"
 msgstr "Einstellungen für zusätzliche Artwork"
 
 msgctxt "#31277"
@@ -966,11 +1038,11 @@ msgstr "Android"
 
 msgctxt "#31288"
 msgid "Select icon"
-msgstr "Symbool auswahl"
+msgstr "Symbol auswählen"
 
 msgctxt "#31289"
 msgid "Icon"
-msgstr "Symbool"
+msgstr "Symbol"
 
 msgctxt "#31290"
 msgid "Menu item"
@@ -994,7 +1066,7 @@ msgstr "Hintergrundtyp"
 
 msgctxt "#31295"
 msgid "Live content"
-msgstr "Liveinhalt"
+msgstr "Live-Inhalt"
 
 msgctxt "#31296"
 msgid "Movie fanart"
@@ -1125,7 +1197,7 @@ msgid "Album details"
 msgstr "Album-Details"
 
 msgctxt "#31332"
-msgid "Alternate fanArt"
+msgid "Alternate fanart"
 msgstr "Alternative Fanart"
 
 msgctxt "#31333"
@@ -1257,8 +1329,8 @@ msgid "Enable video OSD plot on pause"
 msgstr "Aktiviere Video-OSD mit Handlung beim Pausieren"
 
 msgctxt "#31374"
-msgid "Enable video codec info on pause"
-msgstr ""
+msgid "Enable video info and seekbar on pause"
+msgstr "Aktiviere Video-Info und Suchleiste während Pause"
 
 msgctxt "#31375"
 msgid "Use graphical textures on keyboards"
@@ -1266,15 +1338,15 @@ msgstr "Benutze grafische Symbole in der Tastatur"
 
 msgctxt "#31376"
 msgid "Use autocomplete on keyboards"
-msgstr "Benutze Autovervollständigung in Tastaturen"
+msgstr "Benutze Autovervollständigung auf Tastaturen"
 
 msgctxt "#31377"
-msgid "Enable video codec info on OSD menu"
-msgstr "Zeige info zum Videocodec im OSD-Menü"
+msgid "Enable video info on OSD menu"
+msgstr "Zeige info zum Video im OSD-Menü"
 
 msgctxt "#31380"
 msgid "Enable playlist widget script"
-msgstr "Aktiviere Playlist Widget Script"
+msgstr "Aktiviere Playlist-Widget-Script"
 
 msgctxt "#31381"
 msgid "Configure script.randomandlastitems"
@@ -1282,7 +1354,7 @@ msgstr "Konfiguriere script.randomandlastitems"
 
 msgctxt "#31382"
 msgid "Playlist widget should [B]randomize[/B] the playlist sort order"
-msgstr ""
+msgstr "Playlist-Widget-Script erstellt [B]zufällige[/B] Sortierreihenfolge"
 
 msgctxt "#31383"
 msgid "Enable video artwork to show with OSD information"
@@ -1326,7 +1398,7 @@ msgstr "Fett"
 
 msgctxt "#31397"
 msgid "Enable TV show next aired"
-msgstr "Aktiviere TV Show Next Aired"
+msgstr "Aktiviere kommende Episoden"
 
 msgctxt "#31398"
 msgid "Configure script.tv.show.next.aired"
@@ -1334,11 +1406,11 @@ msgstr "Konfiguriere script.tv.show.next.aired"
 
 msgctxt "#31400"
 msgid "OpenELEC OS"
-msgstr ""
+msgstr "OpenELEC OS"
 
 msgctxt "#31401"
 msgid "Raspberry OS"
-msgstr ""
+msgstr "Raspberry OS"
 
 msgctxt "#31402"
 msgid "Enable disk type media cases"
@@ -1358,7 +1430,7 @@ msgstr "Hilfe für ersten Start..."
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
-msgstr "Dieses Symbol zeigt an, dass ein Menü an der Seite des Fensters versteckt ist, das weitere Einstellungen beinhaltet. Um es aufzurufen, nach links navigieren oder  mit der Maus darauf zeigen.[CR][CR]Auf \"OK\" klicken, um diesen Dialog zu schließen. Er wird nicht wieder angezeigt werden."
+msgstr "Dieses Symbol zeigt an, dass ein Menü an der Seite des Fensters versteckt ist, das weitere Einstellungen beinhaltet. Um es aufzurufen, nach links navigieren oder mit der Maus darauf zeigen.[CR][CR]Auf \"OK\" klicken, um diesen Dialog zu schließen. Er wird nicht wieder angezeigt werden."
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -1370,7 +1442,7 @@ msgstr "Anmeldung"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Bitte Benutzerprofil auswählen[CR]um fortzufahren"
+msgstr "Bitte Kodi-Benutzerprofil auswählen[CR]um fortzufahren"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
@@ -1474,19 +1546,19 @@ msgstr "Button für Timer anzeigen"
 
 msgctxt "#31455"
 msgid "Custom shutdown scripts"
-msgstr "Benutzerdefiniertes Script zum Beenden"
+msgstr "Benutzerdefinierte Ausschalten-Scripte"
 
 msgctxt "#31456"
 msgid "Enable custom shutdown script"
-msgstr "Aktiviere benutzerdefiniertes Beenden-Script"
+msgstr "Aktiviere benutzerdefiniertes Ausschalten-Script"
 
 msgctxt "#31457"
 msgid "Custom shutdown script"
-msgstr "Benutzerdefiniertes Script zum Beenden"
+msgstr "Benutzerdefiniertes Ausschalten-Script"
 
 msgctxt "#31458"
 msgid "Custom shutdown argument"
-msgstr ""
+msgstr "Benutzerdefinierter Ausschalten-Befehl"
 
 msgctxt "#31459"
 msgid "Enable custom timer script"
@@ -1498,7 +1570,7 @@ msgstr "Benutzerdefiniertes Timer-Script"
 
 msgctxt "#31461"
 msgid "Custom timer argument"
-msgstr ""
+msgstr "Benutzerdefinierter Timer-Befehl"
 
 msgctxt "#31462"
 msgid "Enable custom hibernate script"
@@ -1510,7 +1582,7 @@ msgstr "Benutzerdefiniertes Tiefschlaf-Script"
 
 msgctxt "#31464"
 msgid "Custom hibernate argument"
-msgstr ""
+msgstr "Benutzerdefinierter Tiefschlaf-Befehl"
 
 msgctxt "#31465"
 msgid "Enable custom suspend script"
@@ -1522,7 +1594,7 @@ msgstr "Benutzerdefiniertes Bereitschafts-Script"
 
 msgctxt "#31467"
 msgid "Custom suspend argument"
-msgstr ""
+msgstr "Benutzerdefinierter Bereitschafts-Befehl"
 
 msgctxt "#31490"
 msgid "Radio 105"
@@ -1610,7 +1682,7 @@ msgstr "Niedrige Liste"
 
 msgctxt "#31698"
 msgid "Media certification country"
-msgstr "Medienzertifizierungsland"
+msgstr "Medien-Zertifizierungsland"
 
 msgctxt "#31699"
 msgid "Extras"
@@ -1708,6 +1780,10 @@ msgctxt "#31922"
 msgid "Enable fanart script"
 msgstr "Aktiviere Fanart-Script"
 
+msgctxt "#31923"
+msgid "Disable PVR in view"
+msgstr "Deaktiviere PVR in Ansicht"
+
 msgctxt "#31924"
 msgid "Album thumbnails"
 msgstr "Album-Vorschaubilder"
@@ -1719,6 +1795,10 @@ msgstr "Aktiviere TvTunes"
 msgctxt "#31926"
 msgid "Configure script.tvtunes"
 msgstr "Konfiguriere script.tvtunes"
+
+msgctxt "#31928"
+msgid "Enable extra fanart"
+msgstr "Aktiviere Extra Fanart"
 
 msgctxt "#31929"
 msgid "Enable artist slideshow"
@@ -1738,7 +1818,7 @@ msgstr "Konfiguriere addon.globalsearch"
 
 msgctxt "#31933"
 msgid "Enable simple playlists (watch it later)"
-msgstr "Aktiviere Simple Playlist (später schauen)"
+msgstr "Aktiviere Simple-Playlist (später schauen)"
 
 msgctxt "#31934"
 msgid "Configure script.simpleplaylists"
@@ -1751,6 +1831,10 @@ msgstr "Konfiguriere benötigte Scripte"
 msgctxt "#31936"
 msgid "Configure service.skin.widgets"
 msgstr "Konfiguriere service.skin.widgets"
+
+msgctxt "#31937"
+msgid "Use alternative background folder"
+msgstr "Alternativer Pfad für Hintergrundbilder"
 
 msgctxt "#31938"
 msgid "Movie details"
@@ -1774,7 +1858,31 @@ msgstr "YouTube"
 
 msgctxt "#31943"
 msgid "Use default confluence favourites window look and feel"
-msgstr "Standard confluence Favoriten-fenster Aussehen"
+msgstr "Standard Confluence Favoriten-Fenster-Aussehen"
+
+msgctxt "#31944"
+msgid "Visible in Master mode only"
+msgstr "Nur im Mastermodus sichtbar"
+
+msgctxt "#31945"
+msgid "Reset paths to skin default"
+msgstr "Pfade auf Skin-Standard zurücksetzen"
+
+msgctxt "#31946"
+msgid "Reset fanart to skin default"
+msgstr "Fanart auf Skin-Standard zurücksetzen"
+
+msgctxt "#31947"
+msgid "Button look and feel"
+msgstr "Button-Aussehen"
+
+msgctxt "#31948"
+msgid "Button layout look and feel"
+msgstr "Button Anlage-Aussehen"
+
+msgctxt "#31949"
+msgid "OSD look and feel"
+msgstr "OSD-Aussehen"
 
 msgctxt "#31950"
 msgid "WEATHER"
@@ -1805,8 +1913,8 @@ msgid "MUSIC"
 msgstr "MUSIK"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMME"
+msgid "ADD-ONS"
+msgstr "ADD-ONS"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -1821,20 +1929,20 @@ msgid "RADIO"
 msgstr "RADIO"
 
 msgctxt "#31961"
-msgid "Disable PVR in view"
-msgstr "Deaktiviere PVR in Ansicht"
+msgid "Timeshift"
+msgstr "Timeshift"
 
 msgctxt "#31962"
-msgid "Reset paths to skin default"
-msgstr "Pfade auf Skin-Standard zurücksetzen"
+msgid "Choose kind of profile identification"
+msgstr "Art der Profil-Identifikation auswählen"
 
 msgctxt "#31963"
-msgid "Reset fanart to skin default"
-msgstr "Fanart auf Skin-Standard zurücksetzen"
+msgid "Profile name"
+msgstr "Profil-Name"
 
 msgctxt "#31964"
-msgid "Use alternative background folder"
-msgstr "Alternativer Pfad für Hintergrundbilder"
+msgid "Profile avatar"
+msgstr "Profil-Avatar"
 
 msgctxt "#31965"
 msgid "Multi-image background time per image"
@@ -1842,19 +1950,19 @@ msgstr "Zeit pro Bild für Mehrfach-Hintergrund"
 
 msgctxt "#31966"
 msgid "Enable custom video info script"
-msgstr "Benutzerdefinierten video info script aktivieren"
+msgstr "Benutzerdefiniertes Video-Info-Script aktivieren"
 
 msgctxt "#31967"
 msgid "Custom video info script command"
-msgstr "Benutzerdefinierten video info script Befehl"
+msgstr "Benutzerdefinierter Video-Info-Script Befehl"
 
 msgctxt "#31968"
 msgid "Widget format"
-msgstr "Widget formaat"
+msgstr "Widget-Format"
 
 msgctxt "#31969"
 msgid "Airs"
-msgstr ""
+msgstr "Austrahlung"
 
 msgctxt "#31970"
 msgid "Enable DVD cases"
@@ -1878,31 +1986,31 @@ msgstr "Zeige Sekunden in der Uhr"
 
 msgctxt "#31975"
 msgid "Sideblade label size and location"
-msgstr "Größe und Position Label"
+msgstr "Größe und Position des Seitenlabels"
 
 msgctxt "#31976"
 msgid "Top"
-msgstr ""
+msgstr "Oben"
 
 msgctxt "#31977"
 msgid "Small label"
-msgstr ""
+msgstr "Kleines Seitenlabel"
 
 msgctxt "#31978"
 msgid "Bottom"
-msgstr ""
+msgstr "Unten"
 
 msgctxt "#31979"
 msgid "Reload"
-msgstr ""
+msgstr "Neuladen"
 
 msgctxt "#31980"
 msgid "Save settings and reload Xonfluence"
-msgstr ""
+msgstr "Einstellungen speichern und Skin neuladen"
 
 msgctxt "#31981"
 msgid "Kodi intro movie path"
-msgstr ""
+msgstr "Kodi-Introfilm-Pfad"
 
 msgctxt "#31982"
 msgid "Custom widgets limit amount"
@@ -1910,7 +2018,7 @@ msgstr "Begrenzung benutzerdefinierte Widgets"
 
 msgctxt "#31983"
 msgid "Dialog look and feel"
-msgstr "Dialoog Aussehen"
+msgstr "Dialog-Aussehen"
 
 msgctxt "#31984"
 msgid "Classic"
@@ -1926,7 +2034,7 @@ msgstr "Max"
 
 msgctxt "#31987"
 msgid "Menu look and feel"
-msgstr "Menu Aussehen"
+msgstr "Menu-Aussehen"
 
 msgctxt "#31988"
 msgid "Graphics"
@@ -1934,11 +2042,11 @@ msgstr "Graphisch"
 
 msgctxt "#31989"
 msgid "Graphics & focused text"
-msgstr "Graphisch & focused text"
+msgstr "Graphisch & Fokussierter Text"
 
 msgctxt "#31990"
 msgid "Graphics & text"
-msgstr "Graphisch & text"
+msgstr "Graphisch & Text"
 
 msgctxt "#31991"
 msgid "Item border size"
