@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include file="IncludesHomeWidget.xml" />
+	<include file="IncludesHomeWidgetSmartPlaylist.xml" />
 	<include file="defaults.xml" />
 	<include file="IncludesVariables.xml" />
 	<include file="IncludesMainMenu.xml" />
@@ -1888,11 +1889,11 @@
 			!IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.8) |
 			!IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.9) |
 			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.10) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.11) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.12) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.13) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.14) |
-			!IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.15)
+			!IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.11) |
+			!IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.12) |
+			!IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.13) |
+			!IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.14) |
+			!IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + StringCompare(Window(home).Property(UsrSelectBtn),HomeItem.15)
 		</visible>
 	</include>
 	<include name="TopLeftInfo">
@@ -2309,7 +2310,6 @@
 		<onunload condition="Skin.HasSetting(ScriptDisableTVNextAired) | [!Skin.HasSetting(ScriptDisableTVNextAired) + !System.HasAddon(script.tv.show.next.aired)]">Skin.Setbool(DisableTVNextAired)</onunload>
 		<onunload condition="!Skin.HasSetting(ScriptDisableTVNextAired) + System.HasAddon(script.tv.show.next.aired)">Skin.Reset(DisableTVNextAired)</onunload>
 		<onunload condition="Skin.HasSetting(ScriptDisableScriptPlaylist) | [!Skin.HasSetting(ScriptDisableScriptPlaylist) + !System.HasAddon(script.randomandlastitems)]">Skin.Setbool(DisableScriptPlaylist)</onunload>
-		<onunload condition="!Skin.HasSetting(ScriptDisableScriptPlaylist) + System.HasAddon(script.randomandlastitems)">Skin.Reset(DisableScriptPlaylist)</onunload>
 		<onunload condition="!Skin.HasSetting(ScriptEnableFanartScript) | [Skin.HasSetting(ScriptEnableFanartScript) + !System.HasAddon(script.grab.fanart)]">Skin.Reset(EnableFanartScript)</onunload>
 		<onunload condition="Skin.HasSetting(ScriptEnableFanartScript) + System.HasAddon(script.grab.fanart)">Skin.Setbool(EnableFanartScript)</onunload>
 		<onunload condition="Skin.HasSetting(ScriptDisableGlobalSearch) | [!Skin.HasSetting(ScriptDisableGlobalSearch) + !System.HasAddon(script.globalsearch)]">Skin.Setbool(DisableGlobalSearch)</onunload>

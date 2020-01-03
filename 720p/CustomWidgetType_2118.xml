@@ -115,12 +115,28 @@
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item>
-						<description>Playlist Movies</description>
-						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+						<description>Playlist - Random</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31182]</label>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistRandom)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<onclick>Dialog.Close(2118)</onclick>
-						<include>MenuMoviePlayListCheck</include>
+						<include>MenuPlayListCheck</include>
+					</item>
+					<item>
+						<description>Playlist - Recent</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31183]</label>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistRecent)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<onclick>Dialog.Close(2118)</onclick>
+						<include>MenuPlayListCheck</include>
+					</item>
+					<item>
+						<description>Playlist - Suggested</description>
+						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[31184]</label>
+						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<onclick>Dialog.Close(2118)</onclick>
+						<include>MenuPlayListCheck</include>
 					</item>
 					<item>
 						<description>Video Node</description>
@@ -137,14 +153,6 @@
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<onclick>Dialog.Close(2118)</onclick>
 						<visible>Skin.HasSetting(UPnP_Mode) + Skin.String(UPnPServer,Kodi)</visible>
-					</item>
-					<item>
-						<description>Playlist Music</description>
-						<label>[COLOR=selected]$VAR[CustomWidgetLabel][/COLOR] - $LOCALIZE[559]</label>
-						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,MusicPlayList)</onclick>
-						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
-						<onclick>Dialog.Close(2118)</onclick>
-						<include>MenuMusicPlayListCheck</include>
 					</item>
 					<item>
 						<description>Weather</description>
@@ -184,7 +192,6 @@
 						<onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,UnWatchedMovies)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 						<onclick>Dialog.Close(2118)</onclick>
-						<visible>!Skin.HasSetting(DisableScriptPlaylist)</visible>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item>

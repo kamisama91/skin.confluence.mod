@@ -1582,6 +1582,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist1,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.1.Path) + !Skin.String(HomeItem.1.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.1.Path) + Skin.String(HomeItem.1.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -1663,6 +1664,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.1.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.1.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.1.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist1,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.1.Label))</visible>
 							</control>
@@ -1688,6 +1690,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist2,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.2.Path) + !Skin.String(HomeItem.2.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.2.Path) + Skin.String(HomeItem.2.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -1769,6 +1772,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.2.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.2.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.2.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist2,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.2.Label))</visible>
 							</control>
@@ -1794,6 +1798,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist3,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.3.Path) + !Skin.String(HomeItem.3.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.3.Path) + Skin.String(HomeItem.3.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -1875,6 +1880,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.3.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.3.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.3.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist3,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.3.Label))</visible>
 							</control>
@@ -1900,6 +1906,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist4,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.4.Path) + !Skin.String(HomeItem.4.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.4.Path) + Skin.String(HomeItem.4.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -1981,6 +1988,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.4.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.4.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.4.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist4,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.4.Label))</visible>
 							</control>
@@ -2006,6 +2014,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist5,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.5.Path) + !Skin.String(HomeItem.5.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.5.Path) + Skin.String(HomeItem.5.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2087,6 +2096,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.5.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.5.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.5.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist5,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.5.Label))</visible>
 							</control>
@@ -2112,6 +2122,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.6,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist6,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.6.Path) + !Skin.String(HomeItem.6.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.6.Path) + Skin.String(HomeItem.6.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2193,6 +2204,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.6.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.6.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.6.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist6,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.6.Label))</visible>
 							</control>
@@ -2218,6 +2230,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist7,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.7.Path) + !Skin.String(HomeItem.7.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.7.Path) + Skin.String(HomeItem.7.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2299,6 +2312,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.7.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.7.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.7.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist7,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.7.Label))</visible>
 							</control>
@@ -2324,6 +2338,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist8,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.8.Path) + !Skin.String(HomeItem.8.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.8.Path) + Skin.String(HomeItem.8.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2405,6 +2420,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.8.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.8.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.8.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist8,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.8.Label))</visible>
 							</control>
@@ -2430,6 +2446,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist9,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.9.Path) + !Skin.String(HomeItem.9.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.9.Path) + Skin.String(HomeItem.9.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2511,6 +2528,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.9.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.9.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.9.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist9,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.9.Label))</visible>
 							</control>
@@ -2536,6 +2554,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist10,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.10.Path) + !Skin.String(HomeItem.10.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.10.Path) + Skin.String(HomeItem.10.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2617,6 +2636,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.10.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.10.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.10.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist10,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.10.Label))</visible>
 							</control>
@@ -2642,6 +2662,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist11,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.11.Path) + !Skin.String(HomeItem.11.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.11.Path) + Skin.String(HomeItem.11.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2723,6 +2744,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.11.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.11.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.11.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist11,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.11.Label))</visible>
 							</control>
@@ -2748,6 +2770,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist12,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.12.Path) + !Skin.String(HomeItem.12.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.12.Path) + Skin.String(HomeItem.12.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2829,6 +2852,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.12.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.12.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.12.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist12,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.12.Label))</visible>
 							</control>
@@ -2854,6 +2878,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist13,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.13.Path) + !Skin.String(HomeItem.13.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.13.Path) + Skin.String(HomeItem.13.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -2925,7 +2950,7 @@
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
 								<onclick>SetProperty(SwapItemLabel,$INFO[Skin.String(HomeItem.13.Label)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPath,$INFO[Skin.String(HomeItem.13.Path)],Home)</onclick>
 								<onclick>SetProperty(SwapItemSub,$INFO[Skin.String(HomeItem.13.Sub)],Home)</onclick>
@@ -2935,6 +2960,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.13.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.13.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.13.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist13,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.13.Label))</visible>
 							</control>
@@ -2960,6 +2986,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist14,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.14.Path) + !Skin.String(HomeItem.14.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.14.Path) + Skin.String(HomeItem.14.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -3041,6 +3068,7 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.14.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.14.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.14.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist14,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.14.Label))</visible>
 							</control>
@@ -3066,6 +3094,7 @@
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>SetProperty(UsrSelectBtn,HomeItem.15,Home)</onclick>
+								<onclick>SetProperty(UsrSelectBtnPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist15,Home)</onclick>
 								<onclick condition="Skin.String(HomeItem.15.Path) + !Skin.String(HomeItem.15.Playlist)">SetProperty(UsrSelectPath,InUse,home)</onclick>
 								<onclick condition="Skin.String(HomeItem.15.Path) + Skin.String(HomeItem.15.Playlist)">SetProperty(UsrSelectPath,PlaylistInUse,home)</onclick>
 								<onclick>ActivateWindow(2114)</onclick>
@@ -3147,10 +3176,11 @@
 								<onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.15.Fanart)],Home)</onclick>
 								<onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.15.Display)],Home)</onclick>
 								<onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.15.Playlist)],Home)</onclick>
+								<onclick>SetProperty(SwapItemPlaylistAlias,service.skin.smartplaylist.widgets.SmartPlaylist15,Home)</onclick>
 								<onclick>ActivateWindow(1128)</onclick>
 								<visible>!IsEmpty(Skin.String(HomeItem.15.Label))</visible>
 							</control>
-						</control>	
+						</control>
 					</control>
 					<control type="scrollbar" id="60">
 						<left>7700</left>
@@ -9326,32 +9356,6 @@
 								<enable>!Skin.HasSetting(ScriptDisableWatchitLater)</enable>
 								<visible>System.HasAddon(script.simpleplaylists)</visible>
 							</control>
-							<control type="radiobutton" id="647">
-								<width>750</width>
-								<height>40</height>
-								<font>font13</font>
-								<label>31380</label>
-								<textcolor>grey2</textcolor>
-								<focusedcolor>white</focusedcolor>
-								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>Skin.ToggleSetting(ScriptDisableScriptPlaylist)</onclick>
-								<selected>!Skin.HasSetting(ScriptDisableScriptPlaylist)</selected>
-								<enable>System.HasAddon(script.randomandlastitems)</enable>
-							</control>
-							<control type="button" id="648">
-								<width>750</width>
-								<height>40</height>
-								<font>font13</font>
-								<label>$LOCALIZE[31381]</label>
-								<textcolor>grey2</textcolor>
-								<focusedcolor>white</focusedcolor>
-								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
-								<texturenofocus>MenuItemNF.png</texturenofocus>
-								<onclick>ActivateWindow(1127)</onclick>
-								<enable>!Skin.HasSetting(ScriptDisableScriptPlaylist)</enable>
-								<visible>System.HasAddon(script.randomandlastitems)</visible>
-							</control>
 						</control>
 						<control type="grouplist" id="9601">
 							<visible>Container(9006).HasFocus(8)</visible>
@@ -9374,6 +9378,18 @@
 								<texturenofocus>MenuItemNF.png</texturenofocus>
 								<onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
 								<enable>System.HasAddon(service.skin.widgets)</enable>
+							</control>
+							<control type="button" id="661">
+								<width>750</width>
+								<height>40</height>
+								<font>font13</font>
+								<label>$LOCALIZE[31983]</label>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>
+								<texturenofocus>MenuItemNF.png</texturenofocus>
+								<onclick>Addon.OpenSettings(service.skin.smartplaylist.widgets)</onclick>
+								<enable>System.HasAddon(service.skin.smartplaylist.widgets)</enable>
 							</control>
 						</control>
 						<control type="grouplist" id="9601">
