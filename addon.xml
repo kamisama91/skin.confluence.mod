@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.confluence.mod"
-  version="17.0.0"
+  version="17.1.0"
   name="Confluence Mod"
-  provider-name="mudislander,kamisama91">
+  provider-name="mudislander,helly1206,kamisama91">
   <requires>
     <import addon="xbmc.gui" version="5.12.0"/>
-	  <import addon="script.favourites" version="6.0.3"/>
-	  <import addon="service.skin.widgets" version="0.0.32"/>
-	  <import addon="service.library.data.provider" version="0.1.6"/>
-	  <import addon="script.randomandlastitems" version="2.2.2"/>
+    <import addon="script.favourites" version="6.0.3"/>
+    <import addon="script.grab.fanart" version="0.14.1"/>
+    <import addon="service.library.data.provider" version="0.1.6"/>
+    <import addon="service.skin.widgets" version="0.0.30"/>
+    <import addon="service.skin.smartplaylist.widgets" version="0.3.2"/>
   </requires>
   <extension
     point="xbmc.gui.skin"
@@ -18,23 +19,23 @@
     <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
   </extension>
 <extension point="xbmc.addon.metadata">
-    <summary lang="de">Mudislander/Helly's MOD des Confluence-Skins ursprünglich von Jezz_X.</summary>
-    <summary lang="en">Mudislander/Helly's MOD of Confluence skin originally by Jezz_X.</summary>
-    <summary lang="en_US">Mudislander/Helly's MOD of Confluence skin originally by Jezz_X.</summary>
-    <summary lang="fr_CA">La modification par Mudislander/Helly de l'habillage Confluence de Jezz_X.</summary>
-    <summary lang="lt">Mudislander/Helly'io modifikuota Confluence teminė išvaizda, kurią sukūrė Jezz_X.</summary>
-    <summary lang="nl">Mudislander/Helly's MOD van de Confluence skin van origine door Jezz_X.</summary>
-    <summary lang="pl">Modyfikacja skóry Confluence, oryginalnie stworzonej przez Jezz_X, autorstwa Mudislander/Hellya.</summary>
-    <summary lang="pt_BR">Modificação do Mudislander/Helly da skin Confluence originalmente por Jezz_X.</summary>
-    <summary lang="sv">Mudislander/Helly's MOD av Confluence temat, orginal av Jezz_X.</summary>
-    <description lang="en">CCM is Mudislander/Helly's MOD of Confluence to enable a greater degree of user customisation to the default skin.</description>
-    <description lang="en_US">CCM is Mudislander/Helly's MOD of Confluence to enable a greater degree of user customization to the default skin.</description>
-    <description lang="fr_CA">CCM est la modification par Mudislander/Helly de Confluence pour permettre un niveau plus élevé de personnalisation par l'utilisateur de l'habillage original.</description>
-    <description lang="lt">CCM yar Mudislander/Helly'io modifikuota Confluence tam, kad numatytąją teminę išvaizdą būtų galima geriau pritaikyti pagal vartotojo poreikius.</description>
-    <description lang="nl">CCM is Mudislander/Helly's MOD van confluence om een grotere aanpassingsmogelijkheid te geven ten opzichten van de standaard skin.</description>
-    <description lang="pl">CCM jest modyfikacją skóry Confluence autorstwa Mudislander/Hellya, której celem jest dostarczenie użytkownikom większych możliwości personalizacji w stosunku do oryginalnej skóry.</description>
-    <description lang="pt_BR">CCM é uma modificação do Mudislander/Helly da Confluence para permitir um maior grau de personalização do usuário para a skin padrão.</description>
-    <description lang="sv">CCM är Mudislander/Helly's MOD av Confluence för att underlätta användaranpassning av standard temat.</description>
+    <summary lang="de">Mudislander/Helly1206/Kamisama91's MOD des Confluence-Skins ursprünglich von Jezz_X.</summary>
+    <summary lang="en">Mudislander/Helly1206/Kamisama91's MOD of Confluence skin originally by Jezz_X.</summary>
+    <summary lang="en_US">Mudislander/Helly1206/Kamisama91's MOD of Confluence skin originally by Jezz_X.</summary>
+    <summary lang="fr_CA">La modification par Mudislander/Helly1206/Kamisama91 de l'habillage Confluence de Jezz_X.</summary>
+    <summary lang="lt">Mudislander/Helly1206/Kamisama91'io modifikuota Confluence teminė išvaizda, kurią sukūrė Jezz_X.</summary>
+    <summary lang="nl">Mudislander/Helly1206/Kamisama91's MOD van de Confluence skin van origine door Jezz_X.</summary>
+    <summary lang="pl">Modyfikacja skóry Confluence, oryginalnie stworzonej przez Jezz_X, autorstwa Mudislander/Helly1206/Kamisama91.</summary>
+    <summary lang="pt_BR">Modificação do Mudislander/Helly1206/Kamisama91 da skin Confluence originalmente por Jezz_X.</summary>
+    <summary lang="sv">Mudislander/Helly1206/Kamisama91's MOD av Confluence temat, orginal av Jezz_X.</summary>
+    <description lang="en">CCM is MMudislander/Helly1206/Kamisama91's MOD of Confluence to enable a greater degree of user customisation to the default skin.</description>
+    <description lang="en_US">CCM is MMudislander/Helly1206/Kamisama91's MOD of Confluence to enable a greater degree of user customization to the default skin.</description>
+    <description lang="fr_CA">CCM est la modification par Mudislander/Helly1206/Kamisama91 de Confluence pour permettre un niveau plus élevé de personnalisation par l'utilisateur de l'habillage original.</description>
+    <description lang="lt">CCM yar Mudislander/Helly1206/Kamisama91'io modifikuota Confluence tam, kad numatytąją teminę išvaizdą būtų galima geriau pritaikyti pagal vartotojo poreikius.</description>
+    <description lang="nl">CCM is Mudislander/Helly1206/Kamisama91's MOD van confluence om een grotere aanpassingsmogelijkheid te geven ten opzichten van de standaard skin.</description>
+    <description lang="pl">CCM jest modyfikacją skóry Confluence autorstwa Mudislander/Helly1206/Kamisama91, której celem jest dostarczenie użytkownikom większych możliwości personalizacji w stosunku do oryginalnej skóry.</description>
+    <description lang="pt_BR">CCM é uma modificação do Mudislander/Helly1206/Kamisama91 da Confluence para permitir um maior grau de personalização do usuário para a skin padrão.</description>
+    <description lang="sv">CCM är Mudislander/Helly1206/Kamisama91's MOD av Confluence för att underlätta användaranpassning av standard temat.</description>
     <disclaimer lang="be">You break it - You get to keep the pieces</disclaimer>
     <disclaimer lang="da">Du smadrer det - Du får lov at beholde stumperne</disclaimer>
     <disclaimer lang="de">Was man kaputt macht darf man behalten</disclaimer>
@@ -64,6 +65,7 @@
     <disclaimer lang="zh">自己打破的碎片自己收拾</disclaimer>
     <disclaimer lang="zh_TW">You break it - You get to keep the pieces</disclaimer>
     <platform>all</platform>
+    <source>https://github.com/kamisama91/skin.confluence.mod</source>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
