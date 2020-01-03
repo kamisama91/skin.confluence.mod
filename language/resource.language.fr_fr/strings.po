@@ -682,51 +682,51 @@ msgstr ""
 
 msgctxt "#31188"
 msgid "Random concerts"
-msgstr ""
+msgstr "Concerts Aléatoires"
 
 msgctxt "#31189"
 msgid "Recent concerts"
-msgstr ""
+msgstr "Concerts Récents"
 
 msgctxt "#31190"
 msgid "Random albums"
-msgstr ""
+msgstr "Albums Aléatoires"
 
 msgctxt "#31191"
 msgid "Suggested albums"
-msgstr ""
+msgstr "Albums Recommandés"
 
 msgctxt "#31192"
 msgid "Recent albums"
-msgstr ""
+msgstr "Albums Récentes"
 
 msgctxt "#31193"
 msgid "Random episodes"
-msgstr ""
+msgstr "Episodes Aléatoires"
 
 msgctxt "#31194"
 msgid "Suggested episodes"
-msgstr ""
+msgstr "Episodes Recommandés"
 
 msgctxt "#31195"
 msgid "Recent episodes"
-msgstr ""
+msgstr "Episodes Récents"
 
 msgctxt "#31196"
 msgid "Random movies"
-msgstr ""
+msgstr "Films Aléatoires"
 
 msgctxt "#31197"
 msgid "Suggested movies"
-msgstr ""
+msgstr "Films Recommandés"
 
 msgctxt "#31198"
 msgid "Recent movies"
-msgstr ""
+msgstr "Films Récents"
 
 msgctxt "#31199"
 msgid "Suggested concerts"
-msgstr ""
+msgstr "Concerts Recommandés"
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -2083,3 +2083,17 @@ msgstr ""
 msgctxt "#31999"
 msgid "Resolution"
 msgstr ""
+
+#Addon service.skin.smartplaylist.widgets support
+
+msgctxt "#99001"
+msgid "Random"
+msgstr "Aléatoires"
+
+msgctxt "#99002"
+msgid "Recent"
+msgstr "Récents"
+
+msgctxt "#99003"
+msgid "Suggested"
+msgstr "Recommandés"

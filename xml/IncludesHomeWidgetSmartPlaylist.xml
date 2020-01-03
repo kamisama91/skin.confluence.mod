@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+  <include name="HomeWidgetDisplaySmartPlaylist">
+    <include content="SmartPlaylistWidget">
+      <param name="Control">999</param>
+      <param name="IsSmallWidget">True</param>
+      <param name="IsPosterWidget">True</param>
+      <param name="PlaylistType">Suggested</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">998</param>
+      <param name="IsSmallWidget">True</param>
+      <param name="IsPosterWidget">False</param>
+      <param name="PlaylistType">Suggested</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">997</param>
+      <param name="IsSmallWidget">False</param>
+      <param name="IsPosterWidget">True</param>
+      <param name="PlaylistType">Suggested</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">996</param>
+      <param name="IsSmallWidget">False</param>
+      <param name="IsPosterWidget">False</param>
+      <param name="PlaylistType">Suggested</param>
+    </include>
+
+    <include content="SmartPlaylistWidget">
+      <param name="Control">995</param>
+      <param name="IsSmallWidget">True</param>
+      <param name="IsPosterWidget">True</param>
+      <param name="PlaylistType">Recent</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">994</param>
+      <param name="IsSmallWidget">True</param>
+      <param name="IsPosterWidget">False</param>
+      <param name="PlaylistType">Recent</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">993</param>
+      <param name="IsSmallWidget">False</param>
+      <param name="IsPosterWidget">True</param>
+      <param name="PlaylistType">Recent</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">992</param>
+      <param name="IsSmallWidget">False</param>
+      <param name="IsPosterWidget">False</param>
+      <param name="PlaylistType">Recent</param>
+    </include>
+
+    <include content="SmartPlaylistWidget">
+      <param name="Control">991</param>
+      <param name="IsSmallWidget">True</param>
+      <param name="IsPosterWidget">True</param>
+      <param name="PlaylistType">Random</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">990</param>
+      <param name="IsSmallWidget">True</param>
+      <param name="IsPosterWidget">False</param>
+      <param name="PlaylistType">Random</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">989</param>
+      <param name="IsSmallWidget">False</param>
+      <param name="IsPosterWidget">True</param>
+      <param name="PlaylistType">Random</param>
+    </include>
+    <include content="SmartPlaylistWidget">
+      <param name="Control">988</param>
+      <param name="IsSmallWidget">False</param>
+      <param name="IsPosterWidget">False</param>
+      <param name="PlaylistType">Random</param>
+    </include>
+  </include>
+
+  <include name="SmartPlaylistWidget">
+    <param name="Control"/> <!-- Must be lower than 1676 because will add 4 digits for Size/Format/FocusedItem-->
+    <param name="IsSmallWidget" />
+    <param name="IsPosterWidget" />
+    <param name="PlaylistType" />
+    <definition>
+      <control type="group">
+        <left>285</left>
+        <top>90</top>
+        <visible>$PARAM[IsSmallWidget]</visible>
+        <visible>$PARAM[IsPosterWidget]</visible>
+        <visible>!Skin.HasSetting(EnableLargeWidgets) | [Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetFormat),Poster)</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Playlist$PARAM[PlaylistType])</visible>
+        <include>VisibleFadeEffect</include>
+        <include content="SmartPlaylistWidgetTypedPlaylist">
+          <param name="Control">$PARAM[Control]1</param>
+          <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+          <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <control type="group">
+        <left>240</left>
+        <top>90</top>
+        <visible>$PARAM[IsSmallWidget]</visible>
+        <visible>!$PARAM[IsPosterWidget]</visible>
+        <visible>!Skin.HasSetting(EnableLargeWidgets) | [Skin.HasSetting(EnableLargeWidgets) + Player.HasMedia + !Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(HideNowPlayingInfo)]</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetFormat),Thumb)</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Playlist$PARAM[PlaylistType])</visible>
+        <include>VisibleFadeEffect</include>
+        <include content="SmartPlaylistWidgetTypedPlaylist">
+          <param name="Control">$PARAM[Control]2</param>
+          <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+          <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <control type="group">
+        <left>0</left>
+        <top>81</top>
+        <visible>!$PARAM[IsSmallWidget]</visible>
+        <visible>$PARAM[IsPosterWidget]</visible>
+        <visible>[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | [Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | [Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetFormat),Poster)</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Playlist$PARAM[PlaylistType])</visible>
+        <include>VisibleFadeEffect</include>
+        <include content="SmartPlaylistWidgetTypedPlaylist">
+          <param name="Control">$PARAM[Control]3</param>
+          <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+          <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <control type="group">
+        <left>0</left>
+        <top>81</top>
+        <visible>!$PARAM[IsSmallWidget]</visible>
+        <visible>!$PARAM[IsPosterWidget]</visible>
+        <visible>[Skin.HasSetting(EnableLargeWidgets) + !Player.HasMedia] | [Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(LowerMainMenuBar) + Player.HasMedia] | [Skin.HasSetting(EnableLargeWidgets) + Skin.HasSetting(HideNowPlayingInfo)+ Player.HasMedia]</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetFormat),Thumb)</visible>
+        <visible>String.IsEqual(Container(9000).ListItem.Property(WidgetSet),Playlist$PARAM[PlaylistType])</visible>
+        <include>VisibleFadeEffect</include>
+        <include content="SmartPlaylistWidgetTypedPlaylist">
+          <param name="Control">$PARAM[Control]4</param>
+          <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+          <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylist">
+    <param name="Control"/>
+    <param name="IsSmallWidget" />
+    <param name="IsPosterWidget" />
+    <param name="PlaylistType" />
+    <definition>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]01</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">1</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]02</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">2</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]03</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">3</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]04</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">4</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]05</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">5</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]06</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">6</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]07</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">7</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]08</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">8</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]09</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">9</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]10</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">10</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]11</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">11</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]12</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">12</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]13</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">13</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]14</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">14</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+      <include content="SmartPlaylistWidgetTypedPlaylistLayout">
+        <param name="Control">$PARAM[Control]15</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="Custom">False</param>
+        <param name="PlaylistId">15</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+      </include>
+    </definition>
+  </include>
+
+  <include name="SmartPlaylistWidgetTypedPlaylistLayout">
+    <param name="Control" />
+    <param name="IsSmallWidget" />
+    <param name="IsPosterWidget" />
+    <param name="Custom" />
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />    
+    <definition>
+      <control type="group">
+        <visible>$PARAM[IsSmallWidget]</visible>
+        <visible>$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistLayoutSmallPoster">
+          <param name="Control">$PARAM[Control]1</param>
+          <param name="Custom">$PARAM[Custom]</param>
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <control type="group">
+        <visible>$PARAM[IsSmallWidget]</visible>
+        <visible>!$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistLayoutSmallThumb">
+          <param name="Control">$PARAM[Control]2</param>
+          <param name="Custom">$PARAM[Custom]</param>
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <control type="group">
+        <visible>!$PARAM[IsSmallWidget]</visible>
+        <visible>$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistLayoutLargePoster">
+          <param name="Control">$PARAM[Control]3</param>
+          <param name="Custom">$PARAM[Custom]</param>
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <control type="group">
+        <visible>!$PARAM[IsSmallWidget]</visible>
+        <visible>!$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistLayoutLargeThumb">
+          <param name="Control">$PARAM[Control]4</param>
+          <param name="Custom">$PARAM[Custom]</param>
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+      <include content="SmartPlaylistWidgetTypedPlaylistButtons">
+        <param name="Control">$PARAM[Control]</param>
+        <param name="IsSmallWidget">$PARAM[IsSmallWidget]</param>
+        <param name="IsPosterWidget">$PARAM[IsPosterWidget]</param>
+        <param name="PlaylistId">$PARAM[PlaylistId]</param>
+      </include>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistLayoutSmallPoster">
+    <param name="Control" />
+    <param name="Custom" />
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <definition>
+      <control type="list" id="$PARAM[Control]">
+        <animation effect="slide" start="0,0" end="135,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
+        <animation effect="slide" start="0,0" end="270,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="405,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+        <left>0</left>
+        <top>0</top>
+        <width>1350</width>
+        <height>330</height>
+        <onleft>$PARAM[Control]</onleft>
+        <onright>$PARAM[Control]</onright>
+        <onup>21</onup>
+        <ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)]">603</ondown>
+        <viewtype label="535">list</viewtype>
+        <scrolltime>200</scrolltime>
+        <orientation>Horizontal</orientation>
+        <itemlayout height="330" width="270">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>270</width>
+            <height>330</height>
+            <texture border="15">RecentAddedBack.png</texture>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>240</width>
+            <height>248</height>
+            <texture background="true">$VAR[VideoThumbImage]</texture>
+            <aspectratio>keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>240</width>
+            <height>248</height>
+            <texture background="true">$VAR[VideoCustomThumbImage]</texture>
+            <aspectratio>keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>276</top>
+            <width>225</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>266</top>
+            <width>225</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>296</top>
+            <width>225</width>
+            <height>22</height>
+            <font>font8</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+        </itemlayout>
+        <focusedlayout height="330" width="270">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>270</width>
+            <height>330</height>
+            <texture border="15">RecentAddedBack.png</texture>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>240</width>
+            <height>248</height>
+            <texture background="true">$VAR[VideoThumbImage]</texture>
+            <aspectratio>keep</aspectratio>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>240</width>
+            <height>248</height>
+            <texture>$VAR[VideoThumbImage]</texture>
+            <aspectratio>keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>240</width>
+            <height>248</height>
+            <texture background="true">$VAR[VideoCustomThumbImage]</texture>
+            <aspectratio>keep</aspectratio>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>240</width>
+            <height>248</height>
+            <texture>$VAR[VideoCustomThumbImage]</texture>
+            <aspectratio>keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>276</top>
+            <width>225</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>276</top>
+            <width>225</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>$VAR[MainColorOne]</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>266</top>
+            <width>225</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>266</top>
+            <width>225</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>$VAR[MainColorOne]</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>22</left>
+            <top>296</top>
+            <width>225</width>
+            <height>22</height>
+            <font>font8</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+        </focusedlayout>
+        <include content="SmartPlaylistContent">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>                
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistLayoutLargePoster">
+    <param name="Control" />
+    <param name="Custom" />
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <definition>
+      <control type="image">
+        <left>-30</left>
+        <top>-8</top>
+        <width>1980</width>
+        <height>442</height>
+        <texture border="5">$VAR[DialogPath]ContentPanel.png</texture>
+        <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+        <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+      </control>
+      <control type="list" id="$PARAM[Control]">
+        <animation effect="slide" start="0,0" end="728,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+        <animation effect="slide" start="0,0" end="580,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="435,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="288,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,4)">conditional</animation>
+        <animation effect="slide" start="0,0" end="144,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,5)">conditional</animation>
+        <left>87</left>
+        <top>0</top>
+        <width>1755</width>
+        <height>480</height>
+        <onleft>$PARAM[Control]</onleft>
+        <onright>$PARAM[Control]</onright>
+        <onup>21</onup>
+        <ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)]">603</ondown>
+        <viewtype label="535">list</viewtype>
+        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <orientation>Horizontal</orientation>
+        <itemlayout height="428" width="292">
+          <control type="image">
+            <left>14</left>
+            <top>12</top>
+            <width>264</width>
+            <height>365</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[VideoThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>14</left>
+            <top>12</top>
+            <width>264</width>
+            <height>365</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[VideoCustomThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>386</top>
+            <width>264</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>376</top>
+            <width>264</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>406</top>
+            <width>264</width>
+            <height>20</height>
+            <font>font8</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+        </itemlayout>
+        <focusedlayout height="428" width="292">
+          <control type="image">
+            <left>14</left>
+            <top>12</top>
+            <width>264</width>
+            <height>365</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[VideoThumbImage]</texture>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>14</left>
+            <top>12</top>
+            <width>264</width>
+            <height>365</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[VideoThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>14</left>
+            <top>12</top>
+            <width>264</width>
+            <height>365</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[VideoCustomThumbImage]</texture>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>14</left>
+            <top>12</top>
+            <width>264</width>
+            <height>365</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$VAR[VideoCustomThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>386</top>
+            <width>264</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>386</top>
+            <width>264</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>$VAR[MainColorOne]</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>376</top>
+            <width>264</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>376</top>
+            <width>264</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>$VAR[MainColorOne]</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>
+          <control type="label">
+            <left>14</left>
+            <top>406</top>
+            <width>264</width>
+            <height>20</height>
+            <font>font8</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+          </control>       
+        </focusedlayout>
+        <include content="SmartPlaylistContent">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistLayoutSmallThumb">
+    <param name="Control" />
+    <param name="Custom" />
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <definition>
+      <control type="list" id="$PARAM[Control]">
+        <animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="540,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">conditional</animation>
+        <left>0</left>
+        <top>0</top>
+        <width>1440</width>
+        <height>360</height>
+        <onleft>PARAM[Control]</onleft>
+        <onright>PARAM[Control]</onright>
+        <onup>21</onup>
+        <ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(FloorGlobalSearch)">610</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(FloorGlobalSearch)]">603</ondown>
+        <viewtype label="535">list</viewtype>
+        <scrolltime>200</scrolltime>
+        <orientation>Horizontal</orientation>
+        <itemlayout height="330" width="360">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>360</width>
+            <height>330</height>
+            <texture border="15">RecentAddedBack.png</texture>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>232</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>232</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>22</left>
+            <top>22</top>
+            <width>315</width>
+            <height>218</height>
+            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            <texture>$INFO[ListItem.Property(Logo)]</texture>
+            <visible>!Skin.HasSetting(DisableLogoArt)</visible>
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>252</top>
+            <width>300</width>
+            <height>30</height>
+            <font>font10</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>278</top>
+            <width>300</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="330" width="360">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>360</width>
+            <height>330</height>
+            <texture border="15">RecentAddedBack.png</texture>
+            <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>232</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>232</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>232</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>330</width>
+            <height>232</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>22</left>
+            <top>22</top>
+            <width>315</width>
+            <height>218</height>
+            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            <texture>$INFO[ListItem.Property(Logo)]</texture>
+            <visible>!Skin.HasSetting(DisableLogoArt)</visible>
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>252</top>
+            <width>300</width>
+            <height>30</height>
+            <font>font10</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>278</top>
+            <width>300</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>278</top>
+            <width>300</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>$VAR[MainColorOne]</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+          </control>
+        </focusedlayout>
+        <include content="SmartPlaylistContent">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistLayoutLargeThumb">
+    <param name="Control" />
+    <param name="Custom" />
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <definition>
+      <control type="image">
+        <left>-30</left>
+        <top>-8</top>
+        <width>1980</width>
+        <height>442</height>
+        <texture border="5">$VAR[DialogPath]ContentPanel.png</texture>
+        <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+        <visible>Integer.IsGreater(Container($PARAM[Control]).NumItems,0)</visible>
+      </control>
+      <control type="list" id="$PARAM[Control]">
+        <animation effect="slide" start="0,0" end="675,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,1)">onditional</animation>
+        <animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,2)">onditional</animation>
+        <animation effect="slide" start="0,0" end="225,0" time="0" condition="String.IsEqual(Container($PARAM[Control]).NumItems,3)">onditional</animation>
+        <left>60</left>
+        <top>0</top>
+        <width>1800</width>
+        <height>510</height>
+        <onleft>$PARAM[Control]</onleft>
+        <onright>$PARAM[Control]</onright>
+        <onup>21</onup>
+        <ondown condition="Skin.HasSetting(LowerMainMenuBar)">9002</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + !Skin.HasSetting(DisableGlobalSearch) + !Skin.HasSetting(loorGlobalSearch)">610</ondown>
+        <ondown condition="!Skin.HasSetting(LowerMainMenuBar) + [Skin.HasSetting(DisableGlobalSearch) | Skin.HasSetting(loorGlobalSearch)]">603</ondown>
+        <viewtype label="535">list</viewtype>
+        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <orientation>Horizontal</orientation>
+        <itemlayout height="428" width="450">
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>420</width>
+            <height>322</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>420</width>
+            <height>322</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>22</left>
+            <top>22</top>
+            <width>405</width>
+            <height>308</height>
+            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            <texture>$INFO[ListItem.Property(Logo)]</texture>
+            <visible>!Skin.HasSetting(DisableLogoArt)</visible>
+          </control>
+          <control type="label">
+            <left>15</left>
+            <top>345</top>
+            <width>420</width>
+            <height>30</height>
+            <font>font10</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="label">
+            <left>15</left>
+            <top>375</top>
+            <width>420</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="428" width="450">
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>420</width>
+            <height>322</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeThumbImage]</texture>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>420</width>
+            <height>322</height>
+            <aspectratio>scale</aspectratio>
+            <texture>$VAR[EpisodeThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>!$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>420</width>
+            <height>322</height>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$VAR[EpisodeCustomThumbImage]</texture>
+            <bordertexture border="5" colordiffuse="$VAR[MainColorOne]">folder-focus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>420</width>
+            <height>322</height>
+            <aspectratio>scale</aspectratio>
+            <texture>$VAR[EpisodeCustomThumbImage]</texture>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <include>TextureBorderWidgets</include>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+            <visible>$PARAM[Custom]</visible>
+          </control>
+          <control type="image">
+            <left>22</left>
+            <top>22</top>
+            <width>405</width>
+            <height>308</height>
+            <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            <texture>$INFO[ListItem.Property(Logo)]</texture>
+            <visible>!Skin.HasSetting(DisableLogoArt)</visible>
+          </control>
+          <control type="label">
+            <left>15</left>
+            <top>345</top>
+            <width>420</width>
+            <height>30</height>
+            <font>font10</font>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+          <control type="label">
+            <left>15</left>
+            <top>375</top>
+            <width>420</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Control.HasFocus($PARAM[Control])</visible>
+          </control>
+          <control type="label">
+            <left>15</left>
+            <top>375</top>
+            <width>420</width>
+            <height>30</height>
+            <font>font12</font>
+            <textcolor>$VAR[MainColorOne]</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus($PARAM[Control])</visible>
+          </control>
+        </focusedlayout>
+        <include content="SmartPlaylistContent">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        </include>
+      </control>
+    </definition>
+  </include>
+  
+  <include name="SmartPlaylistWidgetTypedPlaylistButtons">
+    <param name="Control" />
+    <param name="IsSmallWidget" />
+    <param name="IsPosterWidget" />
+    <param name="PlaylistId" />
+    <definition>
+      <control type="group">
+        <visible>$PARAM[IsSmallWidget]</visible>
+        <visible>$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistButtonsSmallPoster">
+          <param name="Control">$PARAM[Control]1</param>
+        </include>
+      </control>
+      <control type="group">
+        <visible>$PARAM[IsSmallWidget]</visible>
+        <visible>!$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistButtonsSmallThumb">
+          <param name="Control">$PARAM[Control]2</param>
+        </include>
+      </control>      
+      <control type="group">
+        <visible>!$PARAM[IsSmallWidget]</visible>
+        <visible>$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistButtonsLargePoster">
+          <param name="Control">$PARAM[Control]3</param>
+        </include>
+      </control>
+      <control type="group">
+        <visible>!$PARAM[IsSmallWidget]</visible>
+        <visible>!$PARAM[IsPosterWidget]</visible>
+        <visible>Container(9000).Hasfocus($PARAM[PlaylistId])</visible>
+        <include content="SmartPlaylistWidgetTypedPlaylistButtonsLargeThumb">
+          <param name="Control">$PARAM[Control]4</param>
+        </include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistButtonsSmallPoster">
+    <param name="Control" />
+    <definition>
+      <control type="button">
+        <left>-60</left>
+        <top>135</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-left.png</texturefocus>
+        <texturenofocus>arrow-big-left.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],-1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+      <control type="button">
+        <left>1365</left>
+        <top>135</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-right.png</texturefocus>
+        <texturenofocus>arrow-big-right.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistButtonsLargePoster">
+    <param name="Control" />
+    <definition>
+      <control type="button">
+        <left>6</left>
+        <top>150</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-left.png</texturefocus>
+        <texturenofocus>arrow-big-left.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],-1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+      <control type="button">
+        <left>1870</left>
+        <top>150</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-right.png</texturefocus>
+        <texturenofocus>arrow-big-right.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistButtonsSmallThumb">
+    <param name="Control" />
+    <definition>
+      <control type="button">
+        <left>-60</left>
+        <top>135</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-left.png</texturefocus>
+        <texturenofocus>arrow-big-left.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],-1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+      <control type="button">
+        <left>1455</left>
+        <top>135</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-right.png</texturefocus>
+        <texturenofocus>arrow-big-right.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+    </definition>
+  </include>
+  <include name="SmartPlaylistWidgetTypedPlaylistButtonsLargeThumb">
+    <param name="Control" />
+    <definition>
+      <control type="button">
+        <left>6</left>
+        <top>150</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-left.png</texturefocus>
+        <texturenofocus>arrow-big-left.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],-1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasPrevious</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+      <control type="button">
+        <left>1870</left>
+        <top>150</top>
+        <width>45</width>
+        <height>60</height>
+        <texturefocus>arrow-big-right.png</texturefocus>
+        <texturenofocus>arrow-big-right.png</texturenofocus>
+        <include>VisibleFadeEffect</include>
+        <onclick>Control.Move($PARAM[Control],1)</onclick>
+        <visible>[system.getbool(input.enablemouse) | Control.HasFocus($PARAM[Control])] + Container($PARAM[Control]).HasNext</visible>
+        <include>VisibleFadeEffect</include>
+      </control>
+    </definition>
+  </include>
+
+  <include name="SmartPlaylistContent">
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <definition>
+      <content>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">1</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">2</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">3</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">4</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">5</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">6</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">7</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">8</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">9</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">10</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">11</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">12</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">13</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">14</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">15</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">16</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">17</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">18</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">19</param>
+        </include>
+        <include content="SmartPlaylistContentItem">
+          <param name="PlaylistId">$PARAM[PlaylistId]</param>
+          <param name="PlaylistType">$PARAM[PlaylistType]</param>
+          <param name="ItemId">20</param>
+        </include>
+      </content>
+    </definition>
+  </include>
+  <include name="SmartPlaylistContentItem">
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <param name="ItemId" />
+    <definition>
+      <include content="SmartPlaylistContentMovieItem">
+        <param name="PlaylistId">$PARAM[PlaylistId]</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        <param name="ItemId">$PARAM[ItemId]</param>
+      </include>
+      <include content="SmartPlaylistContentEpisodeItem">
+        <param name="PlaylistId">$PARAM[PlaylistId]</param>
+        <param name="PlaylistType">$PARAM[PlaylistType]</param>
+        <param name="ItemId">$PARAM[ItemId]</param>
+      </include>
+    </definition>
+  </include>
+  <include name="SmartPlaylistContentMovieItem">
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <param name="ItemId" />
+    <definition>
+      <item id="movie$PARAM[ItemId]">
+        <label>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Title)]</label>
+        <label2>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].SetTitle)]</label2>
+        <onclick>PlayList.Clear</onclick>
+        <onclick>PlayMedia($ESCINFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].File)])</onclick>
+        <icon>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Art(poster))]</icon>
+        <thumb>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Art(fanart))]</thumb>
+        <visible>!String.IsEmpty(Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Title))</visible>
+        <visible>String.IsEqual(Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId].Type),movie)</visible>
+      </item>
+    </definition>
+  </include>
+  <include name="SmartPlaylistContentEpisodeItem">
+    <param name="PlaylistId" />
+    <param name="PlaylistType" />
+    <param name="ItemId" />
+    <definition>
+      <item id="episode$PARAM[ItemId]">
+        <label>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Title)]</label>
+        <label2>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].EpisodeNo)] - $INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].TVshowTitle)]</label2>
+        <onclick>PlayList.Clear</onclick>
+        <onclick>PlayMedia($ESCINFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].File)])</onclick>
+        <icon>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Art(thumb))]</icon>
+        <thumb>$INFO[Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Art(fanart))]</thumb>
+        <visible>!String.IsEmpty(Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId]#$PARAM[PlaylistType].$PARAM[ItemId].Title))</visible>
+        <visible>String.IsEqual(Window(Home).Property(service.skin.smartplaylist.widgets.SmartPlaylist$PARAM[PlaylistId].Type),episode)</visible>
+      </item>
+    </definition>
+  </include>
+</includes>

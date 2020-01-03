@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include file="IncludesHomeWidget.xml" />
+	<include file="IncludesHomeWidgetSmartPlaylist.xml" />
     <include file="Defaults.xml" />
     <include file="IncludesDialogSelect.xml" />
     <include file="IncludesVariables.xml" />
@@ -2361,11 +2362,11 @@
 			!String.IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.8) |
 			!String.IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.9) |
 			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.10) |
-			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.11) |
-			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.12) |
-			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.13) |
-			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.14) |
-			!String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.15)
+			!String.IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.11) |
+			!String.IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.12) |
+			!String.IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.13) |
+			!String.IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.14) |
+			!String.IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.15)
 		</visible>
     </include>
     <include name="TopLeftInfo">

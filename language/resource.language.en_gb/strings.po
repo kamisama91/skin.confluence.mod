@@ -2162,3 +2162,21 @@ msgstr ""
 msgctxt "#31999"
 msgid "Resolution"
 msgstr ""
+
+#Addon service.skin.smartplaylist.widgets support
+
+msgctxt "#99000"
+msgid "Configure service.skin.smartplaylist.widgets"
+msgstr ""
+
+msgctxt "#99001"
+msgid "Random"
+msgstr ""
+
+msgctxt "#99002"
+msgid "Recent"
+msgstr ""
+
+msgctxt "#99003"
+msgid "Suggested"
+msgstr ""
