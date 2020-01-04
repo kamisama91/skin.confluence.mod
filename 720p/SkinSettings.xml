@@ -9515,7 +9515,7 @@ msgstr ""
 								<width>750</width>
 								<height>40</height>
 								<font>font13</font>
-								<label>$LOCALIZE[31983]</label>
+								<label>$LOCALIZE[99999]</label>
 								<textcolor>grey2</textcolor>
 								<focusedcolor>white</focusedcolor>
 								<texturefocus colordiffuse="$VAR[MainColorOne]">MenuItemFO.png</texturefocus>

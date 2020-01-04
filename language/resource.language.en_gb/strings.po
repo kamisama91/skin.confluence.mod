@@ -2008,14 +2008,6 @@ msgid "Custom widgets limit amount"
 msgstr ""
 
 msgctxt "#31983"
-msgid "Configure service.skin.smartplaylist.widgets"
-msgstr ""
-
-msgctxt "#31984"
-msgid "Configure service.skin.smartplaylist.widgets"
-msgstr ""
-
-msgctxt "#31983"
 msgid "Dialog look and feel"
 msgstr ""
 
@@ -2081,4 +2073,8 @@ msgstr ""
 
 msgctxt "#31999"
 msgid "Resolution"
+msgstr ""
+
+msgctxt "#99999"
+msgid "Configure service.skin.smartplaylist.widgets"
 msgstr ""
