@@ -1,3 +1,6 @@
+[B]18.1.1/B] [I]Jan 2020[/I]
+- Skin loading performance improvment
+
 [B]18.1.0/B] [I]Jan 2020[/I]
 - Add service.skin.smartplaylist support
 
