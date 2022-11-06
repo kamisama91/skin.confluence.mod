@@ -2083,3 +2083,15 @@ msgstr ""
 msgctxt "#31999"
 msgid "Resolution"
 msgstr ""
+
+msgctxt "#99001"
+msgid "Random"
+msgstr "Aléatoires"
+
+msgctxt "#99002"
+msgid "Recent"
+msgstr "Récents"
+
+msgctxt "#99003"
+msgid "Suggested"
+msgstr "Recommandés"
