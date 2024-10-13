@@ -16,6 +16,7 @@
                 <onclick>Dialog.Close(2115)</onclick>
                 <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                 <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                <onclick>ClearProperty(UsrSelectBtnPlaylistAlias,Home)</onclick>
                 <visible>![String.Contains(Window(Home).Property(UsrSelectBtn),UserSub,Left) | String.Contains(Window(Home).Property(UsrSelectBtn),SubProg)] + Window.IsVisible(2115)</visible>
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
@@ -27,6 +28,7 @@
                 <onclick condition="Window.IsVisible(2115)">Dialog.Close(2115)</onclick>
                 <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                 <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                <onclick>ClearProperty(UsrSelectBtnPlaylistAlias,Home)</onclick>
                 <visible>String.Contains(Window(Home).Property(UsrSelectBtn),UserSub,Left) | String.Contains(Window(Home).Property(UsrSelectBtn),SubProg) | Window.IsVisible(2114)</visible>
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
@@ -39,6 +41,7 @@
                 <onclick>Dialog.Close(2115)</onclick>
                 <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                 <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                <onclick>ClearProperty(UsrSelectBtnPlaylistAlias,Home)</onclick>
                 <visible>!String.Contains(Window(Home).Property(UsrSelectBtn),UserSub,Left) + !String.Contains(Window(Home).Property(UsrSelectBtn),SubProg) + Window.IsVisible(2115)</visible>
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
@@ -217,6 +220,7 @@
                 <onclick condition="Window.IsVisible(2114)">Dialog.Close(2114)</onclick>
                 <onclick>RunScript(script.favourites,changetitle=true&amp;property=$INFO[Window(Home).Property(UsrSelectBtn)])</onclick>
                 <onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+                <onclick>ClearProperty(UsrSelectBtnPlaylistAlias,Home)</onclick>
                 <visible>System.HasAddon(script.favourites)</visible>
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
@@ -772,12 +776,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
@@ -792,12 +797,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
@@ -812,12 +818,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
@@ -832,12 +839,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
@@ -852,12 +860,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
@@ -872,12 +881,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>
@@ -892,12 +902,13 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Addon,None)</onclick>
-                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,VideoPlayList)</onclick>
+                <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,PlaylistSuggested)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Type,VideoPlayList)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Display,Default)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Fanart,$VAR[SkinBackgroundPath]playlist.jpg)</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/favorites.png)</onclick>
+                <onclick condition="Window.IsVisible(2114)">SetProperty($INFO[Window(home).Property(UsrSelectBtnPlaylistAlias)],$INFO[Skin.String(UsrSelectAddon)],Home)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),PlayListMenu)</visible>

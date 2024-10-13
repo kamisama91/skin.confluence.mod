@@ -16,6 +16,7 @@
     <onunload>ClearProperty(SwapItemFanArt,Home)</onunload>
     <onunload>ClearProperty(SwapItemDisplay,Home)</onunload>
     <onunload>ClearProperty(SwapItemPlaylist,Home)</onunload>
+    <onunload>ClearProperty(SwapItemPlaylistAlias,Home)</onunload>
     <onunload>ClearProperty(SwapItemPlaylistType,Home)</onunload>
     <onunload>ClearProperty(SwapItemPlaylistContent,Home)</onunload>
     <onunload>ClearProperty(SwapItemWidgetFormat,Home)</onunload>
@@ -175,6 +176,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.1.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.1.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.1.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.1.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -188,6 +190,9 @@
                         <onclick>Skin.SetString(HomeItem.1.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.1.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.1.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist1, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
@@ -208,6 +213,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.2.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.2.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.2.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.2.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -221,6 +227,9 @@
                         <onclick>Skin.SetString(HomeItem.2.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.2.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.2.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist2, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.2.Path))</visible>
@@ -241,6 +250,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.3.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.3.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.3.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.3.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -254,6 +264,9 @@
                         <onclick>Skin.SetString(HomeItem.3.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.3.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.3.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist3, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.3.Path))</visible>
@@ -274,6 +287,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.4.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.4.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.4.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.4.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -287,6 +301,9 @@
                         <onclick>Skin.SetString(HomeItem.4.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.4.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.4.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist4, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.4.Path))</visible>
@@ -307,6 +324,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.5.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.5.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.5.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.5.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -320,6 +338,9 @@
                         <onclick>Skin.SetString(HomeItem.5.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.5.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.5.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist5, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.5.Path))</visible>
@@ -340,6 +361,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.6.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.6.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.6.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.6.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -353,6 +375,9 @@
                         <onclick>Skin.SetString(HomeItem.6.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.6.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.6.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist6, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.6.Path))</visible>
@@ -373,6 +398,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.7.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.7.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.7.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.7.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -386,6 +412,9 @@
                         <onclick>Skin.SetString(HomeItem.7.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.7.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.7.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist7, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.7.Path))</visible>
@@ -406,6 +435,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.8.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.8.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.8.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.8.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -419,6 +449,9 @@
                         <onclick>Skin.SetString(HomeItem.8.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.8.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.8.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist8, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.8.Path))</visible>
@@ -439,6 +472,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.9.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.9.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.9.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.9.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -452,6 +486,9 @@
                         <onclick>Skin.SetString(HomeItem.9.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.9.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.9.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist9, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.9.Path))</visible>
@@ -472,6 +509,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.10.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.10.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.10.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.10.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -485,6 +523,9 @@
                         <onclick>Skin.SetString(HomeItem.10.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.10.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.10.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist10, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.10.Path))</visible>
@@ -505,6 +546,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.11.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.11.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.11.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.11.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -518,6 +560,9 @@
                         <onclick>Skin.SetString(HomeItem.11.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.11.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.11.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist11, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.11.Path))</visible>
@@ -538,6 +583,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.12.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.12.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.12.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.12.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -551,12 +597,15 @@
                         <onclick>Skin.SetString(HomeItem.12.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.12.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.12.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist12, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.12.Path))</visible>
                     </item>
                     <item id="13">
-                        <description>Home Menu Item Thriteen</description>
+                        <description>Home Menu Item Thirteen</description>
                         <label>$INFO[Skin.String(HomeItem.13.Label)]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$INFO[Skin.String(HomeItem.13.Label)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,$INFO[Skin.String(HomeItem.13.Path)])</onclick>
@@ -571,6 +620,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.13.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.13.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.13.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.13.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -584,6 +634,9 @@
                         <onclick>Skin.SetString(HomeItem.13.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.13.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.13.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist13, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.13.Path))</visible>
@@ -604,6 +657,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.14.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.14.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.14.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.14.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -617,6 +671,9 @@
                         <onclick>Skin.SetString(HomeItem.14.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.14.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.14.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist14, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.14.Path))</visible>
@@ -637,6 +694,7 @@
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistContent,$INFO[Skin.String(HomeItem.15.PlaylistContent)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetFormat,$INFO[Skin.String(HomeItem.15.WidgetFormat)])</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,$INFO[Skin.String(HomeItem.15.WidgetLayout)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].PlaylistAlias,$INFO[Skin.String(HomeItem.15.PlaylistAlias)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Label,$INFO[Window(Home).Property(SwapItemLabel)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Path,$INFO[Window(Home).Property(SwapItemPath)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.Sub,$INFO[Window(Home).Property(SwapItemSub)])</onclick>
@@ -650,6 +708,9 @@
                         <onclick>Skin.SetString(HomeItem.15.PlaylistContent,$INFO[Window(Home).Property(SwapItemPlaylistContent)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.WidgetFormat,$INFO[Window(Home).Property(SwapItemWidgetFormat)])</onclick>
                         <onclick>Skin.SetString(HomeItem.15.WidgetLayout,$INFO[Window(Home).Property(SwapItemWidgetLayout)])</onclick>
+                        <onclick>Skin.SetString(HomeItem.15.PlaylistAlias,$INFO[Window(Home).Property(SwapItemPlaylistAlias)])</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.SmartPlaylist15, $INFO[Window(Home).Property(SwapItemPlaylist)], Home)</onclick>
+                        <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings, true, Home)</onclick>
                         <onclick>Dialog.Close(1128)</onclick>
                         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
                         <visible>!String.IsEmpty(Skin.String(HomeItem.15.Path))</visible>

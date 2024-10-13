@@ -2777,3 +2777,19 @@ msgstr ""
 msgctxt "#32051"
 msgid "Enable choosing default menu item"
 msgstr ""
+
+msgctxt "#99000"
+msgid "Configure service.skin.smartplaylist.widgets"
+msgstr ""
+
+msgctxt "#99001"
+msgid "Random"
+msgstr ""
+
+msgctxt "#99002"
+msgid "Recent"
+msgstr ""
+
+msgctxt "#99003"
+msgid "Suggested"
+msgstr ""
