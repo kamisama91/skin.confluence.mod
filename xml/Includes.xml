@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include file="IncludesHomeWidget.xml" />
+    <include file="IncludesHomeWidgetSmartPlaylist.xml" />
     <include file="Defaults.xml" />
     <include file="IncludesDialogSelect.xml" />
     <include file="IncludesVariables.xml" />
@@ -2447,11 +2448,11 @@
             !String.IsEmpty(Skin.String(HomeItem.8.Playlist)) + Skin.String(HomeItem.8.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.8) |
             !String.IsEmpty(Skin.String(HomeItem.9.Playlist)) + Skin.String(HomeItem.9.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.9) |
             !String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.10.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.10) |
-            !String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.11) |
-            !String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.12) |
-            !String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.13) |
-            !String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.14) |
-            !String.IsEmpty(Skin.String(HomeItem.10.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.15)
+            !String.IsEmpty(Skin.String(HomeItem.11.Playlist)) + Skin.String(HomeItem.11.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.11) |
+            !String.IsEmpty(Skin.String(HomeItem.12.Playlist)) + Skin.String(HomeItem.12.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.12) |
+            !String.IsEmpty(Skin.String(HomeItem.13.Playlist)) + Skin.String(HomeItem.13.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.13) |
+            !String.IsEmpty(Skin.String(HomeItem.14.Playlist)) + Skin.String(HomeItem.14.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.14) |
+            !String.IsEmpty(Skin.String(HomeItem.15.Playlist)) + Skin.String(HomeItem.15.Type,VideoNode) + String.IsEqual(Window(home).Property(UsrSelectBtn),HomeItem.15)
         </visible>
     </include>
     <include name="TopLeftInfo">
@@ -3659,6 +3660,24 @@
                     <textwidth>435</textwidth>
                     <onclick>dialog.close(all,true)</onclick>
                     <onclick>System.LogOff</onclick>
+                    <!-- Dispose of service.skin.smartplaylist.widgets addon -->
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist1,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist2,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist3,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist4,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist5,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist6,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist7,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist8,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist9,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist10,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist11,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist12,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist13,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist14,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.SmartPlaylist15,Home)</onclick>
+                    <onclick>SetProperty(service.skin.smartplaylist.widgets.ReloadSettings,true,Home)</onclick>
+                    <onclick>ClearProperty(service.skin.smartplaylist.widgets.Loaded,Home)</onclick>
                     <pulseonselect>no</pulseonselect>
                     <font>font13</font>
                     <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
