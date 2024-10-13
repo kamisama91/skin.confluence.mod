@@ -1,8 +1,8 @@
-[B]19.0.0/B] [I]Oct 2022[/I]
-- Upgrade to Helly skin.xonfluence 4.1.1
+[B]21.0.0/B] [I]Oct 2024[/I]
+- Upgrade to DarkZone-World skin.xonfluence 5 (https://github.com/DarkZone-World/skin.xonfluence)
 
-[B]18.1.0/B] [I]Jan 2020[/I]
-- Add service.skin.smartplaylist support
+[B]19.0.0/B] [I]Oct 2022[/I]
+- Upgrade to Bartolomesoriano skin.xonfluence 4.1.1 (https://github.com/bartolomesoriano/skin.xonfluence)
 
 [B]18.0.0/B] [I]Jan 2020[/I]
 - Upgrade to Helly skin.xonfluence 4.0.10
