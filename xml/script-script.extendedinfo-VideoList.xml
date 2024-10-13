@@ -290,7 +290,7 @@
                             <align>justify</align>
                             <label fallback="32016">$INFO[Container(500).ListItem.Plot,,[CR][CR]  ]</label>
                             <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                            <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                             <font>font12</font>
                             <textcolor>white</textcolor>
                         </control>

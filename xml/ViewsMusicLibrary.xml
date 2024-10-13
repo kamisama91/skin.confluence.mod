@@ -430,7 +430,7 @@
                     <textcolor>white</textcolor>
                     <label>$INFO[ListItem.Property(Album_Description)]</label>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
         </control>
@@ -654,9 +654,9 @@
                     <aligny>center</aligny>
                     <font>font13_title</font>
                     <textcolor>white</textcolor>
-					<visible>!String.IsEmpty(ListItem.Year)</visible>
+                    <visible>!String.IsEmpty(ListItem.Year)</visible>
                 </control>
-				<control type="label">
+                <control type="label">
                     <description>Runtime</description>
                     <left>15</left>
                     <top>823</top>
@@ -666,7 +666,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>font13_title</font>
-					<visible>!String.IsEmpty(ListItem.Duration)</visible>
+                    <visible>!String.IsEmpty(ListItem.Duration)</visible>
                 </control>
             </control>
         </control>
@@ -868,7 +868,7 @@
                         <textcolor>white</textcolor>
                         <label>$INFO[ListItem.Property(Artist_Description)]</label>
                         <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                 </control>
             </control>
@@ -1024,7 +1024,7 @@
                     <textcolor>white</textcolor>
                     <label>$INFO[ListItem.Property(Album_Description)]</label>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
         </control>

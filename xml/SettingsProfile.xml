@@ -272,7 +272,7 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                         <visible>Control.Hasfocus(4)</visible>
                     </control>
                     <control type="textbox">
@@ -286,7 +286,7 @@
                         <align>justify</align>
                         <textcolor>white</textcolor>
                         <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                         <visible>Control.Hasfocus(5)</visible>
                     </control>
                 </control>

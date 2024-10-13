@@ -269,7 +269,7 @@
                     <align>justify</align>
                     <textcolor>grey</textcolor>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     <label>$VAR[VideoDescription]</label>
                 </control>
             </control>

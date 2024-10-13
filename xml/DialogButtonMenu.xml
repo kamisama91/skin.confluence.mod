@@ -21,13 +21,13 @@
             <texturefocus></texturefocus>
             <texturenofocus></texturenofocus>
             <onleft condition="!Skin.HasSetting(Use.SkinShortcuts)">9000</onleft>
-			<onleft condition="Skin.HasSetting(Use.SkinShortcuts)">9099</onleft>
+            <onleft condition="Skin.HasSetting(Use.SkinShortcuts)">9099</onleft>
             <onright condition="!Skin.HasSetting(Use.SkinShortcuts)">9000</onright>
-			<onright condition="Skin.HasSetting(Use.SkinShortcuts)">9099</onright>
+            <onright condition="Skin.HasSetting(Use.SkinShortcuts)">9099</onright>
             <onup condition="!Skin.HasSetting(Use.SkinShortcuts)">9000</onup>
-			<onup condition="Skin.HasSetting(Use.SkinShortcuts)">9099</onup>
+            <onup condition="Skin.HasSetting(Use.SkinShortcuts)">9099</onup>
             <ondown condition="!Skin.HasSetting(Use.SkinShortcuts)">2</ondown>
-			<ondown condition="Skin.HasSetting(Use.SkinShortcuts)">9099</ondown>
+            <ondown condition="Skin.HasSetting(Use.SkinShortcuts)">9099</ondown>
         </control>
         <control type="image">
             <left>0</left>
@@ -36,7 +36,7 @@
             <height>1080</height>
             <texture>black-back.png</texture>
         </control>
-		<include condition="Skin.HasSetting(Use.SkinShortcuts)">SkinShortcutsPowerItems</include>
-    	<include condition="!Skin.HasSetting(Use.SkinShortcuts)">StandardPowerItems</include>
+        <include condition="Skin.HasSetting(Use.SkinShortcuts)">SkinShortcutsPowerItems</include>
+        <include condition="!Skin.HasSetting(Use.SkinShortcuts)">StandardPowerItems</include>
     </controls>
 </window>

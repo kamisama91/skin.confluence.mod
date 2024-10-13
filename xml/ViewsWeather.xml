@@ -59,14 +59,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>690</left>
                         <top>0</top>
                         <width>202</width>
                         <height>202</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                     </control>
@@ -138,14 +138,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>690</left>
                         <top>0</top>
                         <width>202</width>
                         <height>202</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$INFO[ListItem.ActualIcon]</imagepath>
                     </control>
@@ -196,14 +196,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
@@ -262,14 +262,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
@@ -484,14 +484,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(36Hour.1.Heading)]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>0</left>
                         <top>15</top>
                         <width>180</width>
                         <height>165</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.1.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
@@ -557,9 +557,9 @@
                         <top>15</top>
                         <width>180</width>
                         <height>165</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.2.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
@@ -625,9 +625,9 @@
                         <top>15</top>
                         <width>180</width>
                         <height>165</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(36Hour.3.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
@@ -720,9 +720,9 @@
                         <top>30</top>
                         <width>195</width>
                         <height>240</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(Weekend.1.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
@@ -805,14 +805,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[Window.Property(Weekend.2.LongDay)] - $INFO[Window.Property(Weekend.2.ShortDate)]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>15</left>
                         <top>30</top>
                         <width>195</width>
                         <height>240</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$VAR[WeatherIconPath]$INFO[Window.Property(Weekend.2.FanartCode)]$VAR[WeatherIconExt]</imagepath>
                     </control>
@@ -928,14 +928,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
@@ -994,14 +994,14 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-					<control type="multiimage">
+                    <control type="multiimage">
                         <left>165</left>
                         <top>8</top>
                         <width>120</width>
                         <height>120</height>
-						<timeperimage>70</timeperimage>
-				        <fadetime>1</fadetime>
-				        <randomize>false</randomize>
+                        <timeperimage>70</timeperimage>
+                        <fadetime>1</fadetime>
+                        <randomize>false</randomize>
                         <aspectratio>keep</aspectratio>
                         <imagepath>$INFO[ListItem.Thumb]</imagepath>
                     </control>
@@ -1356,7 +1356,7 @@
                     <align>center</align>
                     <label>$INFO[Window.Property(Alerts)]</label>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
             <control type="label">

@@ -209,7 +209,7 @@
                         <textcolor>white</textcolor>
                         <label>$INFO[ListItem.AddonDescription]</label>
                         <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                 </control>
             </control>
@@ -442,7 +442,7 @@
                         <textcolor>white</textcolor>
                         <label>$INFO[ListItem.AddonDescription]</label>
                         <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                 </control>
             </control>

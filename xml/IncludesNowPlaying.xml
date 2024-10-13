@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="NowPlayingMusic">
-	    <control type="group">
+        <control type="group">
             <depth>DepthMenu</depth>
             <left>0</left>
             <top>90</top>
@@ -61,10 +61,10 @@
                 <shadowcolor>black</shadowcolor>
             </control>
         </control>
-	</include>
-	
-	<include name="NowPlayingPVR">
-	    <control type="group">
+    </include>
+    
+    <include name="NowPlayingPVR">
+        <control type="group">
             <depth>DepthMenu</depth>
             <left>735r</left>
             <top>105</top>
@@ -209,10 +209,10 @@
                 </control>
             </control>
         </control>
-	</include>
-	
-	<include name="NowPlayingVideo">
-	    <control type="group">
+    </include>
+    
+    <include name="NowPlayingVideo">
+        <control type="group">
             <depth>DepthMenu</depth>
             <left>0</left>
             <top>75</top>
@@ -222,7 +222,7 @@
             <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
             <animation effect="slide" start="0,0" end="0,240" time="0" condition="Skin.HasSetting(LowerMainMenuBar)">Conditional</animation>
             <!-- Concert or other streaming video -->
-			<control type="group">
+            <control type="group">
                 <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
                 <control type="image">
                     <description>Cover image</description>
@@ -277,7 +277,7 @@
                     <visible>VideoPlayer.HasEpg</visible>
                 </control>
             </control>
-			<!-- PVR -->
+            <!-- PVR -->
             <control type="group">
                 <visible>VideoPlayer.Content(LiveTV)</visible>
                 <control type="image">
@@ -287,7 +287,7 @@
                     <width>214</width>
                     <height>120</height>
                     <aspectratio>scale</aspectratio>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+                    <texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
                     <bordertexture border="8">ThumbBorder.png</bordertexture>
                     <bordersize>5</bordersize>
                 </control>
@@ -331,7 +331,7 @@
                     <shadowcolor>black</shadowcolor>
                 </control>
             </control>
-			<!-- Movies -->
+            <!-- Movies -->
             <control type="group">
                 <visible>VideoPlayer.Content(Movies)</visible>
                 <control type="image">
@@ -385,7 +385,7 @@
                     <shadowcolor>black</shadowcolor>
                 </control>
             </control>
-			<!-- Episodes -->
+            <!-- Episodes -->
             <control type="group">
                 <visible>VideoPlayer.Content(Episodes)</visible>
                 <control type="image">
@@ -440,10 +440,10 @@
                 </control>
             </control>
         </control>
-	</include>
-	
-	<include name="NowPlayingMediaControls">
-	    <control type="group">
+    </include>
+    
+    <include name="NowPlayingMediaControls">
+        <control type="group">
             <depth>DepthMenu-</depth>
             <description>Controls for currently playing media</description>
             <left>818r</left>
@@ -834,5 +834,5 @@
                 <visible>!Player.HasMedia + Skin.HasSetting(EnableHomeStats)</visible>
             </control>
         </control>
-	</include>
+    </include>
 </includes>

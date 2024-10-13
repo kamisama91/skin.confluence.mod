@@ -219,7 +219,7 @@
                     <selected>!Skin.HasSetting(Disable504FanArt)</selected>
                     <visible>[Control.IsVisible(504) | Control.IsVisible(515)] + Container.Content(Movies)</visible>
                 </control>
-				<control type="radiobutton" id="109">
+                <control type="radiobutton" id="109">
                     <description>Hide Ratings</description>
                     <textwidth>255</textwidth>
                     <include>ButtonCommonValues</include>
@@ -228,7 +228,7 @@
                     <selected>Skin.HasSetting(HideRatingsViews)</selected>
                     <!-- diable rating in all views, not just episodes  by:Rafi  -->
                     <!-- <visible>[Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(50) | Control.IsVisible(51)] + Container.Content(episodes)</visible> -->
-					<visible>[Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(50) | Control.IsVisible(51)]</visible>
+                    <visible>[Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(50) | Control.IsVisible(51)]</visible>
                 </control>
                 <control type="label" id="201">
                     <width>375</width>
@@ -293,14 +293,14 @@
                     <onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
                     <visible>Container.Content(addons)</visible>
                 </control>
-				<control type="button" id="205">
+                <control type="button" id="205">
                     <description>Play Random</description>
                     <textwidth>352</textwidth>
                     <include>ButtonCommonValues</include>
                     <label>$ADDON[script.playrandomvideos 32100]</label>
-					<onclick>RunScript(script.playrandomvideos, "$INFO[Container.FolderPath]", "label=$INFO[Container.FolderName]", singlevideo)</onclick>
-					<visible>System.HasAddon(script.playrandomvideos)</visible>
-					<visible>!String.Contains(Container.FolderPath,plugin) + !String.Contains(Container.FolderPath,addons) + !String.Contains(Container.FolderPath,sources)</visible>
+                    <onclick>RunScript(script.playrandomvideos, "$INFO[Container.FolderPath]", "label=$INFO[Container.FolderName]", singlevideo)</onclick>
+                    <visible>System.HasAddon(script.playrandomvideos)</visible>
+                    <visible>!String.Contains(Container.FolderPath,plugin) + !String.Contains(Container.FolderPath,addons) + !String.Contains(Container.FolderPath,sources)</visible>
                 </control>
                 <include>CommonNowPlaying_Controls</include>
             </control>

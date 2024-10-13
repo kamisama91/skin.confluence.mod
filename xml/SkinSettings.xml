@@ -7,7 +7,7 @@
     <onload condition="String.IsEqual(Container(9011).Position,0) + !String.IsEqual(Skin.String(InitialMenuPosi),0)">Control.Move(9011,$INFO[Skin.String(InitialMenuPosi)])</onload>
     <onunload condition="Skin.HasSetting(EnableFanartScript)">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(FanArtCycleRate)])</onunload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu&amp;levels=2)</onunload>
-	<include>UnloadsScripts</include>
+    <include>UnloadsScripts</include>
     <controls>
         <include>CommonBackground</include>
         <control type="image">
@@ -150,22 +150,22 @@
                     <item id="2">
                         <label>31282</label>
                         <label2>31025</label2>
-						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
+                        <visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
-					<item id="8">
+                    <item id="8">
                         <label>31282</label>
                         <label2>31112</label2>
-						<visible>Skin.HasSetting(Use.SkinShortcuts)</visible>
+                        <visible>Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
                     <item id="3">
                         <label>1034</label>
                         <label2>31113</label2>
-						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
+                        <visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
                     <item id="4">
                         <label>24000</label>
                         <label2>31996</label2>
-						<visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
+                        <visible>!Skin.HasSetting(Use.SkinShortcuts)</visible>
                     </item>
                     <item id="5">
                         <label>33068</label>
@@ -221,14 +221,14 @@
             </control>
             <control type="group" id="9010">
                 <defaultcontrol>8001</defaultcontrol>
-				<control type="group">
-				    <visible>Container(9000).Hasfocus(8)</visible>
+                <control type="group">
+                    <visible>Container(9000).Hasfocus(8)</visible>
                     <left>435</left>
                     <top>95</top>
                     <width>1125</width>
                     <height>795</height>
-					<control type="grouplist" id="9801">
-						<onleft>9000</onleft>
+                    <control type="grouplist" id="9801">
+                        <onleft>9000</onleft>
                         <onright>9861</onright>
                         <onup>9199</onup>
                         <ondown>9199</ondown>
@@ -247,7 +247,7 @@
                             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
                             <include>MenuButton</include>
                         </control>
-						<control type="button" id="980102">
+                        <control type="button" id="980102">
                             <description>Customize Power menu</description>
                             <width>1125</width>
                             <height>60</height>
@@ -258,7 +258,7 @@
                             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
                             <include>MenuButton</include>
                         </control>
-						<control type="radiobutton" id="980103">
+                        <control type="radiobutton" id="980103">
                             <description>Enable choosing default menu item</description>
                             <width>1125</width>
                             <height>60</height>
@@ -270,7 +270,7 @@
                             <onclick>Skin.ToggleSetting(Enable.DefaultMenu)</onclick>
                             <selected>Skin.HasSetting(Enable.DefaultMenu)</selected>
                         </control>
-					</control>
+                    </control>
                     <control type="scrollbar" id="9861">
                         <left>1155</left>
                         <top>0</top>
@@ -285,8 +285,8 @@
                         <onright>800</onright>
                         <showonepage>false</showonepage>
                         <orientation>vertical</orientation>
-                    </control>					
-				</control>
+                    </control>                    
+                </control>
                 <control type="group">
                     <visible>Container(9000).Hasfocus(1)</visible>
                     <left>435</left>
@@ -351,7 +351,7 @@
                                 <onclick>Skin.ToggleSetting(Use.SkinShortcuts)</onclick>
                                 <selected>Skin.HasSetting(Use.SkinShortcuts)</selected>
                             </control>
-							<control type="radiobutton" id="100">
+                            <control type="radiobutton" id="100">
                                 <description>Global Background</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -401,7 +401,7 @@
                                 <selected>Skin.HasSetting(ClockShowSeconds)</selected>
                                 <enable>!Skin.HasSetting(HideSystemTime)</enable>
                             </control>
-							<control type="radiobutton" id="1021">
+                            <control type="radiobutton" id="1021">
                                 <description>CPU Temp</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -413,7 +413,7 @@
                                 <onclick>Skin.ToggleSetting(HideCPUTemp)</onclick>
                                 <selected>!Skin.HasSetting(HideCPUTemp)</selected>
                             </control>
-							<control type="radiobutton" id="1022">
+                            <control type="radiobutton" id="1022">
                                 <description>Hide widgets until focused</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -556,10 +556,10 @@
                                 <label>$LOCALIZE[31066]</label>
                                 <include>MenuButton</include>
                                 <onclick condition="Skin.HasSetting(HidePopupSeekBar) + Skin.HasSetting(StandardSeekBar)">Skin.Reset(StandardSeekBar)</onclick>
-								<onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
+                                <onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
                                 <selected>!Skin.HasSetting(HidePopUpSeekBar)</selected>
                             </control>
-							<control type="radiobutton" id="11401">
+                            <control type="radiobutton" id="11401">
                                 <description>Standard Seekbar</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -569,7 +569,7 @@
                                 <label>$LOCALIZE[32008]</label>
                                 <include>MenuButton</include>
                                 <onclick condition="!Skin.HasSetting(StandardSeekBar) + !Skin.HasSetting(HidePopupSeekBar)">Skin.SetBool(HidePopupSeekBar)</onclick>
-								<onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
+                                <onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
                                 <selected>Skin.HasSetting(StandardSeekBar)</selected>
                             </control>
                             <control type="radiobutton" id="115">
@@ -806,7 +806,7 @@
                                 <onclick condition="Skin.String(MenuLAF,GraphFocused)">Skin.SetString(MenuLAF,GraphText)</onclick>
                                 <onclick condition="Skin.String(MenuLAF,GraphText)">Skin.Reset(MenuLAF)</onclick>
                             </control>
-							<control type="radiobutton" id="135">
+                            <control type="radiobutton" id="135">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -816,10 +816,10 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(AutoDisableHWAccel)</onclick>
                                 <selected>Skin.HasSetting(AutoDisableHWAccel)</selected>
-								<visible>System.Platform.Android</visible>
-								<visible>System.HasAddon(script.embuary.helper)</visible>
+                                <visible>System.Platform.Android</visible>
+                                <visible>System.HasAddon(script.embuary.helper)</visible>
                             </control>
-							<control type="radiobutton" id="136">
+                            <control type="radiobutton" id="136">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -829,7 +829,7 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(HideRebootToAndroid)</onclick>
                                 <selected>Skin.HasSetting(HideRebootToAndroid)</selected>
-								<visible>System.CanReboot + [System.Platform.Linux | System.Platform.Linux.RaspberryPi | System.Platform.Android]</visible>
+                                <visible>System.CanReboot + [System.Platform.Linux | System.Platform.Linux.RaspberryPi | System.Platform.Android]</visible>
                             </control>
                         </control>
                         <control type="scrollbar" id="2061">
@@ -950,7 +950,7 @@
                                 <selected>!Skin.HasSetting(AutoVisableSubMenu)</selected>
                                 <include>MenuButton</include>
                             </control>
-							<control type="radiobutton" id="14001">
+                            <control type="radiobutton" id="14001">
                                 <description>Main menu in all caps</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1095,7 +1095,7 @@
                                 <onclick condition="Skin.String(CustomWidgets,75)">Skin.SetString(CustomWidgets,100)</onclick>
                                 <onclick condition="Skin.String(CustomWidgets,100)">Skin.Reset(CustomWidgets)</onclick>
                             </control>
-							<control type="radiobutton" id="1511">
+                            <control type="radiobutton" id="1511">
                                 <description>Show widget fanart</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1247,7 +1247,7 @@
                                 <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
                                 <selected>Skin.HasSetting(AutoScroll)</selected>
                             </control>
-							<control type="radiobutton" id="1611">
+                            <control type="radiobutton" id="1611">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -1257,7 +1257,7 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(AutoScroll.Slow)</onclick>
                                 <selected>Skin.HasSetting(AutoScroll.slow)</selected>
-								<visible>Skin.HasSetting(AutoScroll)</visible>
+                                <visible>Skin.HasSetting(AutoScroll)</visible>
                             </control>
                             <control type="radiobutton" id="162">
                                 <width>1125</width>
@@ -1477,7 +1477,7 @@
                                 <onclick>Skin.ToggleSetting(HideInfoStartOSD)</onclick>
                                 <selected>!Skin.HasSetting(HideInfoStartOSD)</selected>
                             </control>
-							<control type="button" id="17801">
+                            <control type="button" id="17801">
                                 <description>Usr OSD Magic User Select</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1490,7 +1490,7 @@
                                 <onclick>ActivateWindow(2137)</onclick>
                                 <enable>!Skin.HasSetting(HideInfoStartOSD)</enable>
                             </control>
-							<control type="radiobutton" id="17802">
+                            <control type="radiobutton" id="17802">
                                 <description>OSD Seekbar wiht Start Media Intro</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1538,7 +1538,7 @@
                                 <onclick>Skin.ToggleSetting(ShowSeekBarPaused)</onclick>
                                 <selected>Skin.HasSetting(ShowSeekBarPaused)</selected>
                             </control>
-							<control type="radiobutton" id="1811">
+                            <control type="radiobutton" id="1811">
                                 <description>Hide shadow behind seekbar</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1549,9 +1549,9 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(HideShadowSeekBar)</onclick>
                                 <selected>Skin.HasSetting(HideShadowSeekBar)</selected>
-								<visible>Skin.HasSetting(ShowSeekBarPaused)</visible>
+                                <visible>Skin.HasSetting(ShowSeekBarPaused)</visible>
                             </control>
-							<control type="radiobutton" id="1812">
+                            <control type="radiobutton" id="1812">
                                 <description>Show Chapters/Cutlist on Seekbar</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1563,7 +1563,7 @@
                                 <onclick>Skin.ToggleSetting(ShowCutlist)</onclick>
                                 <selected>Skin.HasSetting(ShowCutlist)</selected>
                             </control>
-							<control type="radiobutton" id="1813">
+                            <control type="radiobutton" id="1813">
                                 <description>Show End time on OSD</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1991,8 +1991,8 @@
                                 <enable>Skin.String(HomeItem.1.Widget) + !String.IsEqual(Skin.String(HomeItem.1.Widget),None) + !String.IsEqual(Skin.String(HomeItem.1.Widget),Weather) + !String.IsEqual(Skin.String(HomeItem.1.Widget),WeatherExtended) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.1.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.1.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
-							<!-- Button for selecting widget layout -->
-							<control type="button" id="12051">
+                            <!-- Button for selecting widget layout -->
+                            <control type="button" id="12051">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -2004,7 +2004,7 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.1,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.1.Widget)) + !String.IsEqual(Skin.String(HomeItem.1.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
                             <control type="button" id="1206">
                                 <description>Menu BackGround Type</description>
@@ -2039,10 +2039,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.1.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.1.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.1.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.1.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.1.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.1.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.1.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.1.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.1.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.1.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.1.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.1.Label))</visible>
                             </control>
@@ -2178,7 +2178,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12151">
+                            <control type="button" id="12151">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -2190,9 +2190,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.2,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.2.Widget)) + !String.IsEqual(Skin.String(HomeItem.2.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
-							<control type="button" id="1216">
+                            <control type="button" id="1216">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2226,10 +2226,10 @@
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.2.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.2.Playlist)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.2.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.2.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.2.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.2.WidgetLayout)],Home)</onclick>
-								<onclick>ActivateWindow(1128)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.2.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.2.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.2.WidgetLayout)],Home)</onclick>
+                                <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.2.Label))</visible>
                             </control>
                             <control type="radiobutton" id="1218">
@@ -2364,7 +2364,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12251">
+                            <control type="button" id="12251">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -2376,9 +2376,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.3,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.3.Widget)) + !String.IsEqual(Skin.String(HomeItem.3.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
-							<control type="button" id="1226">
+                            <control type="button" id="1226">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2412,10 +2412,10 @@
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.3.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.3.Playlist)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.3.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.3.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.3.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.3.WidgetLayout)],Home)</onclick>
-								<onclick>ActivateWindow(1128)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.3.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.3.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.3.WidgetLayout)],Home)</onclick>
+                                <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.3.Label))</visible>
                             </control>
                             <control type="radiobutton" id="1228">
@@ -2550,7 +2550,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12351">
+                            <control type="button" id="12351">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -2562,9 +2562,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.4,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.4.Widget)) + !String.IsEqual(Skin.String(HomeItem.4.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
-							<control type="button" id="1236">
+                            <control type="button" id="1236">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2597,10 +2597,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.4.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.4.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.4.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.4.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.4.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.4.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.4.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.4.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.4.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.4.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.4.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.4.Label))</visible>
                             </control>
@@ -2736,7 +2736,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12451">
+                            <control type="button" id="12451">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -2748,9 +2748,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.5,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.5.Widget)) + !String.IsEqual(Skin.String(HomeItem.5.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
-							<control type="button" id="1246">
+                            <control type="button" id="1246">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2783,10 +2783,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.5.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.5.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.5.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.5.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.5.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.5.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.5.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.5.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.5.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.5.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.5.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.5.Label))</visible>
                             </control>
@@ -2922,7 +2922,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12551">
+                            <control type="button" id="12551">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -2936,7 +2936,7 @@
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.6.Widget)) + !String.IsEqual(Skin.String(HomeItem.6.Widget),None)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
-							<control type="button" id="1256">
+                            <control type="button" id="1256">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -2969,10 +2969,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.6.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.6.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.6.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.6.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.6.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.6.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.6.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.6.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.6.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.6.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.6.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.6.Label))</visible>
                             </control>
@@ -3108,7 +3108,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12651">
+                            <control type="button" id="12651">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -3120,9 +3120,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.7,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.7.Widget)) + !String.IsEqual(Skin.String(HomeItem.7.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
-							<control type="button" id="1266">
+                            <control type="button" id="1266">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3155,10 +3155,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.7.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.7.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.7.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.7.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.7.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.7.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.7.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.7.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.7.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.7.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.7.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.7.Label))</visible>
                             </control>
@@ -3294,7 +3294,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12751">
+                            <control type="button" id="12751">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -3306,9 +3306,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.8,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.8.Widget)) + !String.IsEqual(Skin.String(HomeItem.8.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
-							<control type="button" id="1276">
+                            <control type="button" id="1276">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3341,10 +3341,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.8.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.8.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.8.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.8.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.8.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.8.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.8.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.8.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.8.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.8.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.8.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.8.Label))</visible>
                             </control>
@@ -3480,7 +3480,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12851">
+                            <control type="button" id="12851">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -3492,9 +3492,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.9,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.9.Widget)) + !String.IsEqual(Skin.String(HomeItem.9.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
-							<control type="button" id="1286">
+                            <control type="button" id="1286">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3527,10 +3527,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.9.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.9.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.9.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.9.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.9.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.9.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.9.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.9.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.9.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.9.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.9.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.9.Label))</visible>
                             </control>
@@ -3666,7 +3666,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="12951">
+                            <control type="button" id="12951">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -3678,9 +3678,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.10,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.10.Widget)) + !String.IsEqual(Skin.String(HomeItem.10.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
-							<control type="button" id="1296">
+                            <control type="button" id="1296">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3713,10 +3713,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.10.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.10.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.10.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.10.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.10.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.10.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.10.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.10.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.10.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.10.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.10.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.10.Label))</visible>
                             </control>
@@ -3852,7 +3852,7 @@
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
                             <!-- Button for selecting widget layout -->
-							<control type="button" id="13051">
+                            <control type="button" id="13051">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -3864,9 +3864,9 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.11,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.11.Widget)) + !String.IsEqual(Skin.String(HomeItem.11.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
-							<control type="button" id="1306">
+                            <control type="button" id="1306">
                                 <description>Menu BackGround Type</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -3899,10 +3899,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.11.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.11.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.11.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.11.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.11.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.11.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.11.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.11.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.11.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.11.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.11.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.11.Label))</visible>
                             </control>
@@ -4037,8 +4037,8 @@
                                 <enable>Skin.String(HomeItem.12.Widget) + !String.IsEqual(Skin.String(HomeItem.12.Widget),None) + !String.IsEqual(Skin.String(HomeItem.12.Widget),Weather) + !String.IsEqual(Skin.String(HomeItem.12.Widget),WeatherExtended) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.12.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.12.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
-							<!-- Button for selecting widget layout -->
-							<control type="button" id="13151">
+                            <!-- Button for selecting widget layout -->
+                            <control type="button" id="13151">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -4050,7 +4050,7 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.12,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.12.Widget)) + !String.IsEqual(Skin.String(HomeItem.12.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
                             <control type="button" id="1316">
                                 <description>Menu BackGround Type</description>
@@ -4085,10 +4085,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.12.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.12.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.12.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.12.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.12.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.12.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.12.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.12.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.12.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.12.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.12.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.12.Label))</visible>
                             </control>
@@ -4223,8 +4223,8 @@
                                 <enable>Skin.String(HomeItem.13.Widget) + !String.IsEqual(Skin.String(HomeItem.13.Widget),None) + !String.IsEqual(Skin.String(HomeItem.13.Widget),Weather) + !String.IsEqual(Skin.String(HomeItem.13.Widget),WeatherExtended) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.13.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.13.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
-							<!-- Button for selecting widget layout -->
-							<control type="button" id="13251">
+                            <!-- Button for selecting widget layout -->
+                            <control type="button" id="13251">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -4236,7 +4236,7 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.13,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.13.Widget)) + !String.IsEqual(Skin.String(HomeItem.13.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
                             <control type="button" id="1326">
                                 <description>Menu BackGround Type</description>
@@ -4271,10 +4271,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.13.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.13.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.13.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.13.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.13.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.13.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.13.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.13.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.13.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.13.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.13.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.13.Label))</visible>
                             </control>
@@ -4409,8 +4409,8 @@
                                 <enable>Skin.String(HomeItem.14.Widget) + !String.IsEqual(Skin.String(HomeItem.14.Widget),None) + !String.IsEqual(Skin.String(HomeItem.14.Widget),Weather) + !String.IsEqual(Skin.String(HomeItem.14.Widget),WeatherExtended) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.14.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.14.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
-							<!-- Button for selecting widget layout -->
-							<control type="button" id="13351">
+                            <!-- Button for selecting widget layout -->
+                            <control type="button" id="13351">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -4422,7 +4422,7 @@
                                 <onclick>SetProperty(UsrSelectBtn,HomeItem.14,Home)</onclick>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.14.Widget)) + !String.IsEqual(Skin.String(HomeItem.14.Widget),None)</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
                             <control type="button" id="1336">
                                 <description>Menu BackGround Type</description>
@@ -4457,10 +4457,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.14.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.14.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.14.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.14.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.14.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.14.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.14.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.14.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.14.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.14.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.14.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.14.Label))</visible>
                             </control>
@@ -4595,8 +4595,8 @@
                                 <enable>Skin.String(HomeItem.15.Widget) + !String.IsEqual(Skin.String(HomeItem.15.Widget),None) + !String.IsEqual(Skin.String(HomeItem.15.Widget),Weather) + !String.IsEqual(Skin.String(HomeItem.15.Widget),WeatherExtended) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RandomArtists) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RecentAlbums) + !String.IsEqual(Skin.String(HomeItem.15.Widget),RandomAlbums) + !String.IsEqual(Skin.String(HomeItem.15.Widget),SuggestedAlbums)</enable>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
                             </control>
-							<!-- Button for selecting widget layout -->
-							<control type="button" id="13451">
+                            <!-- Button for selecting widget layout -->
+                            <control type="button" id="13451">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -4608,7 +4608,7 @@
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.15.Widget)) + !String.IsEqual(Skin.String(HomeItem.15.Widget),None)</enable>
                                 <onclick>ActivateWindow(2136)</onclick>
                                 <enable>!String.IsEmpty(Skin.String(HomeItem.15.Widget))</enable>
-								<visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
+                                <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
                             </control>
                             <control type="button" id="1346">
                                 <description>Menu BackGround Type</description>
@@ -4643,10 +4643,10 @@
                                 <onclick>SetProperty(SwapItemFanArt,$INFO[Skin.String(HomeItem.15.Fanart)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemDisplay,$INFO[Skin.String(HomeItem.15.Display)],Home)</onclick>
                                 <onclick>SetProperty(SwapItemPlaylist,$INFO[Skin.String(HomeItem.15.Playlist)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.15.PlaylistType)],Home)</onclick>
-								<onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.15.PlaylistContent)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.15.WidgetFormat)],Home)</onclick>
-								<onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.15.WidgetLayout)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistType,$INFO[Skin.String(HomeItem.15.PlaylistType)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemPlaylistContent,$INFO[Skin.String(HomeItem.15.PlaylistContent)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetFormat,$INFO[Skin.String(HomeItem.15.WidgetFormat)],Home)</onclick>
+                                <onclick>SetProperty(SwapItemWidgetLayout,$INFO[Skin.String(HomeItem.15.WidgetLayout)],Home)</onclick>
                                 <onclick>ActivateWindow(1128)</onclick>
                                 <visible>!String.IsEmpty(Skin.String(HomeItem.15.Label))</visible>
                             </control>
@@ -7184,13 +7184,13 @@
                             <item id="12">
                                 <label>$LOCALIZE[31242] $LOCALIZE[31292]</label>
                             </item>
-							<item id="13">
+                            <item id="13">
                                 <label>$LOCALIZE[32017] $LOCALIZE[31292]</label>
                             </item>
-							<item id="14">
+                            <item id="14">
                                 <label>$LOCALIZE[32018] $LOCALIZE[31292]</label>
                             </item>
-							<item id="15">
+                            <item id="15">
                                 <label>$LOCALIZE[32019] $LOCALIZE[31292]</label>
                             </item>
                         </content>
@@ -8668,7 +8668,7 @@
                             <orientation>vertical</orientation>
                             <visible>Container(9004).HasFocus(12)</visible>
                         </control>
-						<control type="grouplist" id="9401">
+                        <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(13)</visible>
                             <onleft>9000</onleft>
                             <onright>2372</onright>
@@ -8790,7 +8790,7 @@
                             <orientation>vertical</orientation>
                             <visible>Container(9004).HasFocus(13)</visible>
                         </control>
-						<control type="grouplist" id="9401">
+                        <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(14)</visible>
                             <onleft>9000</onleft>
                             <onright>2372</onright>
@@ -8912,7 +8912,7 @@
                             <orientation>vertical</orientation>
                             <visible>Container(9004).HasFocus(14)</visible>
                         </control>
-						<control type="grouplist" id="9401">
+                        <control type="grouplist" id="9401">
                             <visible>Container(9004).HasFocus(15)</visible>
                             <onleft>9000</onleft>
                             <onright>2372</onright>
@@ -11021,7 +11021,7 @@
                                 <onclick>Skin.ToggleSetting(DisableClearArt)</onclick>
                                 <selected>!Skin.HasSetting(DisableClearArt)</selected>
                             </control>
-							<control type="radiobutton" id="628">
+                            <control type="radiobutton" id="628">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11032,7 +11032,7 @@
                                 <onclick>Skin.ToggleSetting(EnableExtraFanart)</onclick>
                                 <selected>Skin.HasSetting(EnableExtraFanart)</selected>
                             </control>
-							<control type="button" id="6281">
+                            <control type="button" id="6281">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11043,7 +11043,7 @@
                                 <include>MenuButton</include>
                                 <onclick>SetProperty(CustomSelectExtraFanartCycleRate,True)</onclick>
                                 <onclick>ActivateWindow(2138)</onclick>
-								<enable>Skin.HasSetting(EnableExtraFanart)</enable>
+                                <enable>Skin.HasSetting(EnableExtraFanart)</enable>
                             </control>
                         </control>
                         <control type="scrollbar" id="2565">
@@ -11170,7 +11170,7 @@
                                 <enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
                                 <onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
                             </control>
-							<control type="radiobutton" id="652">
+                            <control type="radiobutton" id="652">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11178,11 +11178,11 @@
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
-								<onclick condition="!System.HasAddon(script.favourites) + !Skin.HasSetting(EnableScriptFavourites)">InstallAddon(script.favourites)</onclick>
+                                <onclick condition="!System.HasAddon(script.favourites) + !Skin.HasSetting(EnableScriptFavourites)">InstallAddon(script.favourites)</onclick>
                                 <onclick>Skin.ToggleSetting(EnableScriptFavourites)</onclick>
                                 <selected>Skin.HasSetting(EnableScriptFavourites)</selected>
                             </control>
-							<control type="radiobutton" id="653">
+                            <control type="radiobutton" id="653">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11191,10 +11191,10 @@
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
                                 <onclick condition="!System.HasAddon(service.library.data.provider) + !Skin.HasSetting(EnableScriptStats)">InstallAddon(service.library.data.provider)</onclick>
-								<onclick>Skin.ToggleSetting(EnableScriptStats)</onclick>
+                                <onclick>Skin.ToggleSetting(EnableScriptStats)</onclick>
                                 <selected>Skin.HasSetting(EnableScriptStats)</selected>
                             </control>
-							<control type="button" id="654">
+                            <control type="button" id="654">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11362,7 +11362,7 @@
                                 <enable>!Skin.HasSetting(ScriptDisableScriptPlaylist)</enable>
                                 <visible>System.HasAddon(script.randomandlastitems)</visible>
                             </control>
-							<control type="radiobutton" id="6491">
+                            <control type="radiobutton" id="6491">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11386,7 +11386,7 @@
                                 <enable>Skin.HasSetting(ScriptEnableExtendedInfo)</enable>
                                 <visible>System.AddonIsEnabled(script.extendedinfo)</visible>
                             </control>
-							<control type="radiobutton" id="6493">
+                            <control type="radiobutton" id="6493">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -11825,7 +11825,7 @@
                 <control type="grouplist" id="9007">
                     <visible>Container(9000).Hasfocus(7)</visible>
                     <defaultcontrol>801</defaultcontrol>
-					<left>435</left>
+                    <left>435</left>
                     <top>150</top>
                     <width>1125</width>
                     <height>795</height>

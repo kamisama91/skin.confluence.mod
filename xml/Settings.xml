@@ -287,9 +287,9 @@
                 <align>left</align>
                 <textcolor>white</textcolor>
                 <shadowcolor>black</shadowcolor>
-				<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+                <visible>!String.IsEqual(Skin.Font,Massive)</visible>
             </control>
-			<control type="textbox">
+            <control type="textbox">
                 <description>Appearance Description</description>
                 <left>450</left>
                 <top>773</top>
@@ -300,7 +300,7 @@
                 <align>left</align>
                 <textcolor>white</textcolor>
                 <shadowcolor>black</shadowcolor>
-				<visible>String.IsEqual(Skin.Font,Massive)</visible>
+                <visible>String.IsEqual(Skin.Font,Massive)</visible>
             </control>
         </control>
         <control type="group">

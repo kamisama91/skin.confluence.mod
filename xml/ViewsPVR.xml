@@ -161,7 +161,7 @@
                     <pagecontrol></pagecontrol>
                     <label>$INFO[Container(50).ListItem.Plot]</label>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
                 <control type="label">
                     <left>0</left>
@@ -638,7 +638,7 @@
                     <pagecontrol></pagecontrol>
                     <label>$INFO[Container(5010).ListItem.Plot]</label>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
                 <control type="label">
                     <left>0</left>
@@ -1261,7 +1261,7 @@
                         <label>$INFO[Container(5060).ListItem.Plot]</label>
                         <animation effect="fade" start="100" end="0" time="2000" condition="Player.HasVideo + System.IdleTime(10) + !Skin.HasSetting(HideNowPlayingInfo)">Conditional</animation>
                         <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                        <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                     </control>
                     <control type="image">
                         <posx>915</posx>
@@ -1636,7 +1636,7 @@
                     <textcolor>white</textcolor>
                     <label>$VAR[VideoDescription]</label>
                     <include condition="Skin.HasSetting(AutoScroll) + !Skin.HasSetting(AutoScroll.Slow)">StandardAutoScroll</include>
-					<include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
+                    <include condition="Skin.HasSetting(AutoScroll) + Skin.HasSetting(AutoScroll.Slow)">SlowerAutoScroll</include>
                 </control>
             </control>
             <control type="label">

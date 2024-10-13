@@ -2,10 +2,10 @@
 <window>
     <defaultcontrol>1</defaultcontrol>
     <!-- This is the original Confluence popup seek bar, so only show it if that setting is active -->
-	<visible>[!Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)] + [Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
-	<visible>!Player.HasGame</visible>
+    <visible>[!Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(MinimumPopUpSeekBar)] + [Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+    <visible>!Player.HasGame</visible>
     <visible>!Player.FrameAdvance</visible>
-	<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
+    <animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
     <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
     <depth>DepthOSD</depth>
     <controls>
@@ -271,12 +271,12 @@
                 <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
             </control>
             <control type="group">
-			    <visible>![Window.IsVisible(VideoOSD) | Window.IsVisible(MusicOSD)]</visible>
-				<visible>!Player.ShowInfo</visible>
-				<visible>[!Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
-				<control type="group">
+                <visible>![Window.IsVisible(VideoOSD) | Window.IsVisible(MusicOSD)]</visible>
+                <visible>!Player.ShowInfo</visible>
+                <visible>[!Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | !Player.Paused</visible>
+                <control type="group">
                     <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-				    <control type="label">
+                    <control type="label">
                         <description>Elapsed Time Label</description>
                         <left>30</left>
                         <top>34</top>
@@ -335,7 +335,7 @@
                 </control>
                 <control type="group">
                     <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-				    <control type="label">
+                    <control type="label">
                         <description>Elapsed Time Label</description>
                         <left>30</left>
                         <top>34</top>
@@ -392,31 +392,31 @@
                         <visible>Player.Seeking</visible>
                     </control>
                 </control>
-			    <!-- Cutlist and Chapters -->
-			    <control type="group">
-				    <visible>Skin.HasSetting(ShowCutlist)</visible>
-				    <control type="ranges">
-			            <left>30</left>
-			            <top>78</top>
-			            <width>360</width>
-			            <height>12</height>
-			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			            <lefttexture>white.png</lefttexture>
-			            <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			            <righttexture>white.png</righttexture>
-			            <info>Player.Cuts</info>
-			        </control>
-			        <control type="ranges">
-    			        <left>30</left>
-	    		        <top>78</top>
-		    	        <width>360</width>
-			            <height>6</height>
-			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			            <righttexture>white.png</righttexture>
-			            <info>Player.Chapters</info>
-			        </control>
-			    </control>
-			</control>	
+                <!-- Cutlist and Chapters -->
+                <control type="group">
+                    <visible>Skin.HasSetting(ShowCutlist)</visible>
+                    <control type="ranges">
+                        <left>30</left>
+                        <top>78</top>
+                        <width>360</width>
+                        <height>12</height>
+                        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                        <lefttexture>white.png</lefttexture>
+                        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+                        <righttexture>white.png</righttexture>
+                        <info>Player.Cuts</info>
+                    </control>
+                    <control type="ranges">
+                        <left>30</left>
+                        <top>78</top>
+                        <width>360</width>
+                        <height>6</height>
+                        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                        <righttexture>white.png</righttexture>
+                        <info>Player.Chapters</info>
+                    </control>
+                </control>
+            </control>    
         </control>
     </controls>
 </window>

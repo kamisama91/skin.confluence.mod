@@ -55,7 +55,7 @@
             <aligny>center</aligny>
             <label>$LOCALIZE[32022]</label>
             <font>font13</font>
-			<wrapmultiline>true</wrapmultiline>
+            <wrapmultiline>true</wrapmultiline>
         </control>
         <control type="button" id="11">
             <description>Yes button</description>
@@ -72,7 +72,7 @@
             <ondown>11</ondown>
             <onclick>Dialog.Close(2135)</onclick>
             <onclick>Quit()</onclick>
-			<onback>Quit()</onback>
+            <onback>Quit()</onback>
         </control>
     </controls>
 </window>

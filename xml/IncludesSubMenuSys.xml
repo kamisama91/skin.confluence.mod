@@ -267,17 +267,17 @@
             </control>
         </control>
     </include>
-	
+    
     <include name="SubMenuAnimation">
-	    <param name="visibility">ControlGroup(9001).HasFocus</param>
-		<definition>
+        <param name="visibility">ControlGroup(9001).HasFocus</param>
+        <definition>
             <animation effect="slide" start="0,-60" end="0,0" delay="200" time="150" tween="quadratic" easing="out">Visible</animation>
             <animation effect="fade" start="100" end="0" time="0" condition="!$PARAM[visibility] + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
             <animation effect="fade" start="0" end="100" delay="300" time="150" condition="$PARAM[visibility] + Skin.HasSetting(AutoVisableSubMenu)">conditional</animation>
             <animation effect="fade" start="100" end="0" time="0" condition="$PARAM[visibility] + Skin.HasSetting(AutoVisableSubMenu)">WindowClose</animation>
-		</definition>	
+        </definition>    
     </include>
-	
+    
     <include name="SubMenuCommonValues">
         <left>92</left>
         <top>0</top>
@@ -291,10 +291,10 @@
         <ondown condition="Skin.HasSetting(LowerMainMenuBar)">21</ondown>
         <hitrect x="0" y="0" w="1920" h="66" />
     </include>
-	
+    
     <include name="SubMenuCommonLayout">
-	    <param name="visibility">ControlGroup(9001).HasFocus</param>
-		<definition>
+        <param name="visibility">ControlGroup(9001).HasFocus</param>
+        <definition>
             <itemlayout height="52" width="290">
                 <control type="image">
                     <left>0</left>
@@ -358,7 +358,7 @@
                     <visible>$PARAM[visibility]</visible>
                 </control>
             </focusedlayout>
-		</definition>	
+        </definition>    
     </include>
     <include name="HomeSubMenuVideos">
         <item>

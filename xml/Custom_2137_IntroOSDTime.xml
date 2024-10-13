@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="2137">
-	<defaultcontrol always="true">450</defaultcontrol>
+    <defaultcontrol always="true">450</defaultcontrol>
     <coordinates>
         <left>352</left>
         <top>112</top>
@@ -132,43 +132,43 @@
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,two)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>3</description>
                         <label>3 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,three)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>4</description>
                         <label>4 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,four)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>5</description>
                         <label>5 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,five)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>6</description>
                         <label>6 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,six)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>10</description>
                         <label>10 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,ten)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>15</description>
                         <label>15 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>
                         <onclick>Skin.SetString(OSDTimeout,fifteen)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>20</description>
                         <label>20 $LOCALIZE[31940]</label>
                         <onclick>Dialog.Close(2137)</onclick>

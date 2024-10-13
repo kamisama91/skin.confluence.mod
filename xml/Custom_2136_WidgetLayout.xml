@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="2136">
-	<defaultcontrol always="true">450</defaultcontrol>
+    <defaultcontrol always="true">450</defaultcontrol>
     <coordinates>
         <left>352</left>
         <top>112</top>
@@ -132,7 +132,7 @@
                         <onclick>Dialog.Close(2136)</onclick>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].WidgetLayout,Small)</onclick>
                     </item>
-					<item>
+                    <item>
                         <description>Large</description>
                         <label>$LOCALIZE[32026]</label>
                         <onclick>Dialog.Close(2136)</onclick>

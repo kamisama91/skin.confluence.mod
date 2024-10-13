@@ -4,16 +4,16 @@
     <visible>!Window.IsVisible(startup)</visible>
     <controls>
 
-		<!-- Global debug grid -->
+        <!-- Global debug grid -->
 
-		<control type="image">
-			<visible>Skin.HasSetting(DebugGrid)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>debuggrid1080.png</texture>
-		</control>
+        <control type="image">
+            <visible>Skin.HasSetting(DebugGrid)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>debuggrid1080.png</texture>
+        </control>
 
 
         <!-- Window/Dialog debug -->
@@ -843,7 +843,7 @@
                 <label>VisualisationPresetList.xml</label>
                 <visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
             </control>
-			
+            
             <control type="label">
                 <width>780</width>
                 <height>21</height>
@@ -877,7 +877,7 @@
                 <visible>Window.IsVisible(CustomF_1125_avouriteAddons.xml)</visible>
             </control>
             
-			<control type="label">
+            <control type="label">
                 <width>780</width>
                 <height>21</height>
                 <textcolor>FFFF0000</textcolor>
@@ -886,8 +886,8 @@
                 <align>left</align>
                 <label>Custom_1120_GameSettings.xml</label>
                 <visible>Window.IsVisible(Custom_1120_GameSettings.xml)</visible>
-            </control>			
-			
+            </control>            
+            
             <control type="label">
                 <width>780</width>
                 <height>21</height>
@@ -908,7 +908,7 @@
                 <align>left</align>
                 <label>Custom_1118_FullscreenMusic.xml</label>
                 <visible>Window.IsVisible(Custom_1118_FullscreenMusic.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -919,7 +919,7 @@
                 <align>left</align>
                 <label>Custom_1123_PausedOverlay.xml</label>
                 <visible>Window.IsVisible(Custom_1123_PausedOverlay.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -930,7 +930,7 @@
                 <align>left</align>
                 <label>Custom_1122_Search.xml</label>
                 <visible>Window.IsVisible(Custom_1122_Search.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -941,7 +941,7 @@
                 <align>left</align>
                 <label>Custom_1124_TextViewer.xml</label>
                 <visible>Window.IsVisible(Custom_1124_TextViewer.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -952,7 +952,7 @@
                 <align>left</align>
                 <label>Custom_1126_Fanart.xml</label>
                 <visible>Window.IsVisible(Custom_1126_Fanart.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -963,7 +963,7 @@
                 <align>left</align>
                 <label>Custom_1127_InfoSets.xml</label>
                 <visible>Window.IsVisible(Custom_1127_InfoSets.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -974,7 +974,7 @@
                 <align>left</align>
                 <label>Custom_1134_TMDBInfo.xml</label>
                 <visible>Window.IsVisible(Custom_1134_TMDB_Info.xml)</visible>
-            </control>			
+            </control>            
             
             <control type="label">
                 <width>780</width>
@@ -1007,8 +1007,8 @@
                 <align>left</align>
                 <label>Custom_1132_ColorBoxSettings.xml</label>
                 <visible>Window.IsVisible(Custom_1132_ColorBoxSettings.xml)</visible>
-            </control>			
-			
+            </control>            
+            
             <control type="label">
                 <width>780</width>
                 <height>21</height>

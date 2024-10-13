@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     
-	<variable name="DialogSelectImage">
-	    <value condition="String.IsEqual(Container(6).ListItem.DBType,movie) |  String.IsEqual(Container(6).ListItem.DBType,tvshow)">$INFO[Container(6).ListItem.Art(poster)]</value>
+    <variable name="DialogSelectImage">
+        <value condition="String.IsEqual(Container(6).ListItem.DBType,movie) |  String.IsEqual(Container(6).ListItem.DBType,tvshow)">$INFO[Container(6).ListItem.Art(poster)]</value>
         <value condition="String.IsEqual(Container(6).ListItem.DBType,episode) + !String.IsEmpty(Container(6).ListItem.Art(season.poster))">$INFO[Container(6).ListItem.Art(season.poster)]</value>
         <value condition="String.IsEqual(Container(6).ListItem.DBType,episode) + String.IsEmpty(Container(6).ListItem.Art(season.poster))">$INFO[Container(6).ListItem.Art(tvshow.poster)]</value>
-		<value>$INFO[Container(6).ListItem.Icon]</value>
-	</variable>
-	
-	
-	<include name="DefaultDialogSelectLayout">
+        <value>$INFO[Container(6).ListItem.Icon]</value>
+    </variable>
+    
+    
+    <include name="DefaultDialogSelectLayout">
         <control type="group">
             <left>352</left>
             <top>112</top>
