@@ -136,9 +136,9 @@
                 <aligny>center</aligny>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
-				<visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
+                <visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
-			<control type="label">
+            <control type="label">
                 <left>8</left>
                 <top>7</top>
                 <width>435</width>
@@ -149,7 +149,7 @@
                 <aligny>center</aligny>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
-				<visible>Skin.HasSetting(MainMenuAllCaps)</visible>
+                <visible>Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
         </itemlayout>
         <focusedlayout height="90" width="450">
@@ -179,7 +179,7 @@
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>!Control.HasFocus(9000)</visible>
-				<visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
+                <visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
             <control type="label">
                 <left>8</left>
@@ -193,9 +193,9 @@
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>Control.HasFocus(9000)</visible>
-				<visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
+                <visible>!Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
-			<control type="label">
+            <control type="label">
                 <left>8</left>
                 <top>7</top>
                 <width>435</width>
@@ -207,7 +207,7 @@
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>!Control.HasFocus(9000)</visible>
-				<visible>Skin.HasSetting(MainMenuAllCaps)</visible>
+                <visible>Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
             <control type="label">
                 <left>8</left>
@@ -221,7 +221,7 @@
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <visible>Control.HasFocus(9000)</visible>
-				<visible>Skin.HasSetting(MainMenuAllCaps)</visible>
+                <visible>Skin.HasSetting(MainMenuAllCaps)</visible>
             </control>
         </focusedlayout>
     </include>
@@ -1711,10 +1711,10 @@
         <onload condition="Skin.String(HomeItem.15.Label,$LOCALIZE[0])">Skin.SetString(HomeItem.15.Label,$LOCALIZE[24001])</onload>
         <onload>Skin.SetBool(Updates_V403)</onload>
     </include>
-	
-	<include name="HomeSuggestedMedia">
-	    <!-- Suggested Movie Info -->
-		<control type="group">
+    
+    <include name="HomeSuggestedMedia">
+        <!-- Suggested Movie Info -->
+        <control type="group">
             <left>0</left>
             <top>90</top>
             <visible>![!Skin.HasSetting(LowerMainMenuBar) + Skin.HasSetting(EnableLargeWidgets)]</visible>
@@ -1862,10 +1862,10 @@
                 <shadowcolor>black</shadowcolor>
             </control>
         </control>
-	</include>
-	
-	<include name="HomeRSS">
-	    <control type="group">
+    </include>
+    
+    <include name="HomeRSS">
+        <control type="group">
             <depth>DepthMenu-</depth>
             <left>0</left>
             <top>50r</top>
@@ -1909,10 +1909,10 @@
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
             </control>
         </control>
-	</include>
-	
-	<include name="HomeBottomButtons">
-	    <control type="grouplist" id="21">
+    </include>
+    
+    <include name="HomeBottomButtons">
+        <control type="grouplist" id="21">
             <depth>DepthFooter</depth>
             <include>Window_OpenClose_Animation</include>
             <left>30</left>
@@ -1984,7 +1984,7 @@
                 <visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
             </control>
         </control>
-	</include>
-	
-	
+    </include>
+    
+    
 </includes>

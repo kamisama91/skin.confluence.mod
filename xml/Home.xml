@@ -42,15 +42,15 @@
     <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(3)">ClearProperty(MusicDirectLink)</onunload>
     <controls>
         
-		<!-- Hidden list for video node statistics - uses service.library.data.provider -->
-		<include condition="Skin.HasSetting(EnableHomeStats) + Skin.HasSetting(EnableScriptStats) + System.HasAddon(service.library.data.provider)">VideoNodeStatsList</include>
+        <!-- Hidden list for video node statistics - uses service.library.data.provider -->
+        <include condition="Skin.HasSetting(EnableHomeStats) + Skin.HasSetting(EnableScriptStats) + System.HasAddon(service.library.data.provider)">VideoNodeStatsList</include>
         
-		<!-- Global background -->
-		<include>CommonBackground</include>
+        <!-- Global background -->
+        <include>CommonBackground</include>
         <!-- Background effects -->
-		<include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
+        <include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
         <!-- Floor -->
-		<control type="image">
+        <control type="image">
             <depth>DepthFloor</depth>
             <left>-30</left>
             <top></top>
@@ -66,24 +66,24 @@
             <visible>!String.IsEmpty(Skin.String(HomeFloor))</visible>
         </control>
         
-		<!-- Top left info -->
-		<include>TopLeftInfo</include>
+        <!-- Top left info -->
+        <include>TopLeftInfo</include>
         
-		<!-- Now Playing info -->
-		<!-- Music Info -->
+        <!-- Now Playing info -->
+        <!-- Music Info -->
         <include>NowPlayingMusic</include>
         <!-- LiveTV Info -->
         <include>NowPlayingPVR</include>
         <!-- Video Info -->
         <include>NowPlayingVideo</include>
         
-		<!-- Suggested Media Info -->
+        <!-- Suggested Media Info -->
         <include>HomeSuggestedMedia</include>
-		
-		<!-- Widgets -->
+        
+        <!-- Widgets -->
         <include>HomeWidgetDisplay</include>
         
-		<control type="button" id="9003">
+        <control type="button" id="9003">
             <description>Hidden Button to pass through navigation when recently added is disabled</description>
             <left>-30</left>
             <top>-30</top>
@@ -102,11 +102,11 @@
             <visible>false</visible>
         </control>
         
-		<!-- Player controls for now playing media -->
-		<include>NowPlayingMediaControls</include>
+        <!-- Player controls for now playing media -->
+        <include>NowPlayingMediaControls</include>
         
-		<!-- Menu and Submenu -->
-		<control type="group">
+        <!-- Menu and Submenu -->
+        <control type="group">
             <depth>DepthMenu</depth>
             <top>600</top>
             <animation effect="slide" start="0,0" end="0,-45" time="0" condition="!String.IsEmpty(Skin.String(MenuLAF))">Conditional</animation>
@@ -120,27 +120,27 @@
                 <effect type="fade" start="100" end="0" time="225" />
             </animation>
             <!-- Submenu -->
-			<include>HomeSubMenuControl</include>
+            <include>HomeSubMenuControl</include>
             <!-- Menu -->
-			<include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
+            <include condition="Skin.HasSetting(WrapAroundHomeMenu)">WrapHomeMainMenu</include>
             <include condition="!Skin.HasSetting(WrapAroundHomeMenu)">FixedHomeMainMenu</include>
         </control>
-		
-        <!-- Addon set below menu -->
-		<include>HomeAddonsDisplay</include>
         
-		<!-- RSS Feed / 5 next songs -->
-		<include>HomeRSS</include>
-		
+        <!-- Addon set below menu -->
+        <include>HomeAddonsDisplay</include>
+        
+        <!-- RSS Feed / 5 next songs -->
+        <include>HomeRSS</include>
+        
         <!-- Bottom left buttons: Power, Favorite, Search -->
-		<include>HomeBottomButtons</include>
-		
-		<!-- Header info: Clock and Date -->
+        <include>HomeBottomButtons</include>
+        
+        <!-- Header info: Clock and Date -->
         <control type="group">
             <depth>DepthHeader</depth>
             <include>Clock</include>
             <include>Date</include>
         </control>
-		
+        
     </controls>
 </window>

@@ -211,7 +211,7 @@
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(Movies)</visible>
                     </item>
-					<item>
+                    <item>
                         <description>Recent Movies (with watched)</description>
                         <label>$LOCALIZE[32000]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentMoviesWatched)</onclick>
@@ -257,7 +257,7 @@
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(TVShows)</visible>
                     </item>
-					<item>
+                    <item>
                         <description>Recent Episodes</description>
                         <label>$LOCALIZE[32001]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentEpisodesWatched)</onclick>
@@ -327,7 +327,7 @@
                         <onclick>Dialog.Close(2118)</onclick>
                         <visible>Library.HasContent(MusicVideos)</visible>
                     </item>
-					<item>
+                    <item>
                         <description>Recent Concerts</description>
                         <label>$LOCALIZE[32002]</label>
                         <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Widget,RecentConcertsWatched)</onclick>

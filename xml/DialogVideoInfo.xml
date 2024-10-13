@@ -973,13 +973,13 @@
                         <visible>Control.IsEnabled(7)</visible>
                     </control>
                     <!--<control type="button" id="204">
-						<description>YouTube</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>31942</label>
-						<onclick>RunScript(script.extendedinfo,info=youtubesearch,id=$INFO[ListItem.Title])</onclick>
-						<enable>System.HasAddon(script.extendedinfo)</enable>
-						<visible>[Container.Content(movies) | Container.Content(tvshows)] + System.HasAddon(script.extendedinfo)</visible>
-					</control>-->
+                        <description>YouTube</description>
+                        <include>ButtonInfoDialogsCommonValues</include>
+                        <label>31942</label>
+                        <onclick>RunScript(script.extendedinfo,info=youtubesearch,id=$INFO[ListItem.Title])</onclick>
+                        <enable>System.HasAddon(script.extendedinfo)</enable>
+                        <visible>[Container.Content(movies) | Container.Content(tvshows)] + System.HasAddon(script.extendedinfo)</visible>
+                    </control>-->
                     <control type="button" id="100">
                         <description>Get Artwork</description>
                         <include>ButtonInfoDialogsCommonValues</include>

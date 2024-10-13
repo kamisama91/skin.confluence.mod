@@ -160,7 +160,7 @@
     <include name="OSDMediaFlagging">
         <control type="grouplist" id="1">
             <visible>[Window.IsVisible(VideoOSD) + !Skin.HasSetting(HideVideoInfoOSD)] | !Window.IsVisible(VideoOSD)</visible>
-			<left>0</left>
+            <left>0</left>
             <top>90</top>
             <width>1365</width>
             <height>52</height>
@@ -246,8 +246,8 @@
     </include>
     <include name="OSDMediaHeading">
         <control type="group" id="1">
-		    <visible>[Window.IsVisible(VideoOSD) + !Skin.HasSetting(HideVideoInfoOSD)] | !Window.IsVisible(VideoOSD)</visible>
-		    <control type="label" id="1">
+            <visible>[Window.IsVisible(VideoOSD) + !Skin.HasSetting(HideVideoInfoOSD)] | !Window.IsVisible(VideoOSD)</visible>
+            <control type="label" id="1">
                 <description>Now Playing Heading label</description>
                 <left>0</left>
                 <top>0</top>
@@ -351,7 +351,7 @@
                 <shadowcolor>black</shadowcolor>
                 <visible>VideoPlayer.Content(LiveTV)</visible>
             </control>
-		</control>
+        </control>
     </include>
     <include name="MusicArtUnderVisualisation">
         <control type="group">
@@ -389,8 +389,8 @@
                 <visible>Skin.HasSetting(DisableSlideShowArt) | String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
                 <fadetime>600</fadetime>
             </control>
-			<!-- Artist Slideshow addon images - Support for versions 3.x and above of addon -->
-			<control type="image">
+            <!-- Artist Slideshow addon images - Support for versions 3.x and above of addon -->
+            <control type="image">
                 <include>Dimensions_Fullscreen</include>
                 <fadetime>600</fadetime>
                 <aspectratio>keep</aspectratio>
@@ -464,14 +464,14 @@
         <param name="Size" default="82" />
         <param name="Texture" default="" />
         <param name="Selected" default="false" />
-		<param name="flipx" default="false" />
+        <param name="flipx" default="false" />
         <definition>
             <width>$PARAM[Size]</width>
             <height>$PARAM[Size]</height>
             <include content="OSDButtonClassicNoAlt" condition="String.IsEmpty(Skin.String(OSDLAF))">
                 <param name="Size" value="$PARAM[Size]" />
                 <param name="Texture" value="$PARAM[Texture]" />
-				<param name="flipx" value="$PARAM[flipx]" />
+                <param name="flipx" value="$PARAM[flipx]" />
             </include>
             <include content="OSDButtonModernNoAlt" condition="Skin.String(OSDLAF,Modern)">
                 <param name="Size" value="$PARAM[Size]" />
@@ -594,16 +594,16 @@
         <radioposx>1</radioposx>
         <radioposy>1</radioposy>
     </include>
-	
-	<include name="OSDStandardSeekBarInfo">
-	    <control type="group" id="1">
+    
+    <include name="OSDStandardSeekBarInfo">
+        <control type="group" id="1">
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | [Skin.HasSetting(StandardSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <!-- Top background for clock, date, etc. -->
-			<control type="image" id="1">
+            <control type="image" id="1">
                 <left>-30</left>
                 <top>-225</top>
                 <width>1980</width>
@@ -612,16 +612,16 @@
                 <texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
                 <visible>!Skin.HasSetting(HideSystemTime)</visible>
             </control>
-			<!-- Top info: weather, clock, etc. -->
+            <!-- Top info: weather, clock, etc. -->
             <control type="group" id="1">
                 <include>TopLeftInfo</include>
                 <include>Clock</include>
                 <include>Date</include>
             </control>
-			<!-- Plot -->
+            <!-- Plot -->
             <include>OSDMediaPlot</include>
             <!-- Bottom background -->
-			<control type="image" id="1">
+            <control type="image" id="1">
                 <left>-30</left>
                 <top>345r</top>
                 <width>1980</width>
@@ -629,9 +629,9 @@
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
                 <texture border="1">HomeNowPlayingBack.png</texture>
                 <animation effect="slide" end="0,68" time="0" tween="back" easing="out" condition="!Player.ShowInfo + Window.IsActive(VideoOSD) + [[Skin.HasSetting(ShowSeekBarPaused) + Player.Paused] | [Skin.HasSetting(HideVideoInfoOSD) + !Player.Paused]]" reversible="true">Conditional</animation>
-				<visible>!Skin.HasSetting(HideShadowSeekBar) | Window.IsVisible(VideoOSD)</visible>
+                <visible>!Skin.HasSetting(HideShadowSeekBar) | Window.IsVisible(VideoOSD)</visible>
             </control>
-			<!-- Poster/thumb/logo -->
+            <!-- Poster/thumb/logo -->
             <control type="group" id="1">
                 <depth>DepthOSDPopout</depth>
                 <include condition="!Skin.HasSetting(HideArtWorkOSD) + VideoPlayer.Content(Movies)">OSDMovieCover</include>
@@ -649,7 +649,7 @@
                     <visible>!Skin.HasSetting(HideArtWorkOSD) + !VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes)</visible>
                 </control>
             </control>
-			<!-- Media info and flags, end time -->
+            <!-- Media info and flags, end time -->
             <control type="group" id="1">
                 <left>495</left>
                 <top>298r</top>
@@ -660,7 +660,7 @@
 <!--                    <left>0</left>
                     <top>180</top>
                     <width>1365</width> -->
-					<left>1160</left>
+                    <left>1160</left>
                     <top>185</top>
                     <width>220</width>
                     <height>38</height>
@@ -702,14 +702,14 @@
                     <animation effect="fade" time="150">VisibleChange</animation>
                 </control>
             </control>
-			<!-- Progress bar and left and right labels -->
+            <!-- Progress bar and left and right labels -->
             <control type="group" id="1">
                 <left>495</left>
                 <top>162r</top>
                 <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
                 <visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
                 <!-- Left label: elapsed time/start time -->
-				<control type="label" id="1">
+                <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <left>0</left>
                     <top>0</top>
@@ -731,7 +731,7 @@
                     <aligny>center</aligny>
                     <label>$INFO[VideoPlayer.StartTime]</label>
                 </control>
-				<!-- Progress bar -->
+                <!-- Progress bar -->
                 <control type="group" id="1">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
                     <control type="progress" id="1">
@@ -774,28 +774,28 @@
                         <info>Player.Progress</info>
                     </control>
                 </control>
-				<!-- Cutlist and Chapters -->
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>14</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <lefttexture>white.png</lefttexture>
-			        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>7</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Chapters</info>
-			    </control>
-				<!-- Right label: duration/end time -->
+                <!-- Cutlist and Chapters -->
+                <control type="ranges" id="1">
+                    <left>150</left>
+                    <top>34</top>
+                    <width>1080</width>
+                    <height>14</height>
+                    <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                    <lefttexture>white.png</lefttexture>
+                    <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+                    <righttexture>white.png</righttexture>
+                    <info>Player.Cutlist</info>
+                </control>
+                <control type="ranges" id="1">
+                    <left>150</left>
+                    <top>34</top>
+                    <width>1080</width>
+                    <height>7</height>
+                    <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                    <righttexture>white.png</righttexture>
+                    <info>Player.Chapters</info>
+                </control>
+                <!-- Right label: duration/end time -->
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <left>1230</left>
@@ -819,11 +819,11 @@
                     <label>$INFO[VideoPlayer.EndTime]</label>
                 </control>
             </control>
-			<!-- Seek frame -->
-			<control type="group" id="2">
-			    <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
-				<visible>Skin.HasSetting(HidePopupSeekBar)</visible>
-				<left>564r</left>
+            <!-- Seek frame -->
+            <control type="group" id="2">
+                <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
+                <visible>Skin.HasSetting(HidePopupSeekBar)</visible>
+                <left>564r</left>
                 <top>86r</top>
                 <control type="group" id="1">
                     <left>390</left>
@@ -1004,7 +1004,7 @@
                         <visible>String.IsEqual(Player.PlaySpeed,1.50)</visible>
                     </control>
                 </control>
-				<!-- Seek label -->
+                <!-- Seek label -->
 <!--                <control type="label" id="1">
                     <description>Seekbar Label</description>
                     <left>365</left>
@@ -1016,10 +1016,10 @@
                     <font>font10_title</font>
                     <textcolor>$VAR[MainColorOne]</textcolor>
                     <label>$VAR[SeekLabel]</label>
-					<visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
+                    <visible>!Skin.HasSetting(MinimumPopUpSeekBar)</visible>
                 </control> -->
                 <!-- Seek numeric label -->
-				<control type="label" id="1">
+                <control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>270</left>
                     <top>34</top>
@@ -1031,9 +1031,9 @@
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
                     <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
-					<visible>!Window.IsVisible(VideoOSD)</visible>
+                    <visible>!Window.IsVisible(VideoOSD)</visible>
                 </control>
-				<control type="label" id="1">
+                <control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>-200</left>
                     <top>34</top>
@@ -1045,14 +1045,14 @@
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
                     <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
-					<visible>Window.IsVisible(VideoOSD)</visible>
+                    <visible>Window.IsVisible(VideoOSD)</visible>
                 </control>
             </control>
         </control>
-	</include>
-	
-	<include name="OSDStandardSeekBarInfoIntro">
-	    <control type="group" id="1">
+    </include>
+    
+    <include name="OSDStandardSeekBarInfoIntro">
+        <control type="group" id="1">
             <depth>DepthOSD</depth>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
@@ -1076,9 +1076,9 @@
                 <height>345</height>
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
                 <texture border="1">HomeNowPlayingBack.png</texture>
-				<visible>!Skin.HasSetting(HideShadowSeekBar) | Window.IsVisible(VideoOSD)</visible>
+                <visible>!Skin.HasSetting(HideShadowSeekBar) | Window.IsVisible(VideoOSD)</visible>
             </control>
-			<control type="group" id="1">
+            <control type="group" id="1">
                 <depth>DepthOSDPopout</depth>
                 <include condition="!Skin.HasSetting(HideArtWorkOSD) + VideoPlayer.Content(Movies)">OSDMovieCover</include>
                 <include condition="!Skin.HasSetting(HideArtWorkOSD) + VideoPlayer.Content(Episodes)">OSDTVShowCover</include>
@@ -1101,7 +1101,7 @@
                 <animation effect="slide" end="-218,0" time="0" tween="back" easing="out" condition="Skin.HasSetting(HideArtWorkOSD)" reversible="true">Conditional</animation>
                 <include>OSDMediaHeading</include>
                 <include>OSDMediaFlagging</include>
-				<control type="label" id="1">
+                <control type="label" id="1">
                     <left>1160</left>
                     <top>185</top>
                     <width>220</width>
@@ -1213,28 +1213,28 @@
                         <info>Player.Progress</info>
                     </control>
                 </control>
-				<!-- Cutlist and Chapters -->
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>14</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <lefttexture>white.png</lefttexture>
-			        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges" id="1">
-			        <left>150</left>
-			        <top>34</top>
-			        <width>1080</width>
-			        <height>7</height>
-			        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			        <righttexture>white.png</righttexture>
-			        <info>Player.Chapters</info>
-			    </control>
-				
+                <!-- Cutlist and Chapters -->
+                <control type="ranges" id="1">
+                    <left>150</left>
+                    <top>34</top>
+                    <width>1080</width>
+                    <height>14</height>
+                    <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                    <lefttexture>white.png</lefttexture>
+                    <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+                    <righttexture>white.png</righttexture>
+                    <info>Player.Cutlist</info>
+                </control>
+                <control type="ranges" id="1">
+                    <left>150</left>
+                    <top>34</top>
+                    <width>1080</width>
+                    <height>7</height>
+                    <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                    <righttexture>white.png</righttexture>
+                    <info>Player.Chapters</info>
+                </control>
+                
                 <control type="label" id="1">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <left>1230</left>
@@ -1258,8 +1258,8 @@
                     <label>$INFO[VideoPlayer.EndTime]</label>
                 </control>
             </control>
-			<control type="group" id="2">
-				<left>564r</left>
+            <control type="group" id="2">
+                <left>564r</left>
                 <top>86r</top>
                 <control type="group" id="1">
                     <left>390</left>
@@ -1464,9 +1464,9 @@
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
                     <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
-					<visible>!Window.IsVisible(VideoOSD)</visible>
+                    <visible>!Window.IsVisible(VideoOSD)</visible>
                 </control>
-				<control type="label" id="1">
+                <control type="label" id="1">
                     <description>Seek Number label</description>
                     <left>-200</left>
                     <top>34</top>
@@ -1478,28 +1478,28 @@
                     <textcolor>white</textcolor>
                     <shadowcolor>black</shadowcolor>
                     <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
-					<visible>Window.IsVisible(VideoOSD)</visible>
+                    <visible>Window.IsVisible(VideoOSD)</visible>
                 </control>
             </control>
         </control>
-	</include>
-	
-	<include name="OSDPosMinimumNoPopUp">
-	    <left>574r</left>
+    </include>
+    
+    <include name="OSDPosMinimumNoPopUp">
+        <left>574r</left>
         <top>86r</top>
-	</include>
-	
-	<include name="OSDPosMinimumWithPopUp">
-	    <left>940r</left>
-		<top>-9</top>
-	</include>
-	
-	<include name="OSDMinimumSeekBar">
-	    <control type="group" id="1">
+    </include>
+    
+    <include name="OSDPosMinimumWithPopUp">
+        <left>940r</left>
+        <top>-9</top>
+    </include>
+    
+    <include name="OSDMinimumSeekBar">
+        <control type="group" id="1">
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>Skin.HasSetting(MinimumPopUpSeekBar)</visible> 
-			 <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+             <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
@@ -1509,20 +1509,20 @@
                 <height>95</height>
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
                 <texture border="1">HomeNowPlayingBack.png</texture>
-				<visible>Skin.HasSetting(HidePopupSeekBar)</visible>
+                <visible>Skin.HasSetting(HidePopupSeekBar)</visible>
             </control>
-			<control type="image" id="1">
+            <control type="image" id="1">
                 <left>440r</left>
                 <top>-9</top>
                 <width>140</width>
                 <height>95</height>
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
-				<texture border="1">HomeNowPlayingBack.png</texture>
-				<visible>!Skin.HasSetting(HidePopupSeekBar)</visible>
+                <texture border="1">HomeNowPlayingBack.png</texture>
+                <visible>!Skin.HasSetting(HidePopupSeekBar)</visible>
             </control>
-			<control type="group" id="2">
-				<include condition="!Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumWithPopUp</include>
-				<include condition="Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumNoPopUp</include>
+            <control type="group" id="2">
+                <include condition="!Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumWithPopUp</include>
+                <include condition="Skin.HasSetting(HidePopUpSeekBar)">OSDPosMinimumNoPopUp</include>
                 <control type="group" id="1">
                     <left>390</left>
                     <top>15</top>
@@ -1717,14 +1717,14 @@
                 </control>
             </control>
         </control>
-	</include>
-	
-	<include name="OSDNoSeekBar">
-	    <control type="group" id="1">
+    </include>
+    
+    <include name="OSDNoSeekBar">
+        <control type="group" id="1">
             <depth>DepthOSD</depth>
             <visible>!String.IsEqual(Player.Filenameandpath,Skin.String(KodiIntroVideo))</visible>
             <visible>[!Skin.HasSetting(MinimumPopUpSeekBar) + Skin.HasSetting(HidePopupSeekBar) + !Skin.HasSetting(StandardSeekBar)]</visible> 
-			 <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
+             <visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowTime | Player.IsTempo | !String.IsEmpty(Player.SeekNumeric)]</visible>
             <visible>![Window.IsVisible(SliderDialog) |Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
             <animation effect="fade" time="200">VisibleChange</animation>
             <control type="image" id="1">
@@ -1735,8 +1735,8 @@
                 <include condition="!String.IsEmpty(Skin.String(MediaPanelTrans))">TransparentEffect</include>
                 <texture border="1">HomeNowPlayingBack.png</texture>
             </control>
-			<control type="group" id="2">
-				<left>574r</left>
+            <control type="group" id="2">
+                <left>574r</left>
                 <top>86r</top>
                 <control type="group" id="1">
                     <left>390</left>
@@ -1943,14 +1943,14 @@
                     <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
                 </control>
             </control>
-			<control type="group" id="1">
-			    <left>574r</left>
+            <control type="group" id="1">
+                <left>574r</left>
                 <top>96r</top>
-				<visible>!Player.ShowInfo + !Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD)</visible>
-			    <!-- Progress bar for PVR -->
-				<control type="group" id="1">
-				    <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-				    <control type="label" id="1">
+                <visible>!Player.ShowInfo + !Window.IsVisible(VideoOSD) + !Window.IsVisible(MusicOSD)</visible>
+                <!-- Progress bar for PVR -->
+                <control type="group" id="1">
+                    <visible>[VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
+                    <control type="label" id="1">
                         <description>Elapsed Time Label</description>
                         <left>30</left>
                         <top>34</top>
@@ -2007,10 +2007,10 @@
                         <visible>Player.Seeking</visible>
                     </control>
                 </control>
-				<!-- Progress bar for non PVR -->
+                <!-- Progress bar for non PVR -->
                 <control type="group" id="1">
-				    <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-				    <control type="label" id="1">
+                    <visible>![VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
+                    <control type="label" id="1">
                         <description>Elapsed Time Label</description>
                         <left>30</left>
                         <top>34</top>
@@ -2067,33 +2067,33 @@
                         <visible>Player.Seeking</visible>
                     </control>
                 </control>
-			    <!-- Cutlist and Chapters -->
-			    <control type="group" id="1">
-				    <control type="ranges" id="1">
-			            <left>30</left>
-			            <top>78</top>
-			            <width>360</width>
-			            <height>12</height>
-			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			            <lefttexture>white.png</lefttexture>
-			            <midtexture colordiffuse="FFFF0000">white.png</midtexture>
-			            <righttexture>white.png</righttexture>
-			            <info>Player.Cutlist</info>
-			        </control>
-			        <control type="ranges" id="1">
-			            <left>30</left>
-			            <top>78</top>
-			            <width>360</width>
-			            <height>6</height>
-			            <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
-			            <righttexture>white.png</righttexture>
-			            <info>Player.Chapters</info>
-			        </control>
-			    </control>
-			</control>
+                <!-- Cutlist and Chapters -->
+                <control type="group" id="1">
+                    <control type="ranges" id="1">
+                        <left>30</left>
+                        <top>78</top>
+                        <width>360</width>
+                        <height>12</height>
+                        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                        <lefttexture>white.png</lefttexture>
+                        <midtexture colordiffuse="FFFF0000">white.png</midtexture>
+                        <righttexture>white.png</righttexture>
+                        <info>Player.Cutlist</info>
+                    </control>
+                    <control type="ranges" id="1">
+                        <left>30</left>
+                        <top>78</top>
+                        <width>360</width>
+                        <height>6</height>
+                        <texturebg border="3" colordiffuse="00FFFFFF">white50.png</texturebg>
+                        <righttexture>white.png</righttexture>
+                        <info>Player.Chapters</info>
+                    </control>
+                </control>
+            </control>
         </control>
-	</include>
-	
+    </include>
+    
     <variable name="OSDPath">
         <value condition="!String.IsEmpty(Skin.String(OSDLAF))">osd_modern/</value>
         <value>osd_classic/</value>

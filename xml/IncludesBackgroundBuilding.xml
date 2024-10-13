@@ -344,24 +344,24 @@
                 <visible>!Skin.HasSetting(DisableSlideShowArt) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
             </control>
             <control type="group">
-            	<visible>!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(DisableSlideShowArt) + Skin.HasSetting(ScriptEnableExtraFanart)</visible>
-            	<include>ArtistExtraFanArt</include>
-        	</control>
+                <visible>!Skin.HasSetting(HideHomeNowPlaying) + Skin.HasSetting(DisableSlideShowArt) + Skin.HasSetting(ScriptEnableExtraFanart)</visible>
+                <include>ArtistExtraFanArt</include>
+            </control>
             <control type="group">
-            	<visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name)</visible>
-            	<include>AlbumArtMusicVizWall</include>
-        	</control>
-        	<include>MusicArtUnderVisualisation</include>
-        	<control type="visualisation">
-            	<include>Dimensions_Fullscreen</include>
-            	<visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome)</visible>
-        	</control>
-        	<control type="group">
-            	<visible>!Skin.HasSetting(NoDiffuseVizFanart) + !String.IsEmpty(Visualisation.Name)</visible>
-            	<include>AlbumArtMusicVizWall</include>
-        	</control>
-        	<include>MusicArtOverVisualisation</include>
-    	</control>
+                <visible>Skin.HasSetting(NoDiffuseVizFanart) | String.IsEmpty(Visualisation.Name)</visible>
+                <include>AlbumArtMusicVizWall</include>
+            </control>
+            <include>MusicArtUnderVisualisation</include>
+            <control type="visualisation">
+                <include>Dimensions_Fullscreen</include>
+                <visible>Window.IsVisible(Home) + Skin.HasSetting(VizOnlyOnHome)</visible>
+            </control>
+            <control type="group">
+                <visible>!Skin.HasSetting(NoDiffuseVizFanart) + !String.IsEmpty(Visualisation.Name)</visible>
+                <include>AlbumArtMusicVizWall</include>
+            </control>
+            <include>MusicArtOverVisualisation</include>
+        </control>
         <control type="videowindow">
             <depth>DepthBackground</depth>
             <include>Dimensions_Fullscreen</include>

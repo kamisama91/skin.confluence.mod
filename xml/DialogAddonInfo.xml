@@ -317,14 +317,14 @@
                     <align>center</align>
                     <font>font12_title</font>
                 </control>
-				<control type="button" id="14">
-					<description>Versions button</description>
-					<width>330</width>
-					<height>56</height>
-					<label>24069</label>
-					<align>center</align>
-					<font>font12_title</font>
-				</control>
+                <control type="button" id="14">
+                    <description>Versions button</description>
+                    <width>330</width>
+                    <height>56</height>
+                    <label>24069</label>
+                    <align>center</align>
+                    <font>font12_title</font>
+                </control>
                 <control type="button" id="12">
                     <description>Launch Addon button</description>
                     <width>330</width>

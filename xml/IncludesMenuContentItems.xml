@@ -231,7 +231,7 @@
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>System.HasAddon(script.favourites)</visible>
-				<visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
+                <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
             <item>
                 <description>Add-Ons</description>
@@ -300,7 +300,7 @@
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>System.HasAddon(script.globalsearch)</visible>
-				<visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
+                <visible>!Skin.HasSetting(DisableGlobalSearch)</visible>
                 <visible>String.IsEqual(Window.Property(MenuItemType),MainMenu)</visible>
             </item>
             <item>
@@ -632,7 +632,7 @@
                 <label>$LOCALIZE[3] - $LOCALIZE[559]</label>
                 <include>ClearButtonChoice</include>
                 <onclick>Skin.SetFile(UsrSelectAddon,.xsp,special://videoplaylists/)</onclick>
-				<onclick>ActivateWindow(2133)</onclick>
+                <onclick>ActivateWindow(2133)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label,$LOCALIZE[559])</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,ActivateWindow(Videos,"$INFO[Skin.String(UsrSelectAddon)]",return))</onclick>
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Playlist,$INFO[Skin.String(UsrSelectAddon)])</onclick>
@@ -1404,7 +1404,7 @@
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
                 <visible>System.HasAddon(service.skin.widgets)</visible>
-				<visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
+                <visible>String.IsEqual(Window.Property(MenuItemType),TVShowsMenu)</visible>
             </item>
             <item>
                 <description>TVShows</description>
@@ -1559,7 +1559,7 @@
                 <onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Icon,Icons/music2.png)</onclick>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Label)</onclick>
                 <include>CloseMenuChoice</include>
-				<visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
+                <visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
             </item>
             <item>
                 <description>Concerts</description>
@@ -1612,7 +1612,7 @@
                 <include>CloseMenuChoice</include>
                 <visible>String.IsEqual(Window.Property(MenuItemType),ConcertsMenu)</visible>
             </item>
-			<item>
+            <item>
                 <description>Concerts Artists</description>
                 <label>$LOCALIZE[31425] $LOCALIZE[133]</label>
                 <onclick>Skin.SetString($INFO[Window(Home).Property(UsrSelectBtn)].Path,ActivateWindow(Videos,MusicVideoArtists,return))</onclick>

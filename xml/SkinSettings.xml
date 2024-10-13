@@ -314,7 +314,7 @@
                                 <selected>Skin.HasSetting(ClockShowSeconds)</selected>
                                 <enable>!Skin.HasSetting(HideSystemTime)</enable>
                             </control>
-							<control type="radiobutton" id="1021">
+                            <control type="radiobutton" id="1021">
                                 <description>CPU Temp</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -457,10 +457,10 @@
                                 <label>$LOCALIZE[31066]</label>
                                 <include>MenuButton</include>
                                 <onclick condition="Skin.HasSetting(HidePopupSeekBar) + Skin.HasSetting(StandardSeekBar)">Skin.Reset(StandardSeekBar)</onclick>
-								<onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
+                                <onclick>Skin.ToggleSetting(HidePopUpSeekBar)</onclick>
                                 <selected>!Skin.HasSetting(HidePopUpSeekBar)</selected>
                             </control>
-							<control type="radiobutton" id="11401">
+                            <control type="radiobutton" id="11401">
                                 <description>Standard Seekbar</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -470,7 +470,7 @@
                                 <label>$LOCALIZE[32008]</label>
                                 <include>MenuButton</include>
                                 <onclick condition="!Skin.HasSetting(StandardSeekBar) + !Skin.HasSetting(HidePopupSeekBar)">Skin.SetBool(HidePopupSeekBar)</onclick>
-								<onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
+                                <onclick>Skin.ToggleSetting(StandardSeekBar)</onclick>
                                 <selected>Skin.HasSetting(StandardSeekBar)</selected>
                             </control>
                             <control type="radiobutton" id="115">
@@ -707,7 +707,7 @@
                                 <onclick condition="Skin.String(MenuLAF,GraphFocused)">Skin.SetString(MenuLAF,GraphText)</onclick>
                                 <onclick condition="Skin.String(MenuLAF,GraphText)">Skin.Reset(MenuLAF)</onclick>
                             </control>
-							<control type="radiobutton" id="135">
+                            <control type="radiobutton" id="135">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -717,8 +717,8 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(AutoDisableHWAccel)</onclick>
                                 <selected>Skin.HasSetting(AutoDisableHWAccel)</selected>
-								<visible>System.Platform.Android</visible>
-								<visible>System.HasAddon(script.embuary.helper)</visible>
+                                <visible>System.Platform.Android</visible>
+                                <visible>System.HasAddon(script.embuary.helper)</visible>
                             </control>
                         </control>
                         <control type="scrollbar" id="2061">
@@ -839,7 +839,7 @@
                                 <selected>!Skin.HasSetting(AutoVisableSubMenu)</selected>
                                 <include>MenuButton</include>
                             </control>
-							<control type="radiobutton" id="14001">
+                            <control type="radiobutton" id="14001">
                                 <description>Main menu in all caps</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1354,7 +1354,7 @@
                                 <onclick>Skin.ToggleSetting(HideInfoStartOSD)</onclick>
                                 <selected>!Skin.HasSetting(HideInfoStartOSD)</selected>
                             </control>
-							<control type="radiobutton" id="17801">
+                            <control type="radiobutton" id="17801">
                                 <description>OSD Seekbar wiht Start Media Intro</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1402,7 +1402,7 @@
                                 <onclick>Skin.ToggleSetting(ShowSeekBarPaused)</onclick>
                                 <selected>Skin.HasSetting(ShowSeekBarPaused)</selected>
                             </control>
-							<control type="radiobutton" id="1811">
+                            <control type="radiobutton" id="1811">
                                 <description>Hide shadow behind seekbar</description>
                                 <width>1125</width>
                                 <height>60</height>
@@ -1413,7 +1413,7 @@
                                 <include>MenuButton</include>
                                 <onclick>Skin.ToggleSetting(HideShadowSeekBar)</onclick>
                                 <selected>Skin.HasSetting(HideShadowSeekBar)</selected>
-								<visible>Skin.HasSetting(ShowSeekBarPaused)</visible>
+                                <visible>Skin.HasSetting(ShowSeekBarPaused)</visible>
                             </control>
                             <control type="radiobutton" id="182">
                                 <description>Video Info OSD</description>
@@ -10326,7 +10326,7 @@
                                 <enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
                                 <onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
                             </control>
-							<control type="radiobutton" id="652">
+                            <control type="radiobutton" id="652">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -10334,11 +10334,11 @@
                                 <textcolor>grey2</textcolor>
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
-								<onclick condition="!System.HasAddon(script.favourites) + !Skin.HasSetting(EnableScriptFavourites)">InstallAddon(script.favourites)</onclick>
+                                <onclick condition="!System.HasAddon(script.favourites) + !Skin.HasSetting(EnableScriptFavourites)">InstallAddon(script.favourites)</onclick>
                                 <onclick>Skin.ToggleSetting(EnableScriptFavourites)</onclick>
                                 <selected>Skin.HasSetting(EnableScriptFavourites)</selected>
                             </control>
-							<control type="radiobutton" id="653">
+                            <control type="radiobutton" id="653">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
@@ -10347,10 +10347,10 @@
                                 <focusedcolor>white</focusedcolor>
                                 <include>MenuButton</include>
                                 <onclick condition="!System.HasAddon(service.library.data.provider) + !Skin.HasSetting(EnableScriptStats)">InstallAddon(service.library.data.provider)</onclick>
-								<onclick>Skin.ToggleSetting(EnableScriptStats)</onclick>
+                                <onclick>Skin.ToggleSetting(EnableScriptStats)</onclick>
                                 <selected>Skin.HasSetting(EnableScriptStats)</selected>
                             </control>
-							<control type="button" id="654">
+                            <control type="button" id="654">
                                 <width>1125</width>
                                 <height>60</height>
                                 <font>font13</font>
