@@ -10,6 +10,9 @@
             <include>VisibleFadeEffect</include>
             <animation effect="fade" time="225" delay="1000">WindowOpen</animation>
             <animation effect="fade" time="150">WindowClose</animation>
+            
+            <include>HomeWidgetDisplaySmartPlaylist</include>
+            
             <control type="group">
                 <!-- Recent Movies -->
                 <left>285</left>
